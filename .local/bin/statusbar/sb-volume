@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Prints the current volume or 🔇 if muted.
+
+case $BLOCK_BUTTON in
+        1) setsid -w -f "$TERMINAL" -e alsamixer; pkill -RTMIN+10 "${STATUSBAR:-wibar}" ;;
+        2) amixer set Master toggle ;;
+        4) amixer set Master 1%+ ;;
+        5) amixer set Master 1%- ;;
+        3) notify-send "📢 Volume module" "\- Shows volume 🔊, 🔇 if muted.
+- Middle click to mute.
+- Scroll to change." ;;
+        6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+vol="$(amixer get Master | grep -oP '\[.*?%\]' | head -1 | tr -d '[]%')"
+mute="$(amixer get Master | grep -oP '\[on\]|\[off\]' | head -1)"
+
+# If muted, print 🔇 and exit.
+[ "$mute" = "[off]" ] && echo 🔇 && exit
+
+case 1 in
+        $((vol >= 70)) ) icon="🔊" ;;
+        $((vol >= 30)) ) icon="🔉" ;;
+        $((vol >= 1)) ) icon="🔈" ;;
+        * ) echo 🔇 && exit ;;
+esac
+
+echo "$icon$vol%"
