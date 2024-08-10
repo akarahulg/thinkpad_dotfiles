@@ -149,5 +149,14 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
 
+
+
 #heasoft
-source /etc/profile.d/heasoft.sh
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+export FC=/usr/bin/gfortran
+export PERL=/usr/bin/perl
+export PYTHON=/usr/bin/python3
+
+#export HEADAS=/home/rahul/packages/heasoft/heasoft-6.33.2/x86_64-pc-linux-gnu-libc2.40/
+#source $HEADAS/headas-init.sh

@@ -12,6 +12,7 @@ pp="cd /home/rahul/Pictures && ls -A" \
 sc="cd /home/rahul/.local/bin && ls -A" \
 src="cd /home/rahul/.local/src && ls -A" \
 vv="cd /home/rahul/Videos && ls -A" \
+cfg="cd /home/rahul/git && ls -A" \
 bf="$EDITOR /home/rahul/.config/shell/bm-files" \
 bd="$EDITOR /home/rahul/.config/shell/bm-dirs" \
 cfx="$EDITOR /home/rahul/.config/x11/xresources" \

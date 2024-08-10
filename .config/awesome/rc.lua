@@ -17,6 +17,10 @@ local naughty = require("naughty")
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local wibox = require('wibox')
+local statusbar = require("statusbar.aw-volume")
+
+
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -130,7 +134,10 @@ if beautiful.wallpaper then
 end
 -- }}}
 
-
+local separator = wibox.widget {
+    text   = "|",  -- You can change this to any character or string you'd like
+    widget = wibox.widget.textbox,
+}
 
 -- {{{ Wibar
 
@@ -143,7 +150,7 @@ mytextclock = wibox.widget.textclock()
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[2])
+    awful.tag({ "🦁", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -213,9 +220,13 @@ s.mywibox = awful.wibar {
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+	    statusbar.volume_widget,
+	    separator,
             wibox.widget.systray(),
+	    separator,
             mytextclock,
             s.mylayoutbox,
+
         },
     }
 }
@@ -520,10 +531,10 @@ ruled.client.connect_signal("request::rules", function()
     }
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- ruled.client.append_rule {
-    --     rule       = { class = "Firefox"     },
-    --     properties = { screen = 1, tag = "2" }
-    -- }
+    ruled.client.append_rule {
+        rule       = { class = "Brave"     },
+        properties = {tag = "🦁" }
+    }
         -- Specific rule for LibreOffice
     ruled.client.append_rule {
         id         = "libreoffice",
@@ -684,9 +695,5 @@ globalkeys = gears.table.join(
 
 -- Apply the keybindings
 root.keys(globalkeys)
-
-
-
-
 
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
