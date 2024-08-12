@@ -518,9 +518,11 @@ ruled.client.connect_signal("request::rules", function()
                 "AlarmWindow",    -- Thunderbird's calendar.
                 "ConfigManager",  -- Thunderbird's about:config.
                 "pop-up",         -- e.g. Google Chrome's (detached) Developer Tools.
+                "Picture in picture",
+		"Brave"
             }
         },
-        properties = { floating = true }
+        properties = { floating = true, fullscreen = false, maximized_vertical = false, maximized_horizontal = false}
     }
 
     -- Add titlebars to normal clients and dialogs
@@ -530,16 +532,17 @@ ruled.client.connect_signal("request::rules", function()
         properties = { titlebars_enabled = false      }
     }
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
     ruled.client.append_rule {
-        rule       = { class = "Brave"     },
-        properties = {tag = "🦁" }
+        rule       = { class = "brave-browser"},
+        properties = {tag = "🦁",
+	fullscreen = false}
     }
         -- Specific rule for LibreOffice
     ruled.client.append_rule {
         id         = "libreoffice",
         rule       = { class = "libreoffice" },
-        properties = { fullscreen = false }
+        properties = { fullscreen = false,
+}
     }
 end)
 -- }}}
