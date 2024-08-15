@@ -10,7 +10,9 @@ local volume_widget = wibox.widget {
     },
     layout = wibox.container.margin(_, 2, 2),
     set_volume = function(self, text)
-        self:get_children_by_id("icon")[1]:set_text(text)
+        local icon_widget = self:get_children_by_id("icon")[1]
+	icon_widget.font = "Hack 10"
+	icon_widget:set_text(text)
     end,
 }
 
@@ -63,15 +65,15 @@ volume_widget:buttons(
             naughty.notify({ title = "Volume Widget", text = "Left click: Open pavucontrol\nMiddle click: Mute/unmute\nScroll: Adjust volume" })
         end),
 
-        -- Scroll up: Increase volume by 1%
+        -- Scroll up: Increase volume by 5%
         awful.button({}, 4, function()
-            awful.spawn("amixer set Master 1%+")
+            awful.spawn("amixer set Master 5%+")
             update_volume()
         end),
 
-        -- Scroll down: Decrease volume by 1%
+        -- Scroll down: Decrease volume by 5%
         awful.button({}, 5, function()
-            awful.spawn("amixer set Master 1%-")
+            awful.spawn("amixer set Master 5%-")
             update_volume()
         end)
     )

@@ -15,10 +15,11 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 -- Declarative object management
 local ruled = require("ruled")
-local menubar = require("menubar")
+-- local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local wibox = require('wibox')
-local statusbar = require("statusbar.aw-volume")
+local volbar = require("statusbar.aw-volume")
+local sysbar = require("statusbar.aw-system")
 
 
 
@@ -74,7 +75,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 
 -- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+-- menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- {{{ Tag layout
@@ -220,7 +221,12 @@ s.mywibox = awful.wibar {
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-	    statusbar.volume_widget,
+	    separator,
+	    sysbar.ram_widget,
+	    sysbar.cpu_widget,
+	    sysbar.home_widget,
+	    separator,
+	    volbar.volume_widget,
 	    separator,
             wibox.widget.systray(),
 	    separator,
@@ -268,8 +274,12 @@ awful.keyboard.append_global_keybindings({
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, "d", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
+    awful.key({ modkey }, "d", function() awful.spawn("dmenu_run") end,
+              {description = "Run dmenu", group = "launcher"}),
+    awful.key({ modkey, "Shift" }, "d", function ()
+    		awful.spawn("rofi -show run -modi run,window,drun,ssh")
+		end,
+	      {description = "run rofi with all modes", group = "launcher"})
 })
 
 -- Tags related keybindings
@@ -517,12 +527,10 @@ ruled.client.connect_signal("request::rules", function()
             role    = {
                 "AlarmWindow",    -- Thunderbird's calendar.
                 "ConfigManager",  -- Thunderbird's about:config.
-                "pop-up",         -- e.g. Google Chrome's (detached) Developer Tools.
-                "Picture in picture",
-		"Brave"
+                "pop-up"         -- e.g. Google Chrome's (detached) Developer Tools.
             }
         },
-        properties = { floating = true, fullscreen = false, maximized_vertical = false, maximized_horizontal = false}
+        properties = { floating = true, fullscreen = false, maximized_vertical = false, maximized_horizontal = false, maximized = false}
     }
 
     -- Add titlebars to normal clients and dialogs
@@ -532,7 +540,14 @@ ruled.client.connect_signal("request::rules", function()
         properties = { titlebars_enabled = false      }
     }
 
+--     ruled.client.append_rule {
+-- 	id = "Picture in picture",
+--         rule       = { class = "Picture in picture"},
+--         properties = { floating = true, fullscreen = false}
+--     }
+
     ruled.client.append_rule {
+	id = "Brave",
         rule       = { class = "brave-browser"},
         properties = {tag = "🦁",
 	fullscreen = false}
