@@ -100,7 +100,7 @@ tag.connect_signal("request::default_layouts", function()
 end)
 -- }}}
 
-beautiful.wallpaper = home .. ".config/defaultwallpaper.png"
+beautiful.wallpaper = home .. "/.config/defaultwallpaper.png"
 -- {{{ Wallpaper
 screen.connect_signal("request::wallpaper", function(s)
     awful.wallpaper {
@@ -128,9 +128,9 @@ if beautiful.wallpaper then
     for s = 1, screen.count() do
         --gears.wallpaper.maximized(beautiful.wallpaper, s, true)
         if s < 2 then
-          gears.wallpaper.maximized(home .. ".config/defaultwallpaper.png", s, true)
+          gears.wallpaper.maximized(home .. "/.config/defaultwallpaper.png", s, true)
         else
-          gears.wallpaper.maximized(home .. ".config/protraitwall.jpg", s, true)
+          gears.wallpaper.maximized(home .. "/.config/protraitwall.jpg", s, true)
         end
     end
 end
