@@ -27,9 +27,11 @@ local function update_volume()
         awful.spawn.easy_async_with_shell("amixer get Master", function(stdout)
             local vol = stdout:match("(%d+)%%")
             local icon
+            local display_text
 
             if is_muted then
                 icon = "  "  -- Mute icon
+                display_text = "muted"  -- Display "mute" instead of the volume percentage
             else
                 if tonumber(vol) >= 70 then
                     icon = "  "
@@ -38,9 +40,10 @@ local function update_volume()
                 else
                     icon = "  "
                 end
+                display_text = vol .. "%"  -- Display the volume percentage
             end
 
-            volume_widget:set_volume(icon .. vol .. "%")
+            volume_widget:set_volume(icon .. display_text)
         end)
     end)
 end
