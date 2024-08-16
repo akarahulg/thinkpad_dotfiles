@@ -2,7 +2,7 @@
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
-
+local home = os.getenv('HOME')
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -21,6 +21,7 @@ local wibox = require('wibox')
 local volbar = require("statusbar.aw-volume")
 local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music")
+
 
 local music_widget = musbar.create_music_widget()
 -- Enable hotkeys help widget for VIM and other apps
@@ -99,7 +100,7 @@ tag.connect_signal("request::default_layouts", function()
 end)
 -- }}}
 
-beautiful.wallpaper = "/home/rahul/Pictures/wallpapers/lukewall.png"
+beautiful.wallpaper = home .. ".config/defaultwallpaper.png"
 -- {{{ Wallpaper
 screen.connect_signal("request::wallpaper", function(s)
     awful.wallpaper {
@@ -127,9 +128,9 @@ if beautiful.wallpaper then
     for s = 1, screen.count() do
         --gears.wallpaper.maximized(beautiful.wallpaper, s, true)
         if s < 2 then
-          gears.wallpaper.maximized("/home/rahul/Pictures/wallpapers/lukewall.png", s, true)
+          gears.wallpaper.maximized(home .. ".config/defaultwallpaper.png", s, true)
         else
-          gears.wallpaper.maximized("/home/rahul/Pictures/wallpapers/protraitwall.jpg", s, true)
+          gears.wallpaper.maximized(home .. ".config/protraitwall.jpg", s, true)
         end
     end
 end
@@ -714,4 +715,4 @@ globalkeys = gears.table.join(
 -- Apply the keybindings
 root.keys(globalkeys)
 
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell(home .."/.config/awesome/autorun.sh")
