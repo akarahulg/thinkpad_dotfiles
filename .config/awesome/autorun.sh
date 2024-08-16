@@ -6,7 +6,7 @@ run() {
     "$@"&
   fi
 }
-run "dust"
+run "dunst"
 run "nitrogen --restore"
 run "xset s 540"
 run "xset dpms 600 600 600"
