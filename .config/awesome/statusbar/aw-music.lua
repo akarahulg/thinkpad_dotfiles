@@ -36,7 +36,7 @@ local function create_music_widget()
 
     -- Update widget function
     local function update_widget()
-        awful.spawn.easy_async_with_shell("playerctl -p $(playerctl -l) metadata title", function(stdout)
+        awful.spawn.easy_async_with_shell("playerctl -p $(playerctl -l) metadata --format '{{xesam:title}} | {{xesam:artist}} | {{xesam:album}} | '", function(stdout)
             local title = stdout:gsub("%s+$", "")  -- Trim trailing whitespace
             if title == "" then
                 music_title.text = "   "  -- No music playing emoji

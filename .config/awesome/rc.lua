@@ -221,11 +221,11 @@ s.mywibox = awful.wibar {
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
 	    separator,
-	    music_widget,
-	    separator,
 	    sysbar.ram_widget,
 	    sysbar.cpu_widget,
 	    sysbar.home_widget,
+	    separator,
+	    music_widget,
 	    separator,
 	    volbar.volume_widget,
 	    separator,

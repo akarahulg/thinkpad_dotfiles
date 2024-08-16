@@ -70,7 +70,7 @@ local function update_volume()
                 if mute_speakers then
                     icon = "   "
                 elseif tonumber(vol) >= 70 then
-                    icon = "   "
+                    icon = "  "
                 elseif tonumber(vol) >= 30 then
                     icon = "  "
                 elseif tonumber(vol) >= 1 then
