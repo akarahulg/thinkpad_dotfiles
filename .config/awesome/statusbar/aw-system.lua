@@ -10,7 +10,7 @@ local ram_widget = wibox.widget {
             id = "icon",
             widget = wibox.widget.textbox,
             font = "Hack 10",
-            text = "💾",  -- RAM icon (could be a different icon from an icon font)
+            text = " ",  -- RAM icon (could be a different icon from an icon font)
         },
         {
             id = "text",
@@ -32,7 +32,7 @@ local cpu_widget = wibox.widget {
             id = "icon",
             widget = wibox.widget.textbox,
             font = "Hack 10",
-            text = "🖥️",  -- CPU icon (could be a different icon from an icon font)
+            text = " ",  -- CPU icon (could be a different icon from an icon font)
         },
         {
             id = "text",
@@ -54,7 +54,7 @@ local home_widget = wibox.widget {
             id = "icon",
             widget = wibox.widget.textbox,
             font = "Hack 10",
-            text = "🏠",  -- Home folder icon (could be a different icon from an icon font)
+            text = " ",  -- Home folder icon (could be a different icon from an icon font)
         },
         {
             id = "text",
