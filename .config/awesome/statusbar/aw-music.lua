@@ -67,7 +67,7 @@ local function create_music_widget()
 
     -- Create buttons with emojis for media control
     local prev_button = wibox.widget {
-        text = "  ",  -- Previous track emoji
+        text = "  ",  -- Previous track emoji
         widget = wibox.widget.textbox,
         align = "center",
         valign = "center",
@@ -76,7 +76,7 @@ local function create_music_widget()
     prev_button:connect_signal("button::press", function() awful.spawn("playerctl previous") end)
 
     local next_button = wibox.widget {
-        text = "   ",  -- Next track emoji
+        text = "  ",  -- Next track emoji
         widget = wibox.widget.textbox,
         align = "center",
         valign = "center",
