@@ -19,61 +19,23 @@ local volume_widget = wibox.widget {
     end,
 }
 
--- Initialize global variables to keep track of mute states
-local mute_headphones = false
-local mute_speakers = false
-
--- Function to get the current audio output device
-local function get_audio_output_device(callback)
-    awful.spawn.easy_async_with_shell("pactl list sinks | grep -E 'Name:|Active Port:'", function(stdout)
-        local device
-        for line in stdout:gmatch("[^\r\n]+") do
-            if line:match("Active Port:") then
-                if line:match("headphones") then
-                    device = "headphones"
-                else
-                    device = "speakers"
-                end
-                break
-            end
-        end
-        callback(device)
-    end)
-end
-
--- Function to update volume and mute state
+-- Function to get the current audio output device and mute status
 local function update_volume()
-    get_audio_output_device(function(device)
-        -- Update volume and mute status for both headphones and speakers
+    awful.spawn.easy_async_with_shell("pactl get-sink-mute @DEFAULT_SINK@", function(mute_stdout)
+        local is_muted = mute_stdout:match("Mute: yes")
+
         awful.spawn.easy_async_with_shell("amixer get Master", function(stdout)
             local vol = stdout:match("(%d+)%%")
-            local mute_status = stdout:match("%[(on|off)%]")
+            local icon
 
-            if device == "headphones" then
-                mute_headphones = (mute_status == "off")
+            if is_muted then
+                icon = "  "  -- Mute icon
             else
-                mute_speakers = (mute_status == "off")
-            end
-
-            local icon = "  "
-            if device == "headphones" then
-                if mute_headphones then
-                    icon = "  "
-                elseif tonumber(vol) >= 70 then
-                    icon = "  "
-                elseif tonumber(vol) >= 30 then
-                    icon = "  "
-                elseif tonumber(vol) >= 1 then
-                    icon = "  "
-                end
-            else
-                if mute_speakers then
-                    icon = "   "
-                elseif tonumber(vol) >= 70 then
+                if tonumber(vol) >= 70 then
                     icon = "  "
                 elseif tonumber(vol) >= 30 then
                     icon = "  "
-                elseif tonumber(vol) >= 1 then
+                else
                     icon = "  "
                 end
             end
@@ -83,16 +45,11 @@ local function update_volume()
     end)
 end
 
--- Function to toggle mute status for a specific device
-local function toggle_mute(device)
-    if device == "headphones" then
-        mute_headphones = not mute_headphones
-        awful.spawn("amixer set Master " .. (mute_headphones and "mute" or "unmute"))
-    else
-        mute_speakers = not mute_speakers
-        awful.spawn("amixer set Master " .. (mute_speakers and "mute" or "unmute"))
-    end
-    update_volume()
+-- Function to toggle mute status
+local function toggle_mute()
+    awful.spawn.easy_async_with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle", function()
+        update_volume()
+    end)
 end
 
 -- Function to handle changes
@@ -106,37 +63,11 @@ local watch_timer = gears.timer({
     call_now = true,
     autostart = true,
     callback = function()
-        awful.spawn.easy_async_with_shell("amixer get Master", function(stdout)
-            local new_vol = stdout:match("(%d+)%%")
-            if new_vol ~= current_vol then
-                current_vol = new_vol
-                handle_change()
-            end
-        end)
-
-        awful.spawn.easy_async_with_shell("pactl list sinks | grep -E 'Active Port:'", function(stdout)
-            local new_device
-            for line in stdout:gmatch("[^\r\n]+") do
-                if line:match("Active Port:") then
-                    if line:match("headphones") then
-                        new_device = "headphones"
-                    else
-                        new_device = "speakers"
-                    end
-                    break
-                end
-            end
-            if new_device ~= current_device then
-                current_device = new_device
-                handle_change()
-            end
-        end)
+        handle_change()
     end
 })
 
 -- Initialize current volume and device
-local current_vol
-local current_device
 update_volume()  -- Initial update
 
 -- Apply the theme font to the volume widget
@@ -150,9 +81,7 @@ volume_widget:buttons(
 
         -- Middle-click: Mute/Unmute the current device
         awful.button({}, 2, function()
-            get_audio_output_device(function(device)
-                toggle_mute(device)
-            end)
+            toggle_mute()
         end),
 
         -- Right-click: Show a help notification
