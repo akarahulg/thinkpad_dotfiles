@@ -1,0 +1,36 @@
+
+#!/bin/bash
+
+# Define the options
+options=("Artist" "Composer" "Track" "Next" "Playlist" "Jump" "Longplayer")
+
+# Prompt the user to select a mode using dmenu
+selected_mode=$(printf "%s\n" "${options[@]}" | dmenu -p "Select Mode:")
+
+# Check the selected mode and call your script accordingly
+case $selected_mode in
+    "Artist")
+        mpc_control -a
+        ;;
+    "Composer")
+        mpc_control -c
+        ;;
+    "Track")
+        mpc_control -t
+        ;;
+    "Next")
+        mpc_control -n
+        ;;
+    "Playlist")
+        mpc_control -p
+        ;;
+    "Jump")
+        mpc_control -j
+        ;;
+    "Longplayer")
+        mpc_control -l
+        ;;
+    *)
+        echo "Invalid mode selected."
+        ;;
+esac

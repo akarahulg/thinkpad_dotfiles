@@ -22,8 +22,9 @@ local volbar = require("statusbar.aw-volume")
 local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music")
 
-
 local music_widget = musbar.create_music_widget()
+
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -152,7 +153,7 @@ mytextclock = wibox.widget.textclock()
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "🦁", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[2])
+    awful.tag({ "", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -278,6 +279,10 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
     awful.key({ modkey }, "d", function() awful.spawn("dmenu_run") end,
+              {description = "Run dmenu", group = "launcher"}),
+    awful.key({ modkey }, "m", function() awful.spawn("mpc_control -t") end,
+              {description = "Run dmenu", group = "launcher"}),
+    awful.key({ modkey,"Shift" }, "m", function() awful.spawn("dmenu-wrapper-music") end,
               {description = "Run dmenu", group = "launcher"}),
     awful.key({ modkey, "Shift" }, "d", function ()
     		awful.spawn("rofi -show run -modi run,window,drun,ssh")
@@ -552,7 +557,7 @@ ruled.client.connect_signal("request::rules", function()
     ruled.client.append_rule {
 	id = "Brave",
         rule       = { class = "brave-browser"},
-        properties = {tag = "🦁",
+        properties = {tag = "",
 	fullscreen = false}
     }
         -- Specific rule for LibreOffice
@@ -649,7 +654,7 @@ end
 local function take_screenshot_region()
          naughty.notify({
             preset = naughty.config.presets.normal,
-            title = " ☐ Select the region",
+            title = "   Select the region",
             timeout = 5
         })
     local filename = os.getenv("HOME") .. "/Pictures/Screenshots/screenshot_" .. get_timestamp() .. ".png"
@@ -659,8 +664,8 @@ local function take_screenshot_region()
         -- Notify after screenshot is taken
         naughty.notify({
             preset = naughty.config.presets.normal,
-            title = "📸 Screenshot taken",
-            text = "Saved as " .. filename .. " 📁",
+            title = "  Screenshot taken",
+            text = "  Saved as " .. filename,
             timeout = 5
         })
     end)
@@ -674,8 +679,8 @@ local function take_screenshot_full()
         -- Notify after screenshot is taken
         naughty.notify({
             preset = naughty.config.presets.normal,
-            title = "📸 Full-Screen Screenshot",
-            text = "Saved as " .. filename .. " 📁",
+            title = "  Full-Screen Screenshot",
+            text = "  Saved as " .. filename,
             timeout = 5
         })
     end)
