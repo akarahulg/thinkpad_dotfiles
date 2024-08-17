@@ -1,27 +1,32 @@
 [global]
-    monitor = 0
-    follow = keyboard
-    width = 370
-    height = 350
-    offset = 0x19
-    padding = 2
-    horizontal_padding = 2
-    transparency = 25
-    font = Monospace 12
-    format = "<b>%s</b>\n%b"
+	font               = "Hack 10"
+	geometry           = "0x0-62-62"
+	separator_height   = 2
+	padding            = 2
+	horizontal_padding = 2
+	frame_width        = 2
 
-[urgency_low]
-    background = "#1d2021"
-    foreground = "#928374"
-    timeout = 3
+	markup           = full
+	format           = "<b>%s</b>\n%b"
+	icon_path        = ""
+	icon_position    = left
+	max_icon_size    = 64
+	show_indicators  = false
+	separator_color  = frame
 
-[urgency_normal]
-    foreground = "#ebdbb2"
-    background = "#458588"
-    timeout = 5
+	lf  = #D8D8D8
+	nf  = #D8D8D8
+	cf  = #D8D8D8
+	lb  = #181818E5
+	nb  = #181818E5
+	cb  = #181818E5
+	lfr = #585858
+	nfr = #585858
+	cfr = #AB4642
+	lto = 1
+	nto = 3
+	cto = 5
 
-[urgency_critical]
-    background = "#1cc24d"
-    foreground = "#ebdbb2"
-    frame_color = "#fabd2f"
-    timeout = 10
+	mouse_left_click   = do_action
+	mouse_right_click  = close_current
+	mouse_middle_click = close_current

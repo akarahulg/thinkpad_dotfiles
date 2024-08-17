@@ -24,7 +24,7 @@ local function create_music_widget()
 
     -- Create emojis for play/pause control
     local play_pause_emoji = wibox.widget {
-        text = "",  -- Play emoji
+        text = "  ",  -- Play emoji
         widget = wibox.widget.textbox,
         align = "center",
         valign = "center",
@@ -36,22 +36,30 @@ local function create_music_widget()
 
     -- Update widget function
     local function update_widget()
-        awful.spawn.easy_async_with_shell("playerctl -p $(playerctl -l) metadata --format '{{xesam:title}} | {{xesam:artist}} | {{xesam:album}} | '", function(stdout)
-            local title = stdout:gsub("%s+$", "")  -- Trim trailing whitespace
-            if title == "" then
+        awful.spawn.easy_async_with_shell("playerctl -l | head -n 1", function(player_name)
+            player_name = player_name:gsub("%s+$", "")  -- Trim trailing whitespace
+            if player_name == "" then
                 music_title.text = "   "  -- No music playing emoji
                 scrolling_text.speed = 0  -- Stop scrolling when no music is playing
             else
-                music_title.text = (title .. " "):rep(10)  -- Repeat title to ensure scrolling
-                awful.spawn.easy_async_with_shell("playerctl -p $(playerctl -l) status", function(status)
-                    if status:match("Playing") then
-                        scrolling_text.speed = 40  -- Scroll only when playing
-                        -- Update play/pause emoji to show pause
-                        play_pause_emoji.text = "  "  -- Pause emoji
+                awful.spawn.easy_async_with_shell("playerctl -p " .. player_name .. " metadata --format '{{xesam:title}} | {{xesam:artist}} | {{xesam:album}} | '", function(stdout)
+                    local title = stdout:gsub("%s+$", "")  -- Trim trailing whitespace
+                    if title == "" then
+                        music_title.text = "   "  -- No music playing emoji
+                        scrolling_text.speed = 0  -- Stop scrolling when no music is playing
                     else
-                        scrolling_text.speed = 0  -- Stop scrolling when paused
-                        -- Update play/pause emoji to show play
-                        play_pause_emoji.text = "  "  -- Play emoji
+                        music_title.text = (title .. " "):rep(10)  -- Repeat title to ensure scrolling
+                        awful.spawn.easy_async_with_shell("playerctl -p " .. player_name .. " status", function(status)
+                            if status:match("Playing") then
+                                scrolling_text.speed = 40  -- Scroll only when playing
+                                -- Update play/pause emoji to show pause
+                                play_pause_emoji.text = "  "  -- Pause emoji
+                            else
+                                scrolling_text.speed = 0  -- Stop scrolling when paused
+                                -- Update play/pause emoji to show play
+                                play_pause_emoji.text = "  "  -- Play emoji
+                            end
+                        end)
                     end
                 end)
             end
