@@ -34,8 +34,9 @@ local function create_music_widget()
         awful.spawn("playerctl play-pause")
     end)
 
-    -- Update widget function
+    -- Function to update the widget
     local function update_widget()
+        -- Get the first active player from the list
         awful.spawn.easy_async_with_shell("playerctl -l | head -n 1", function(player_name)
             player_name = player_name:gsub("%s+$", "")  -- Trim trailing whitespace
             if player_name == "" then
@@ -49,14 +50,13 @@ local function create_music_widget()
                         scrolling_text.speed = 0  -- Stop scrolling when no music is playing
                     else
                         music_title.text = (title .. " "):rep(10)  -- Repeat title to ensure scrolling
-                        awful.spawn.easy_async_with_shell("playerctl -p " .. player_name .. " status", function(status)
-                            if status:match("Playing") then
+                        awful.spawn.easy_async_with_shell("playerctl -p " .. player_name .. " status | head -n 1", function(status)
+                            status = status:gsub("%s+$", "")  -- Trim trailing whitespace
+                            if status == "Playing" then
                                 scrolling_text.speed = 40  -- Scroll only when playing
-                                -- Update play/pause emoji to show pause
                                 play_pause_emoji.text = "  "  -- Pause emoji
                             else
                                 scrolling_text.speed = 0  -- Stop scrolling when paused
-                                -- Update play/pause emoji to show play
                                 play_pause_emoji.text = "  "  -- Play emoji
                             end
                         end)
