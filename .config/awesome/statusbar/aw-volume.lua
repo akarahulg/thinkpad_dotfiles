@@ -30,15 +30,15 @@ local function update_volume()
             local display_text
 
             if is_muted then
-                icon = "  "  -- Mute icon
+                icon = " "  -- Mute icon
                 display_text = "muted"  -- Display "mute" instead of the volume percentage
             else
                 if tonumber(vol) >= 70 then
-                    icon = "  "
+                    icon = " "
                 elseif tonumber(vol) >= 30 then
-                    icon = "  "
+                    icon = " "
                 else
-                    icon = "  "
+                    icon = " "
                 end
                 display_text = vol .. "%"  -- Display the volume percentage
             end
