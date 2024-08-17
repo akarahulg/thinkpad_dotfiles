@@ -17,7 +17,7 @@ local function create_music_widget()
     local scrolling_text = wibox.widget {
         music_title,
         layout = wibox.container.scroll.horizontal,
-        max_size = 150,  -- Adjust to your preferred maximum width
+        max_size = 120,  -- Adjust to your preferred maximum width
         step_function = wibox.container.scroll.step_functions.linear_increase,
         speed = 0  -- Initial speed set to 0
     }
