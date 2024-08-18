@@ -23,6 +23,12 @@ wedit() {
 	[[ -f $filepath ]] && $EDITOR $filepath;
 }
 
+cpcat() {
+	filepath="$(realpath $1)"
+	[[ -f $filepath ]] && cat $filepath | xclip;
+	notify-send "$1 copied to clipboard"
+}
+
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
