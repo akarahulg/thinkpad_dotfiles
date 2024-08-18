@@ -1,0 +1,9 @@
+#!/bin/bash
+
+QUERY=$(printf "" | dmenu -p "Google Search: ")
+CON=$(echo $QUERY | tr " " "+")
+
+if [[ $(echo $CON | wc -c) -gt 1 ]]
+then
+	brave https://www.google.com/search\?q\=$CON > /dev/null 2>&1
+fi

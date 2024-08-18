@@ -1,0 +1,9 @@
+#!/bin/bash
+
+QUERY=$(printf "" | dmenu -p "YouTube Search: ")
+CON=$(echo $QUERY | tr " " "+")
+
+if [[ $(echo $CON | wc -c) -gt 1 ]]
+then
+	brave https://www.youtube.com/results?search_query=$CON > /dev/null 2>&1
+fi

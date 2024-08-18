@@ -281,9 +281,13 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey }, "d", function() awful.spawn("dmenu_run") end,
               {description = "Run dmenu", group = "launcher"}),
     awful.key({ modkey }, "m", function() awful.spawn("mpc_control -t") end,
-              {description = "Run dmenu", group = "launcher"}),
+              {description = "Music launcher", group = "launcher"}),
     awful.key({ modkey,"Shift" }, "m", function() awful.spawn("dmenu-wrapper-music") end,
-              {description = "Run dmenu", group = "launcher"}),
+              {description = "Music mode selection", group = "launcher"}),
+    awful.key({ modkey }, "y", function() awful.spawn("ytsearch") end,
+              {description = "dmenu youtube search", group = "launcher"}),
+    awful.key({ modkey }, "g", function() awful.spawn("gsearch") end,
+              {description = "dmenu google selection", group = "launcher"}),
     awful.key({ modkey, "Shift" }, "d", function ()
     		awful.spawn("rofi -show run -modi run,window,drun,ssh")
 		end,
