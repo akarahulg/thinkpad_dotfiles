@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Define the options
-options=("Artist" "Composer" "Track" "Next" "Playlist" "Jump" "Longplayer")
+options=("Artist" "Composer" "Track" "Next" "Playlist" "Jump" "Longplayer" "Genre")
 
 # Prompt the user to select a mode using dmenu
 selected_mode=$(printf "%s\n" "${options[@]}" | dmenu -p "Select Mode:")
@@ -29,6 +29,9 @@ case $selected_mode in
         ;;
     "Longplayer")
         mpc_control -l
+        ;;
+    "Genre")
+         mpc_control -g
         ;;
     *)
         echo "Invalid mode selected."

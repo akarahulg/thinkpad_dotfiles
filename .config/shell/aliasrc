@@ -55,6 +55,7 @@ alias \
 alias \
 	ka="killall" \
 	g="git" \
+	gl='git log --graph --pretty=format:"%C(auto)%h%C(reset) %ad %C(auto)%d%C(reset) %s" --date=format:"%b %d, %Y"' \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
 	sdn="shutdown -h now" \
@@ -65,6 +66,8 @@ alias \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
 	z="zathura"
+
+
 
 alias \
 	lf="lfub" \

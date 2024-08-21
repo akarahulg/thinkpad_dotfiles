@@ -1,112 +1,66 @@
-
+local gears = require("gears")
 local wibox = require("wibox")
 local awful = require("awful")
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local gears = require("gears")
+
+-- Define the font
+local widget_font = "Hack 10"
+
+-- Define the volume command
+local volume_command = "volume"
 
 -- Create the volume widget
-local volume_widget = wibox.widget {
-    {
-        id = "icon",
-        widget = wibox.widget.textbox,
-    },
-    layout = wibox.container.margin(_, 2, 2),
-    set_volume = function(self, text)
-        local icon_widget = self:get_children_by_id("icon")[1]
-        icon_widget.font = "Hack 10"
-        icon_widget:set_text(text)
-    end,
-}
+local my_volume_widget = wibox.widget.textbox()
+my_volume_widget:set_font(widget_font)
 
--- Function to get the current audio output device and mute status
-local function update_volume()
-    awful.spawn.easy_async_with_shell("pactl get-sink-mute @DEFAULT_SINK@", function(mute_stdout)
-        local is_muted = mute_stdout:match("Mute: yes")
+-- Function to call the volume script and get its output asynchronously
+local function get_volume_output(callback)
+    awful.spawn.easy_async(volume_command .. ' display', function(stdout)
+        local output = stdout:gsub("\n", "")  -- Remove newline characters
+        callback(output)
+    end)
+end
 
-        awful.spawn.easy_async_with_shell("amixer get Master", function(stdout)
-            local vol = stdout:match("(%d+)%%")
-            local icon
-            local display_text
-
-            if is_muted then
-                icon = " "  -- Mute icon
-                display_text = "muted"  -- Display "mute" instead of the volume percentage
-            else
-                if tonumber(vol) >= 70 then
-                    icon = " "
-                elseif tonumber(vol) >= 30 then
-                    icon = " "
-                else
-                    icon = " "
-                end
-                display_text = vol .. "%"  -- Display the volume percentage
-            end
-
-            volume_widget:set_volume(icon .. display_text)
-        end)
+-- Function to update the widget text
+local function update_widget()
+    get_volume_output(function(output)
+        my_volume_widget:set_text(output)
     end)
 end
 
 -- Function to toggle mute status
 local function toggle_mute()
-    awful.spawn.easy_async_with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle", function()
-        update_volume()
-    end)
+    awful.spawn.with_shell(volume_command .. ' toggle')
+    update_widget()
 end
 
--- Function to handle changes
-local function handle_change()
-    update_volume()
+-- Function to adjust volume
+local function adjust_volume(direction)
+    awful.spawn.with_shell(volume_command .. ' ' .. direction)
+    update_widget()
 end
 
--- Create a timer to periodically check for changes
-local watch_timer = gears.timer({
-    timeout = 1, -- Check every second
-    call_now = true,
-    autostart = true,
-    callback = function()
-        handle_change()
-    end
-})
+-- Function to open pavucontrol
+local function open_pavucontrol()
+    awful.spawn.with_shell("pavucontrol")
+end
 
--- Initialize current volume and device
-update_volume()  -- Initial update
+-- Initial update
+update_widget()
 
--- Apply the theme font to the volume widget
-volume_widget:get_children_by_id("icon")[1].font = beautiful.font
+-- Set up a timer to update the widget periodically
+local update_timer = gears.timer({ timeout = 1 })  -- Update every 1 second
+update_timer:connect_signal("timeout", function()
+    update_widget()
+end)
+update_timer:start()
 
--- Add mouse event listeners
-volume_widget:buttons(
-    awful.util.table.join(
-        -- Left-click: Open pavucontrol
-        awful.button({}, 1, function() awful.spawn("pavucontrol") end),
-
-        -- Middle-click: Mute/Unmute the current device
-        awful.button({}, 2, function()
-            toggle_mute()
-        end),
-
-        -- Right-click: Show a help notification
-        awful.button({}, 3, function()
-            naughty.notify({ title = "Volume Widget", text = "Left click: Open pavucontrol\nMiddle click: Mute/unmute current device\nScroll: Adjust volume" })
-        end),
-
-        -- Scroll up: Increase volume by 5%
-        awful.button({}, 4, function()
-            awful.spawn("amixer set Master 5%+")
-            update_volume()
-        end),
-
-        -- Scroll down: Decrease volume by 5%
-        awful.button({}, 5, function()
-            awful.spawn("amixer set Master 5%-")
-            update_volume()
-        end)
-    )
-)
+-- Add buttons to the widget
+my_volume_widget:buttons(gears.table.join(
+    awful.button({}, 3, function() open_pavucontrol() end),  -- Left click: Open pavucontrol
+    awful.button({}, 1, function() toggle_mute() end),  -- Middle click: Toggle mute
+    awful.button({}, 4, function() adjust_volume('up') end),  -- Scroll up: Increase volume
+    awful.button({}, 5, function() adjust_volume('down') end)  -- Scroll down: Decrease volume
+))
 
 -- Return the widget
-return {
-    volume_widget = volume_widget,
-}
+return my_volume_widget

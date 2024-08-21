@@ -228,7 +228,7 @@ s.mywibox = awful.wibar {
 	    separator,
 	    music_widget,
 	    separator,
-	    volbar.volume_widget,
+	    volbar,
 	    separator,
             wibox.widget.systray(),
 	    separator,
