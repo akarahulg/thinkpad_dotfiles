@@ -26,10 +26,15 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tc50cal/vim-terminal'
 Plug 'preservim/tagbar'
 Plug 'terryma/vim-multiple-cursors'
+" Plug 'larvag/vitex'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'preservim/nerdcommenter'
+Plug 'jamessan/vim-gnupg'
 
 call plug#end()
 
 
+set background=dark
 
 set title
 set bg=light
@@ -113,7 +118,7 @@ colorscheme jellybeans
   	let col = col('.') - 1
   	return !col || getline('.')[col - 1]  =~# '\s'
 	endfunction
-
+	inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "<CR>"
 	inoremap <silent><expr> <Tab>
       	\ coc#pum#visible() ? coc#pum#next(1) :
       	\ CheckBackspace() ? "\<Tab>" :

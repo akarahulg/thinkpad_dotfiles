@@ -39,6 +39,13 @@ local function adjust_volume(direction)
     update_widget()
 end
 
+-- Function to switch between headphones and speaker
+local function switch_device(direction)
+    awful.spawn.with_shell(volume_command .. ' ' .. 'switch')
+    update_widget()
+end
+
+
 -- Function to open pavucontrol
 local function open_pavucontrol()
     awful.spawn.with_shell("pavucontrol")
@@ -56,8 +63,9 @@ update_timer:start()
 
 -- Add buttons to the widget
 my_volume_widget:buttons(gears.table.join(
-    awful.button({}, 3, function() open_pavucontrol() end),  -- Left click: Open pavucontrol
-    awful.button({}, 1, function() toggle_mute() end),  -- Middle click: Toggle mute
+    awful.button({}, 1, function() toggle_mute() end),  -- Left click: Toggle mute
+    awful.button({}, 2, function() switch_device() end),  -- Middle click: Switch between speaker and headphones
+    awful.button({}, 3, function() open_pavucontrol() end),  -- Right click: Open pavucontrol
     awful.button({}, 4, function() adjust_volume('up') end),  -- Scroll up: Increase volume
     awful.button({}, 5, function() adjust_volume('down') end)  -- Scroll down: Decrease volume
 ))
