@@ -41,7 +41,9 @@ alias \
 	yt="yt-dlp --embed-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner"\
+	fzf='fzf --layout=reverse'\
+	ytmp3='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -P $HOME/Music/downloaded'
 
 # Colorize commands when possible.
 alias \

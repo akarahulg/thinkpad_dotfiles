@@ -147,20 +147,31 @@ local separator = wibox.widget {
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- Create a textclock widget
+-- Required libraries
 
-local mytextclock = wibox.widget.textclock("%a %b %d, %H:%M", 60)
+-- Create the textclock widget
+local mytextclock = wibox.widget.textclock("%a %b(%m) %d, %H:%M:%S ", 1)
 mytextclock.font = "Hack 10"
 
--- Create the calendar popup and attach it to the textclock
+-- Create the calendar popup
 local month_calendar = awful.widget.calendar_popup.month()
-month_calendar:attach(mytextclock, "tr")
+month_calendar:attach(mytextclock, "tr")  -- Attach the calendar to the textclock (top-right position)
+month_calendar.visible = false  -- Ensure the calendar is initially hidden
 
 -- Toggle calendar visibility on left-click
 mytextclock:buttons(awful.util.table.join(
     awful.button({}, 1, function()
-        month_calendar:toggle()
+        if month_calendar.visible then
+            month_calendar.visible = false
+        else
+            month_calendar.visible = true
+        end
     end)
 ))
+
+
+
+
 --------------------------------
 
 screen.connect_signal("request::desktop_decoration", function(s)
