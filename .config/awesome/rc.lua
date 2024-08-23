@@ -48,9 +48,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
 editor = os.getenv("EDITOR") or "nvim"
-editor_cmd = terminal .. " -e " .. editor
-
--- Default modkey.
+editor_cmd = terminal .. " -e " .. editor -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
@@ -149,7 +147,21 @@ local separator = wibox.widget {
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+
+local mytextclock = wibox.widget.textclock("%a %b %d, %H:%M", 60)
+mytextclock.font = "Hack 10"
+
+-- Create the calendar popup and attach it to the textclock
+local month_calendar = awful.widget.calendar_popup.month()
+month_calendar:attach(mytextclock, "tr")
+
+-- Toggle calendar visibility on left-click
+mytextclock:buttons(awful.util.table.join(
+    awful.button({}, 1, function()
+        month_calendar:toggle()
+    end)
+))
+--------------------------------
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
