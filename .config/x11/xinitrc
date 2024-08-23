@@ -21,7 +21,8 @@ setxkbmap -option caps:swapescape
 xset r rate 300 50
 
 # Roating the monitor for
-xrandr --output DP-2 --rotate left
+
+xrandr --output DP-1 --primary --pos 0x635 --output DP-2 --pos 1920x0 --rotate left
 # Activate dbus variables
 #dbus-update-activation-environment --all
 exec awesome
