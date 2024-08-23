@@ -135,10 +135,14 @@ if beautiful.wallpaper then
 end
 -- }}}
 
+-- Create a vertical separator widget
 local separator = wibox.widget {
-    text   = "|",  -- You can change this to any character or string you'd like
-    widget = wibox.widget.textbox,
+    orientation = 'vertical',
+    forced_width = 2,
+    color = beautiful.bg_focus,  -- Change color as needed
+    widget = wibox.widget.separator,
 }
+
 
 -- {{{ Wibar
 
