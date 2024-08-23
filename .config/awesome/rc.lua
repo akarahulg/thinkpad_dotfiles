@@ -303,6 +303,8 @@ awful.keyboard.append_global_keybindings({
               {description = "run prompt", group = "launcher"}),
     awful.key({ modkey }, "d", function() awful.spawn("dmenu_run") end,
               {description = "Run dmenu", group = "launcher"}),
+    awful.key({ modkey }, "b", function() awful.spawn("brave") end,
+              {description = "Brave browser", group = "launcher"}),
     awful.key({ modkey }, "m", function() awful.spawn("mpc_control -t") end,
               {description = "Music launcher", group = "launcher"}),
     awful.key({ modkey,"Shift" }, "m", function() awful.spawn("dmenu-wrapper-music") end,
