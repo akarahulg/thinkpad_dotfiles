@@ -22,6 +22,7 @@ local volbar = require("statusbar.aw-volume")
 local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music")
 local powerbar = require("statusbar.aw-lock")
+local dunstbar = require("statusbar.aw-dunst")
 
 local music_widget = musbar.create_music_widget()
 
@@ -249,6 +250,8 @@ s.mywibox = awful.wibar {
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+	    separator,
+	    dunstbar,
 	    separator,
 	    sysbar.ram_widget,
 	    sysbar.cpu_widget,
