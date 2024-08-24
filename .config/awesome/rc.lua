@@ -21,6 +21,7 @@ local wibox = require('wibox')
 local volbar = require("statusbar.aw-volume")
 local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music")
+local powerbar = require("statusbar.aw-lock")
 
 local music_widget = musbar.create_music_widget()
 
@@ -260,8 +261,8 @@ s.mywibox = awful.wibar {
             wibox.widget.systray(),
 	    separator,
             mytextclock,
-            s.mylayoutbox,
-
+	    powerbar,
+            -- s.mylayoutbox,
         },
     }
 }
