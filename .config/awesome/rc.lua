@@ -137,15 +137,18 @@ if beautiful.wallpaper then
 end
 -- }}}
 
--- Create a vertical separator widget
+-- -- Create a vertical separator widget
+-- local separator = wibox.widget {
+--     orientation = 'vertical',
+--     forced_width = 2,
+--     color = beautiful.bg_focus,  -- Change color as needed
+--     widget = wibox.widget.separator,
+-- }
+
 local separator = wibox.widget {
-    orientation = 'vertical',
-    forced_width = 2,
-    color = beautiful.bg_focus,  -- Change color as needed
-    widget = wibox.widget.separator,
+	widget = wibox.widget.textbox,
+	text = " ",
 }
-
-
 -- {{{ Wibar
 
 
@@ -251,6 +254,7 @@ s.mywibox = awful.wibar {
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
 	    separator,
+	    -- mykeyboardlayout,
 	    dunstbar,
 	    separator,
 	    sysbar.ram_widget,

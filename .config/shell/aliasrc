@@ -51,8 +51,9 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
-	ip="ip -color=auto"
-
+	ip="ip -color=auto" \
+	cheat='cheat -ca' \
+	pcheat='cheat -p personal'
 # These common commands are just too long! Abbreviate them.
 alias \
 	ka="killall" \
