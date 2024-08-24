@@ -23,6 +23,7 @@ local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music")
 local powerbar = require("statusbar.aw-lock")
 local dunstbar = require("statusbar.aw-dunst")
+local updatebar = require("statusbar.aw-update")
 
 local music_widget = musbar.create_music_widget()
 
@@ -256,6 +257,8 @@ s.mywibox = awful.wibar {
 	    separator,
 	    -- mykeyboardlayout,
 	    dunstbar,
+	    separator,
+	    updatebar,
 	    separator,
 	    sysbar.ram_widget,
 	    sysbar.cpu_widget,
