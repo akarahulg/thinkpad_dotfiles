@@ -42,7 +42,7 @@ local function create_music_widget()
                 awful.spawn("playerctl -a pause")
             else
                 -- Play all players if any player is paused
-                awful.spawn("playerctl -a play")
+                awful.spawn("playerctl play")
             end
         end)
     end
