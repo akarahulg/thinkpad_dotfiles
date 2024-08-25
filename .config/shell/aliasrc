@@ -58,7 +58,7 @@ alias \
 alias \
 	ka="killall" \
 	g="git" \
-	gl='git log --graph --pretty=format:"%C(auto)%h%C(reset) %ad %C(auto)%d%C(reset) %s" --date=format:"%b %d, %Y"' \
+	gl='git log --graph --pretty=format:"%C(auto)%h%C(reset) %ad %C(auto)%d%C(reset) %s" --date=format:"%H:%M:%S %b %d, %Y"'\
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
 	sdn="shutdown -h now" \
@@ -68,7 +68,11 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	z="zathura" \
+	resetcaps='setxkbmap -option' \
+	caps='setxkbmap -option caps:swapescape'
+
+
 
 
 

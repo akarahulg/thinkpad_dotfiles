@@ -51,7 +51,7 @@ local function create_music_widget()
 
     -- Create buttons with emojis for media control
     local prev_button = wibox.widget {
-        text = "  ",  -- Previous track emoji
+        text = " ",  -- Previous track emoji
         widget = wibox.widget.textbox,
         align = "center",
         valign = "center",
