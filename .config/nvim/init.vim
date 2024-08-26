@@ -30,11 +30,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'preservim/nerdcommenter'
 Plug 'jamessan/vim-gnupg'
+Plug 'projekt0n/github-nvim-theme'
 
 call plug#end()
 
 
-set background=dark
 
 set title
 set bg=light
@@ -46,7 +46,9 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
-colorscheme jellybeans
+colorscheme github_dark_default
+set background=dark
+
 
 " Some basics:
 	nnoremap c "_c

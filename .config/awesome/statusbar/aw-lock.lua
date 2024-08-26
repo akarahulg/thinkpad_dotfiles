@@ -4,27 +4,31 @@ local awful = require("awful")
 local gears = require("gears")
 local beautiful = require("beautiful")
 
-
 -- Font Awesome icon
-local lock_icon = " "   -- Font Awesome lock icon
+local lock_icon = "  "   -- Font Awesome lock icon
 
 -- Create a widget with Font Awesome icon
 local power_widget = wibox.widget {
     {
-        text = lock_icon,
-        font = "Hack 12",  -- Adjust the size as needed
-        widget = wibox.widget.textbox,
+        {
+            text = lock_icon,
+            font = "Hack 12",  -- Adjust the size as needed
+            widget = wibox.widget.textbox,
+        },
+        widget = wibox.container.margin,  -- Add margin if necessary
+        margins = 5,
     },
-    layout = wibox.layout.fixed.horizontal,
+    widget = wibox.container.background,  -- Wrap in background container
+    bg = "#900C3F",  -- Set red background color
 }
 
 -- Define the dropdown menu items with custom icons and labels
 local menu_items = {
-    { " Lock", function() awful.spawn.with_shell('locknow') end },
-    { " Suspend", function() awful.spawn.with_shell("systemctl suspend") end },
-    { " Reboot", function() awful.spawn.with_shell("systemctl reboot") end },
-    { " Poweroff", function() awful.spawn.with_shell("systemctl poweroff") end },
-    { " Logout", function() awesome.quit() end },  -- Logout from AwesomeWM
+    { "  Lock", function() awful.spawn.with_shell('locknow') end },
+    { "  Suspend", function() awful.spawn.with_shell("systemctl suspend") end },
+    { "  Reboot", function() awful.spawn.with_shell("systemctl reboot") end },
+    { "  Poweroff", function() awful.spawn.with_shell("systemctl poweroff") end },
+    { "  Logout", function() awesome.quit() end },  -- Logout from AwesomeWM
 }
 
 -- Create the dropdown menu with simplified styling

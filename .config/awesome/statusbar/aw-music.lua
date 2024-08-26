@@ -23,6 +23,13 @@ local function create_music_widget()
         speed = 0  -- Initial speed set to 0
     }
 
+    -- Add a background color to the scrolling text
+    local scrolling_text_with_bg = wibox.widget {
+        scrolling_text,
+        widget = wibox.container.background,
+        bg = "#192675",  -- Set your desired background color here
+    }
+
     -- Create emojis for play/pause control
     local play_pause_emoji = wibox.widget {
         text = "  ",  -- Play emoji
@@ -74,7 +81,6 @@ local function create_music_widget()
 
     -- Function to update the widget
     local function update_widget()
-	    -- "music" is my custom player status checking script
         awful.spawn.easy_async_with_shell("music", function(full_text)
             full_text = full_text:gsub("%s+$", "")  -- Trim trailing whitespace
 
@@ -119,7 +125,7 @@ local function create_music_widget()
         prev_button,
         play_pause_emoji,
         next_button,
-        scrolling_text,
+        scrolling_text_with_bg,  -- Use the widget with background color
     }
 
     return control_bar
