@@ -34,6 +34,7 @@ local function create_music_widget()
     local tooltip = awful.tooltip({
         objects = {scrolling_text_with_bg},
         text = "Left Click: Play/Pause\nRight Click: Next Track\nMiddle Click: Previous Track",
+	delay_show = 1,
     })
 
     -- Function to update the widget
