@@ -41,7 +41,7 @@ local function create_music_widget()
 
     local function toggle_play_pause()
         -- Check the status of the first active player
-        awful.spawn.easy_async_with_shell("playerctl status | head -n 1", function(status)
+        awful.spawn.easy_async_without_shell("playerctl status | head -n 1", function(status)
             status = status:gsub("%s+$", "")  -- Trim trailing whitespace
 
             if status == "Playing" then
@@ -81,7 +81,7 @@ local function create_music_widget()
 
     -- Function to update the widget
     local function update_widget()
-        awful.spawn.easy_async_with_shell("music", function(full_text)
+        awful.spawn.easy_async_without_shell("music", function(full_text)
             full_text = full_text:gsub("%s+$", "")  -- Trim trailing whitespace
 
             -- Extract player name and title
@@ -93,7 +93,7 @@ local function create_music_widget()
                     scrolling_text.speed = 0  -- Stop scrolling when no music is playing
                 else
                     music_title.text = (title .. " "):rep(10)  -- Repeat title to ensure scrolling
-                    awful.spawn.easy_async_with_shell("playerctl -p " .. player_name .. " status | head -n 1", function(status)
+                    awful.spawn.easy_async_without_shell("playerctl -p " .. player_name .. " status | head -n 1", function(status)
                         status = status:gsub("%s+$", "")  -- Trim trailing whitespace
                         if status == "Playing" then
                             scrolling_text.speed = 40  -- Scroll only when playing
