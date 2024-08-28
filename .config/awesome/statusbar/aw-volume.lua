@@ -20,6 +20,14 @@ local function get_volume_output(callback)
     end)
 end
 
+local tooltip = awful.tooltip({
+        objects = {my_volume_widget},
+        text = "Left Click: Mute/Unmute\nRight Click: Open pavucontrol\nMiddle Click: Switch between speaker and headphones\nScroll Up: Increase Volume\nScroll Down: Decrease Volume",
+        delay_show = 1,
+    })
+
+
+
 -- Function to update the widget text
 local function update_widget()
     get_volume_output(function(output)

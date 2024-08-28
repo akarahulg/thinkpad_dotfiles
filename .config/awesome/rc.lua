@@ -20,7 +20,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local wibox = require('wibox')
 local volbar = require("statusbar.aw-volume")
 local sysbar = require("statusbar.aw-system")
-local musbar = require("statusbar.aw-music")
+local musbar = require("statusbar.aw-music-compact")
 local powerbar = require("statusbar.aw-lock")
 local dunstbar = require("statusbar.aw-dunst")
 local updatebar = require("statusbar.aw-update")
@@ -160,7 +160,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Required libraries
 
 -- Create the textclock widget
-local mytextclock = wibox.widget.textclock("%a %b(%m) %d, %H:%M:%S ", 1)
+local mytextclock = wibox.widget.textclock("%a %b(%m) [%d] %H:%M:%S ", 1)
 mytextclock.font = "Hack 10"
 
 -- Create the calendar popup

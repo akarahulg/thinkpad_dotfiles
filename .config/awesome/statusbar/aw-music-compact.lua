@@ -33,8 +33,8 @@ local function create_music_widget()
     -- Tooltip to show instructions
     local tooltip = awful.tooltip({
         objects = {scrolling_text_with_bg},
-        text = "Left Click: Play/Pause\nRight Click: Next Track\nMiddle Click: Previous Track",
-	delay_show = 1,
+        text = "Left Click: Play/Pause\nRight Click: Next Track\nMiddle Click: Previous Track\nScroll Up: Increase Volume\nScroll Down: Decrease Volume",
+        delay_show = 2,
     })
 
     -- Function to update the widget
@@ -86,7 +86,7 @@ local function create_music_widget()
         end)
     end
 
-    -- Handle clicks on scrolling text
+    -- Handle clicks and scrolls on scrolling text
     scrolling_text_with_bg:connect_signal("button::press", function(_, _, _, button)
         if button == 1 then  -- Left click
             toggle_play_pause()
@@ -94,6 +94,10 @@ local function create_music_widget()
             awful.spawn("playerctl next")  -- Next track
         elseif button == 2 then  -- Middle click
             awful.spawn("playerctl previous")  -- Previous track
+        elseif button == 4 then  -- Scroll up
+            awful.spawn("playerctl volume 0.05+")
+        elseif button == 5 then  -- Scroll down
+            awful.spawn("playerctl volume 0.05-")
         end
     end)
 
