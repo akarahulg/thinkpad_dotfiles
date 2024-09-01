@@ -3,14 +3,14 @@ local wibox = require("wibox")
 local awful = require("awful")
 
 -- Define the font
-local widget_font = "Hack 10"
+-- local widget_font = "Hack 10"
 
 -- Define the volume command
 local volume_command = "volume"
 
 -- Create the volume widget
 local my_volume_widget = wibox.widget.textbox()
-my_volume_widget:set_font(widget_font)
+-- my_volume_widget:set_font(widget_font)
 
 -- Function to call the volume script and get its output asynchronously
 local function get_volume_output(callback)

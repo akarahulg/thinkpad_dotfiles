@@ -11,7 +11,7 @@ local function create_music_widget()
         text = "   ",  -- Initial text when no music is playing
         align = "center",
         valign = "center",
-        font = "Hack 10"
+        -- font = "Hack 10"
     }
 
     -- Create a container that scrolls the text horizontally

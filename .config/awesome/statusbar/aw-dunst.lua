@@ -13,7 +13,7 @@ local dunst_widget = wibox.widget {
     text   = "Dunst", -- Initial text for the widget
     align  = 'center',
     valign = 'center',
-    font = "Hack 12",
+    -- font = "Hack 12",
     widget = wibox.widget.textbox,
 }
 

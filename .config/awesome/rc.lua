@@ -11,6 +11,7 @@ require("awful.autofocus")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
+beautiful.font = "Hack 10"
 -- Notification library
 local naughty = require("naughty")
 -- Declarative object management
@@ -24,8 +25,12 @@ local musbar = require("statusbar.aw-music-compact")
 local powerbar = require("statusbar.aw-lock")
 local dunstbar = require("statusbar.aw-dunst")
 local updatebar = require("statusbar.aw-update")
+local calendar_widget = require("statusbar.aw-calendar")
 
 local music_widget = musbar.create_music_widget()
+
+
+
 
 
 -- Enable hotkeys help widget for VIM and other apps
@@ -160,26 +165,43 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Required libraries
 
 -- Create the textclock widget
-local mytextclock = wibox.widget.textclock("%a %b(%m) [%d] %H:%M:%S ", 1)
-mytextclock.font = "Hack 10"
+-- local mytextclock = wibox.widget.textclock("%a %b(%m) [%d] %H:%M:%S ", 1)
+-- mytextclock.font = "Hack 10"
+--
+-- -- Create the calendar popup
+-- local month_calendar = awful.widget.calendar_popup.month()
+-- month_calendar:attach(mytextclock, "tr")  -- Attach the calendar to the textclock (top-right position)
+-- month_calendar.visible = false  -- Ensure the calendar is initially hidden
+--
+-- -- Toggle calendar visibility on left-click
+-- mytextclock:buttons(awful.util.table.join(
+--     awful.button({}, 1, function()
+--         if month_calendar.visible then
+--             month_calendar.visible = false
+--         else
+--             month_calendar.visible = true
+--         end
+--     end)
+-- ))
 
--- Create the calendar popup
-local month_calendar = awful.widget.calendar_popup.month()
-month_calendar:attach(mytextclock, "tr")  -- Attach the calendar to the textclock (top-right position)
-month_calendar.visible = false  -- Ensure the calendar is initially hidden
+mytextclock = wibox.widget.textclock("%a %b %d, %H:%M:%S ", 1)
 
--- Toggle calendar visibility on left-click
-mytextclock:buttons(awful.util.table.join(
-    awful.button({}, 1, function()
-        if month_calendar.visible then
-            month_calendar.visible = false
-        else
-            month_calendar.visible = true
-        end
+-- default
+local cw = calendar_widget()
+-- or customized
+local cw = calendar_widget({
+    theme = 'outrun',
+    placement = 'top_right',
+    start_sunday = true,
+    radius = 8,
+-- with customized next/previous (see table above)
+    previous_month_button = 1,
+    next_month_button = 3,
+})
+mytextclock:connect_signal("button::press",
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
     end)
-))
-
-
 
 
 --------------------------------

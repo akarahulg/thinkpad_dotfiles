@@ -12,7 +12,7 @@ local power_widget = wibox.widget {
     {
         {
             text = lock_icon,
-            font = "Hack 12",  -- Adjust the size as needed
+            -- font = "Hack 12",  -- Adjust the size as needed
             widget = wibox.widget.textbox,
         },
         widget = wibox.container.margin,  -- Add margin if necessary
@@ -36,7 +36,7 @@ local dropdown_menu = awful.menu({
     items = menu_items,
     theme = {
         width = 150,
-        font = "Hack 12",  -- Font and size for menu items
+        -- font = "Hack 12",  -- Font and size for menu items
         height = 20,  -- Height of menu items
         bg_normal = "#282A36",  -- Background color for menu items
         fg_normal = "#FFFFFF",  -- Text color for normal items

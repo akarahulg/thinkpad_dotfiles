@@ -8,7 +8,7 @@ local pacman_widget = wibox.widget {
     text   = " ", -- Initial text for the widget
     align  = 'center',
     valign = 'center',
-    font = "Hack 10",
+    -- font = "Hack 10",
     widget = wibox.widget.textbox
 }
 
