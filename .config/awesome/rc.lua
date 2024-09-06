@@ -26,10 +26,7 @@ local powerbar = require("statusbar.aw-lock")
 local dunstbar = require("statusbar.aw-dunst")
 local updatebar = require("statusbar.aw-update")
 local calendar_widget = require("statusbar.aw-calendar")
-
 local music_widget = musbar.create_music_widget()
-
-
 
 
 
@@ -204,6 +201,11 @@ mytextclock:connect_signal("button::press",
     end)
 
 
+
+-- Systray customization
+
+local systray = wibox.widget.systray()
+systray:set_base_size(20)
 --------------------------------
 
 screen.connect_signal("request::desktop_decoration", function(s)
@@ -261,6 +263,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
         }
     }
 
+
+
+
     -- Create the wibox
 s.mywibox = awful.wibar {
     position = "top",
@@ -291,6 +296,7 @@ s.mywibox = awful.wibar {
 	    volbar,
 	    separator,
             wibox.widget.systray(),
+	    -- systray(),
 	    separator,
             mytextclock,
 	    powerbar,
