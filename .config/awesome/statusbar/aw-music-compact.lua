@@ -8,7 +8,7 @@ local function create_music_widget()
     -- Widget to display the music title
     local music_title = wibox.widget {
         widget = wibox.widget.textbox,
-        text = "   ",  -- Initial text when no music is playing
+        text = " No music ",  -- Initial text when no music is playing
         align = "center",
         valign = "center",
         -- font = "Hack 10"
@@ -47,7 +47,7 @@ local function create_music_widget()
 
             if player_name and title then
                 if title == "" then
-                    music_title.text = "   "  -- No music playing emoji
+                    music_title.text = " No music "  -- No music playing emoji
                     scrolling_text.speed = 0  -- Stop scrolling when no music is playing
                 else
                     music_title.text = (title .. " "):rep(10)  -- Repeat title to ensure scrolling
@@ -61,7 +61,7 @@ local function create_music_widget()
                     end)
                 end
             else
-                music_title.text = "   "  -- No music playing emoji
+                music_title.text = " No music "  -- No music playing emoji
                 scrolling_text.speed = 0  -- Stop scrolling when no music is playing
             end
         end)
