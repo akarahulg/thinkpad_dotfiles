@@ -111,7 +111,7 @@
  dex, Program to generate and execute DesktopEntry files of type Application
  dialog, A tool to display dialog boxes from shell scripts
  diffutils, Utility programs used for creating patch files
- ding-libs, "DING is not GNU" helper libraries for SSSD and FreeIPA
+ ding-libs, DING is not GNU helper libraries for SSSD and FreeIPA
  djvulibre, Library and utilities to create manipulate and view DjVu (déjà vu) documents
  docbook-xml, A widely used XML scheme for writing documentation and help
  docbook-xsl, XML stylesheets for Docbook-xml transformations
@@ -397,7 +397,7 @@
  libbpf, Library for loading eBPF programs and reading and manipulating eBPF objects from user-space
  libbs2b, Bauer stereophonic-to-binaural DSP effect library
  libbsd, Provides useful functions commonly found on BSD systems like strlcpy()
- libbytesize, A tiny library providing a C "class" for working with arbitrary big sizes in bytes
+ libbytesize, A tiny library providing a C class for working with arbitrary big sizes in bytes
  libcamera, A complex camera support library for Linux Android and ChromeOS
  libcamera-ipa, A complex camera support library for Linux Android and ChromeOS - signed IPA
  libcanberra, A small and lightweight implementation of the XDG Sound Theme Specification
@@ -827,7 +827,7 @@
  pwgen, Password generator for creating easily memorable passwords
  python, The Python programming language
  python-anyio, High level compatibility layer for multiple asynchronous event loop implementations
- python-appdirs, A small Python module for determining appropriate platform-specific dirs e.g. a "user data dir".
+ python-appdirs, A small Python module for determining appropriate platform-specific dirs e.g. a user data dir.
  python-argcomplete, Easy extensible command line tab completion of arguments for your Python script
  python-argon2-cffi, Secure password hashing algorithm for Python
  python-argon2-cffi-bindings, Low-level CFFI bindings for Argon2
@@ -959,7 +959,7 @@
  python-sphinxcontrib-jquery, Extension to include jQuery on newer Sphinx releases
  python-sphinxcontrib-jsmath, Sphinx extension which renders display math in HTML via JavaScript
  python-sphinxcontrib-qthelp, Sphinx extension which outputs QtHelp document
- python-sphinxcontrib-serializinghtml, Sphinx extension which outputs "serialized" HTML files (json and pickle)
+ python-sphinxcontrib-serializinghtml, Sphinx extension which outputs serialized HTML files (json and pickle)
  python-stack-data, Extract data from python stack frames and tracebacks for informative displays
  python-tinycss2, Low-level CSS parser for Python
  python-tomli, A lil' TOML parser
@@ -1046,7 +1046,7 @@
  ruby-rbs, RBS is the language for type signatures for Ruby and standard library definitions
  ruby-rdoc, Command-line documentation generator for Ruby projects
  ruby-rexml, An XML toolkit for Ruby
- ruby-rss, Family of libraries that support various formats of XML "feeds"
+ ruby-rss, Family of libraries that support various formats of XML feeds
  ruby-stdlib, Full Ruby StdLib including default gems bundled gems and tools
  ruby-test-unit, An xUnit family unit testing framework for Ruby
  ruby-typeprof, An experimental type-level Ruby interpreter for testing and understanding Ruby code
