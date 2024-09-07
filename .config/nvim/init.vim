@@ -46,7 +46,7 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
-colorscheme github_dark_default
+colorscheme jellybeans
 set background=dark
 
 
