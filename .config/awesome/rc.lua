@@ -27,6 +27,7 @@ dgreen = "#263A09"
 dblue = "#0D0221"
 ashwhite = "#D5DCD9"
 sand = "#DCDBB9"
+lgreen = "#89B6AD"
 
 -- Customize theme settings
 beautiful.font = "Hack Bold 10"
@@ -36,7 +37,7 @@ beautiful.bg_focus = purple
 beautiful.bg_urgent = "#901C0F"
 beautiful.bg_minimize = beautiful.bg_normal
 beautiful.wibar_bg = dblue
-beautiful.wibar_fg = sand
+beautiful.wibar_fg = lgreen
 beautiful.bg_systray = beautiful.wibar_bg
 
 beautiful.fg_normal = "#ebdbb2"
@@ -59,9 +60,6 @@ local dunstbar = require("statusbar.aw-dunst")
 local updatebar = require("statusbar.aw-update")
 local calendar_widget = require("statusbar.aw-calendar")
 local music_widget = musbar.create_music_widget()
-
-volbar.bg = purple
-
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
