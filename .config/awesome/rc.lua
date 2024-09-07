@@ -11,7 +11,6 @@ require("awful.autofocus")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
-beautiful.font = "Hack 10"
 -- Notification library
 local naughty = require("naughty")
 -- Declarative object management
@@ -19,6 +18,39 @@ local ruled = require("ruled")
 -- local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local wibox = require('wibox')
+
+beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+
+purple =  "#6D2557"
+cyan = "#0DC8C6"
+dgreen = "#263A09"
+dblue = "#0D0221"
+ashwhite = "#D5DCD9"
+sand = "#DCDBB9"
+
+-- Customize theme settings
+beautiful.font = "Hack Bold 10"
+
+beautiful.bg_normal = "#202828"
+beautiful.bg_focus = purple
+beautiful.bg_urgent = "#901C0F"
+beautiful.bg_minimize = beautiful.bg_normal
+beautiful.wibar_bg = dblue
+beautiful.wibar_fg = sand
+beautiful.bg_systray = beautiful.wibar_bg
+
+beautiful.fg_normal = "#ebdbb2"
+beautiful.fg_focus = "#fbf1c7"
+beautiful.fg_urgent = "#ffffff"
+beautiful.fg_minimize = "#ffffff"
+
+beautiful.useless_gap = 0
+beautiful.border_width = 5
+beautiful.border_color_normal = "#000000"
+beautiful.border_color_active = purple
+beautiful.border_color_marked = "#91231C"
+
+-- widgets for wibar
 local volbar = require("statusbar.aw-volume")
 local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music-compact")
@@ -28,6 +60,7 @@ local updatebar = require("statusbar.aw-update")
 local calendar_widget = require("statusbar.aw-calendar")
 local music_widget = musbar.create_music_widget()
 
+volbar.bg = purple
 
 
 -- Enable hotkeys help widget for VIM and other apps
@@ -48,7 +81,7 @@ end)
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+
 
 -- This is used later as the default terminal and editor to run.
 terminal = "st"

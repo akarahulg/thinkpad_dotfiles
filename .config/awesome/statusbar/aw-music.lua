@@ -11,7 +11,7 @@ local function create_music_widget()
         text = "   ",  -- Initial text when no music is playing
         align = "center",
         valign = "center",
-        font = "Hack 10"
+        -- font = "Hack 10"
     }
 
     -- Create a container that scrolls the text horizontally
@@ -36,7 +36,7 @@ local function create_music_widget()
         widget = wibox.widget.textbox,
         align = "center",
         valign = "center",
-        font = "Hack 10"
+        -- font = "Hack 10"
     }
 
     local function toggle_play_pause()
@@ -62,7 +62,7 @@ local function create_music_widget()
         widget = wibox.widget.textbox,
         align = "center",
         valign = "center",
-        font = "Hack 10"
+        -- font = "Hack 10"
     }
     prev_button:connect_signal("button::press", function()
         awful.spawn("playerctl previous")
@@ -73,7 +73,7 @@ local function create_music_widget()
         widget = wibox.widget.textbox,
         align = "center",
         valign = "center",
-        font = "Hack 10"
+        -- font = "Hack 10"
     }
     next_button:connect_signal("button::press", function()
         awful.spawn("playerctl next")
