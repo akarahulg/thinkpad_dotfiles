@@ -617,7 +617,7 @@ ruled.client.connect_signal("request::rules", function()
             raise     = true,
             screen    = awful.screen.preferred,
             placement = awful.placement.no_overlap+awful.placement.no_offscreen,
-	    fullscreen = false,
+	    maximized = false,
         }
     }
 
@@ -641,7 +641,7 @@ ruled.client.connect_signal("request::rules", function()
                 "pop-up"         -- e.g. Google Chrome's (detached) Developer Tools.
             }
         },
-        properties = { floating = true, fullscreen = false, maximized_vertical = false, maximized_horizontal = false, maximized = false}
+        properties = { floating = true,  maximized = false, sticky = true}
     }
 
     -- Add titlebars to normal clients and dialogs
@@ -651,25 +651,23 @@ ruled.client.connect_signal("request::rules", function()
         properties = { titlebars_enabled = false      }
     }
 
---     ruled.client.append_rule {
--- 	id = "Picture in picture",
---         rule       = { class = "Picture in picture"},
---         properties = { floating = true, fullscreen = false}
---     }
+    ruled.client.append_rule {
+	id = "Picture in picture",
+        rule       = { name = "Picture in picture"},
+        properties = { floating = true, above = true,  maximized = false, sticky = true}
+    }
 
     ruled.client.append_rule {
 	id = "Brave",
-        rule       = { class = "brave-browser"},
-        properties = {tag = "",
-	fullscreen = false}
+        rule       = { name = "Brave"},
+        properties = {tag = ""}
     }
-        -- Specific rule for LibreOffice
-    ruled.client.append_rule {
-        id         = "libreoffice",
-        rule       = { class = "libreoffice" },
-        properties = { fullscreen = false,
-}
-    }
+--         -- Specific rule for LibreOffice
+--     ruled.client.append_rule {
+--         id         = "libreoffice",
+--         rule       = { name = "libreoffice" },
+--         properties = { maximized = false}
+--     }
 end)
 -- }}}
 
