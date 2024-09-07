@@ -1,0 +1,1304 @@
+ a52dec	 Library for decoding ATSC A/52 (AC-3) audio streams
+ aalib	 ASCII art graphic library
+ abseil-cpp	 Collection of C++ library code designed to augment the C++ standard library
+ accounts-qml-module	 Expose the Online Accounts API to QML applications
+ acl	 Access control list utilities, libraries and headers
+ ada	 WHATWG-compliant and fast URL parser written in modern C++
+ adobe-source-code-pro-fonts	 Monospaced font family for user interface and coding environments
+ adwaita-cursors	 GNOME standard cursors
+ adwaita-icon-theme	 GNOME standard icons
+ adwaita-icon-theme-legacy	 GNOME fallback icons for legacy apps
+ alacritty	 A cross-platform, GPU-accelerated terminal emulator
+ alsa-card-profiles	 Low-latency audio/video router and processor - ALSA card profiles
+ alsa-lib	 An alternative implementation of Linux sound support
+ alsa-topology-conf	 ALSA topology configuration files
+ alsa-ucm-conf	 ALSA Use Case Manager configuration (and topologies)
+ alsa-utils	 Advanced Linux Sound Architecture - Utilities
+ alttab	 The task switcher for minimalistic window managers or standalone X11 session
+ android-file-transfer	 Android MTP client with minimalistic UI
+ android-udev	 Udev rules to connect Android devices to your linux box
+ aom	 Alliance for Open Media video codec
+ apache	 A high performance Unix-based HTTP server
+ appstream	 Provides a standard for creating app stores across distributions
+ apr	 The Apache Portable Runtime
+ apr-util	 The Apache Portable Runtime
+ arandr	 Provide a simple visual front end for XRandR 1.2.
+ arc-gtk-theme	 A flat theme with transparent elements for GTK 2,3,4 and Gnome-Shell
+ arch-install-scripts	 Scripts to aid in installing Arch Linux
+ archlinux-keyring	 Arch Linux PGP keyring
+ argon2	 A password-hashing function (reference C implementation)
+ aria2	 Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
+ aribb24	 Library for ARIB STD-B24, decoding JIS 8 bit characters and parsing MPEG-TS stream
+ asciidoc	 Text document format for short documents, articles, books and UNIX man pages
+ asciidoctor	 An implementation of AsciiDoc in Ruby
+ at-spi2-core	 Protocol definitions and daemon for D-Bus at-spi
+ atkmm	 C++ bindings for ATK
+ attica	 Qt library that implements the Open Collaboration Services API
+ attr	 Extended attribute support library for ACL support
+ audiofile	 Silicon Graphics Audio File Library
+ audit	 Userspace components of the audit framework
+ autoconf	 A GNU tool for automatically configuring source code
+ autoconf-archive	 A collection of freely re-usable Autoconf macros
+ automake	 A GNU tool for automatically creating Makefiles
+ avahi	 Service Discovery for Linux using mDNS/DNS-SD (compatible with Bonjour)
+ awesome-git	 Highly configurable framework window manager
+ babl	 Dynamic, any to any, pixel format conversion library
+ baloo	 A framework for searching and managing metadata
+ baloo-widgets	 Widgets for Baloo
+ base	 Minimal package set to define a basic Arch Linux installation
+ base-devel	 Basic tools to build Arch Linux packages
+ bash	 The GNU Bourne Again shell
+ bat	 Cat clone with syntax highlighting and git integration
+ bc	 An arbitrary precision calculator language
+ bcprov	 Bouncy Castle Crypto APIs for Java
+ binutils	 A set of programs to assemble and manipulate binary and object files
+ bison	 The GNU general-purpose parser generator
+ blas	 Basic Linear Algebra Subprograms
+ bluez-libs	 Deprecated libraries for the bluetooth protocol stack
+ boost-libs	 Free peer-reviewed portable C++ source libraries (runtime libraries)
+ box2d	 2D rigid body simulation library for games
+ brave-bin	 Web browser that blocks ads and trackers by default (binary release)
+ breeze-icons	 Breeze icon theme
+ bridge-utils	 Utilities for configuring the Linux ethernet bridge
+ brightnessctl	 Lightweight brightness control tool
+ brotli	 Generic-purpose lossless compression algorithm
+ bubblewrap	 Unprivileged sandboxing tool
+ bzip2	 A high-quality data compression program
+ c-ares	 A C library for asynchronous DNS requests
+ ca-certificates	 Common CA certificates - default providers
+ ca-certificates-mozilla	 Mozilla's set of trusted CA certificates
+ ca-certificates-utils	 Common CA certificates (utilities)
+ cairo	 2D graphics library with support for multiple output devices
+ cairomm	 C++ bindings for Cairo
+ cairomm-1.16	 C++ bindings for Cairo
+ cantarell-fonts	 Humanist sans serif font
+ cblas	 C interface to BLAS
+ cdparanoia	 Compact Disc Digital Audio extraction tool
+ cfitsio	 A library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format
+ cheat-bin	 cheat allows you to create and view interactive cheatsheets on the command-line
+ chromaprint	 Library for extracting fingerprints from any audio source
+ chromedriver	 Standalone server that implements the W3C WebDriver standard (for google-chrome)
+ cifs-utils	 CIFS filesystem user-space tools
+ clang	 C language family frontend for LLVM
+ cloog	 Library that generates loops for scanning polyhedra
+ clucene	 C++ port of the high-performance text search engine Lucene
+ cmake	 A cross-platform open-source make system
+ code	 The Open Source build of Visual Studio Code (vscode) editor
+ colord	 System daemon for managing color devices
+ compiler-rt	 Compiler runtime libraries for clang
+ containerd	 An open and reliable container runtime
+ convertlit	 An extractor/converter for .LIT eBooks
+ coreutils	 The basic file, shell and text manipulation utilities of the GNU operating system
+ cppdap	 C++ library for the Debug Adapter Protocol
+ cryptsetup	 Userspace setup tool for transparent encryption of block devices using dm-crypt
+ cups	 OpenPrinting CUPS - daemon package
+ cups-filters	 OpenPrinting CUPS Filters
+ cups-pdf	 PDF printer for cups
+ curl	 command line tool and library for transferring data with URLs
+ dav1d	 AV1 cross-platform decoder focused on speed and correctness
+ db5.3	 The Berkeley DB embedded database system v5.3
+ dbeaver-git	 Free universal SQL Client for developers and database administrators. Community Edition. Git version.
+ dbus	 Freedesktop.org message bus system
+ dbus-broker	 Linux D-Bus Message Broker
+ dbus-broker-units	 Linux D-Bus Message Broker - Service units
+ dbus-glib	 GLib bindings for D-Bus (deprecated)
+ dconf	 Configuration database system
+ debugedit	 Tool to mangle source locations in .debug files
+ default-cursors	 Default cursor set
+ dejagnu	 Framework for testing other programs
+ desktop-file-utils	 Command line utilities for working with desktop entries
+ device-mapper	 Device mapper userspace library and tools
+ dex	 Program to generate and execute DesktopEntry files of type Application
+ dialog	 A tool to display dialog boxes from shell scripts
+ diffutils	 Utility programs used for creating patch files
+ ding-libs	 "DING is not GNU" helper libraries for SSSD and FreeIPA
+ djvulibre	 Library and utilities to create, manipulate and view DjVu (déjà vu) documents
+ docbook-xml	 A widely used XML scheme for writing documentation and help
+ docbook-xsl	 XML stylesheets for Docbook-xml transformations
+ docker	 Pack, ship and run any application as a lightweight container
+ docker-compose	 Fast, isolated development environments using Docker
+ dosfstools	 DOS filesystem utilities
+ double-conversion	 Binary-decimal and decimal-binary routines for IEEE doubles
+ doxygen	 Documentation system for C++, C, Java, IDL and PHP
+ dropbox	 A free service that lets you bring your photos, docs, and videos anywhere and share them easily.
+ ds9-bin	 SAOImage DS9 Astronomical Data Visualization Application
+ duktape	 Embeddable Javascript engine
+ dunst	 Customizable and lightweight notification-daemon
+ dvisvgm	 A fast DVI, EPS, and PDF to SVG converter
+ e2fsprogs	 Ext2/3/4 filesystem utilities
+ ebook-tools	 Tools for accessing and converting various ebook file formats
+ efibootmgr	 Linux user-space application to modify the EFI Boot Manager
+ efivar	 Tools and libraries to work with EFI variables
+ electron28	 Build cross platform desktop apps with web technologies
+ electron29	 Build cross platform desktop apps with web technologies
+ electron30	 Build cross platform desktop apps with web technologies
+ elementary-icon-theme	 Named, vector icons for elementary OS
+ elfutils	 Handle ELF object files and DWARF debugging information (utilities)
+ enchant	 A wrapper library for generic spell checking
+ erfa	 Essential Routines for Fundamental Astronomy
+ evince	 Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)
+ evtest	 Input device event monitor and query tool
+ exiv2	 Exif, Iptc and XMP metadata manipulation library and tools
+ exo	 Application library for the Xfce desktop environment
+ expat	 An XML parser library
+ expect	 A tool for automating interactive applications
+ faad2	 Freeware Advanced Audio (AAC) Decoder
+ fakeroot	 Tool for simulating superuser privileges
+ ffcall	 C library for implementing foreign function calls in embedded interpreters
+ ffmpeg	 Complete solution to record, convert and stream audio and video
+ ffmpeg4.4	 Complete solution to record, convert and stream audio and video
+ ffmpegthumbnailer	 Lightweight video thumbnailer that can be used by file managers
+ ffmpegthumbnailer-mp3	 A very simple integration of ffmpeg to generate thumbnails from mp3(audio/mpeg) files
+ fftw	 A library for computing the discrete Fourier transform (DFT)
+ file	 File type identification utility
+ file-roller	 Create and modify archives
+ filesystem	 Base Arch Linux files
+ findutils	 GNU utilities to locate files
+ firefox	 Fast, Private & Safe Web Browser
+ flac	 Free Lossless Audio Codec
+ flex	 A tool for generating text-scanning programs
+ fluidsynth	 A real-time software synthesizer based on the SoundFont 2 specifications
+ fmt	 Open-source formatting library for C++
+ fontconfig	 Library for configuring and customizing font access
+ freeglut	 Free OpenGL Utility Toolkit
+ freetype2	 Font rasterization library
+ frei0r-plugins	 Collection of video effect plugins
+ fribidi	 A Free Implementation of the Unicode Bidirectional Algorithm
+ fuse-common	 Common files for fuse2/3 packages
+ fuse2	 Interface for userspace programs to export a filesystem to the Linux kernel
+ fuse3	 Interface for userspace programs to export a filesystem to the Linux kernel
+ fzf	 Command-line fuzzy finder
+ garcon	 Freedesktop.org compliant menu library
+ gawk	 GNU version of awk
+ gc	 A garbage collector for C and C++
+ gcc	 The GNU Compiler Collection - C and C++ frontends
+ gcc-fortran	 Fortran front-end for GCC
+ gcc-libs	 Runtime libraries shipped by GCC
+ gcc13	 The GNU Compiler Collection - C and C++ frontends (13.x.x)
+ gcc13-fortran	 Fortran front-end for GCC (13.x.x)
+ gcc13-libs	 Runtime libraries shipped by GCC (13.x.x)
+ gcc48	 The GNU Compiler Collection - C and C++ frontends (4.8.x)
+ gcc48-debug	 Detached debugging symbols for gcc48
+ gcr-4	 A library for bits of crypto UI and parsing
+ gd	 Library for the dynamic creation of images by programmers
+ gdbm	 GNU database library
+ gdk-pixbuf2	 An image loading library
+ geany	 Fast and lightweight IDE
+ gegl	 Graph based image processing framework
+ gendesk	 Utility for generating desktop files by specifying a minimum of information
+ geoclue	 Modular geoinformation service built on the D-Bus messaging system
+ gettext	 GNU internationalization library
+ ghostscript	 An interpreter for the PostScript language
+ giflib	 Library for reading and writing gif images
+ gimp	 GNU Image Manipulation Program
+ girara	 User interface library focused on simplicity and minimalism
+ git	 the fast distributed version control system
+ glew	 The OpenGL Extension Wrangler Library
+ glib-networking	 Network extensions for GLib
+ glib2	 Low level core library
+ glib2-devel	 Low level core library - development files
+ glibc	 GNU C Library
+ glibmm	 C++ bindings for GLib
+ glibmm-2.68	 C++ bindings for GLib
+ glslang	 OpenGL and OpenGL ES shader front end and validator
+ glu	 Mesa OpenGL utility library
+ gmp	 A free library for arbitrary precision arithmetic
+ gnome-desktop	 Provides API shared by several apps on the GNOME desktop using GTK 3
+ gnome-desktop-common	 Provides API shared by several apps on the GNOME desktop (common files)
+ gnome-themes-extra	 Extra Themes for GNOME Applications
+ gnupg	 Complete and free implementation of the OpenPGP standard
+ gnutls	 A library which provides a secure layer over a reliable transport layer
+ gobject-introspection	 Introspection system for GObject-based libraries
+ gobject-introspection-runtime	 Introspection system for GObject-based libraries - runtime
+ google-chrome	 The popular web browser by Google (Stable Channel)
+ gperftools	 Fast, multi-threaded malloc and nifty performance analysis tools
+ gpgme	 A C wrapper library for GnuPG
+ gpick	 Advanced color picker written in C++ using GTK+ toolkit
+ gpm	 A mouse server for the console and xterm
+ graphene	 A thin layer of graphic data types
+ graphicsmagick	 Image processing system
+ graphite	 reimplementation of the SIL Graphite text processing engine
+ graphviz	 Graph visualization software
+ grep	 A string search utility
+ groff	 GNU troff text-formatting system
+ grub	 GNU GRand Unified Bootloader (2)
+ gsettings-desktop-schemas	 GSettings schemas for GNOME desktop components
+ gsettings-system-schemas	 GSettings schemas for GNOME system components
+ gsfonts	 (URW)++ base 35 font set
+ gsl	 The GNU Scientific Library (GSL) is a modern numerical library for C and C++ programmers
+ gsm	 Shared libraries for GSM 06.10 lossy speech compression
+ gspell	 Spell-checking library for GTK applications
+ gssdp	 GObject-based API for handling resource discovery and announcement over SSDP
+ gssproxy	 GSSAPI Proxy
+ gst-plugin-pipewire	 Multimedia graph framework - pipewire plugin
+ gst-plugins-bad-libs	 Multimedia graph framework - bad
+ gst-plugins-base	 Multimedia graph framework - base plugins
+ gst-plugins-base-libs	 Multimedia graph framework - base
+ gstreamer	 Multimedia graph framework - core
+ gtest	 Google Test - C++ testing utility
+ gtk-layer-shell	 Library to create Wayland desktop components using the Layer Shell protocol
+ gtk-update-icon-cache	 GTK icon cache updater
+ gtk2	 GObject-based multi-platform GUI toolkit (legacy)
+ gtk3	 GObject-based multi-platform GUI toolkit
+ gtk4	 GObject-based multi-platform GUI toolkit
+ gtkglext	 An OpenGL extension to GTK2.
+ gtkmm	 C++ bindings for GTK+ 2
+ gtkmm-4.0	 C++ bindings for GTK 4
+ gtkmm3	 C++ bindings for GTK+ 3
+ gtksourceview4	 A text widget adding syntax highlighting and more to GNOME
+ gts	 Provides useful functions to deal with 3D surfaces meshed with interconnected triangles
+ guile	 Portable, embeddable Scheme implementation written in C
+ gumbo-parser	 HTML5 parsing library in pure C99
+ gupnp	 GObject-based UPNP framework
+ gupnp-igd	 A library to handle UPnP IGD port mapping
+ gvfs	 Virtual filesystem implementation for GIO
+ gvfs-mtp	 Virtual filesystem implementation for GIO - MTP backend (Android, media player)
+ gzip	 GNU compression utility
+ harfbuzz	 OpenType text shaping engine
+ harfbuzz-icu	 OpenType text shaping engine - ICU integration
+ hicolor-icon-theme	 Freedesktop.org Hicolor icon theme
+ hidapi	 Simple library for communicating with USB and Bluetooth HID devices
+ highway	 A C++ library that provides portable SIMD/vector intrinsics
+ htop	 Interactive process viewer
+ http-parser	 Parser for HTTP Request/Response written in C
+ hunspell	 Spell checker and morphological analyzer library and program
+ hwdata	 hardware identification databases
+ hyphen	 library for high quality hyphenation and justification
+ i3-wm	 Improved dynamic tiling window manager
+ i3blocks	 Define blocks for your i3bar status line
+ i3lock-color-git	 The world's most popular non-default computer lockscreen.
+ iana-etc	 /etc/protocols and /etc/services provided by IANA
+ icu	 International Components for Unicode library
+ ijs	 a library which implements a protocol for transmission of raster page images
+ imagemagick	 An image viewing/manipulation program
+ imath	 A C++ and python library of 2D and 3D vector, matrix, and math operations for computer graphics
+ imlib2	 Library that does image file loading and saving as well as rendering, manipulation, arbitrary polygon support
+ inetutils	 A collection of common network programs
+ inkscape	 Professional vector graphics editor
+ iproute2	 IP Routing Utilities
+ iptables	 Linux kernel packet control tool (using legacy interface)
+ iputils	 Network monitoring tools, including ping
+ ipython	 Enhanced Interactive Python shell
+ iso-codes	 Lists of the country, language, and currency names
+ jack2	 The JACK low-latency audio server
+ jansson	 C library for encoding, decoding and manipulating JSON data
+ jasper	 Software-based implementation of the codec specified in the emerging JPEG-2000 Part-1 standard
+ java-commons-lang	 A host of helper utilities for the java.lang API
+ java-environment-common	 Common files for Java Development Kits
+ java-runtime-common	 Common files for Java Runtime Environments
+ jbig2dec	 Decoder implementation of the JBIG2 image compression format
+ jbigkit	 Data compression library/utilities for bi-level high-resolution images
+ jdk-openjdk	 OpenJDK Java 22 development kit
+ jdk8-openjdk	 OpenJDK Java 8 development kit
+ jhelioviewer-debug	 Detached debugging symbols for jhelioviewer
+ jmtpfs	 FUSE and libmtp based filesystem for accessing MTP (Media Transfer Protocol) devices
+ jre8-openjdk	 OpenJDK Java 8 full runtime environment
+ jre8-openjdk-headless	 OpenJDK Java 8 headless runtime environment
+ json-c	 A JSON implementation in C
+ json-glib	 JSON library built on GLib
+ jsoncpp	 C++ library for interacting with JSON
+ jupyter-nbclient	 A tool for running Jupyter Notebooks in different execution contexts
+ jupyter-nbconvert	 Jupyter Notebook Conversion
+ jupyter-nbformat	 The base implementation of the Jupyter Notebook format and Python APIs for working with notebooks
+ jupyter-notebook	 The language-agnostic HTML notebook application for Project Jupyter
+ jupyter-notebook-shim	 Provides a way for JupyterLab and other frontends to switch to Jupyter Server for their Python Web application backend
+ jupyter-server	 Provides the backend for Jupyter web applications like Jupyter notebook, JupyterLab, and Voila
+ jupyterlab	 JupyterLab computational environment
+ jupyterlab-pygments	 Pygments theme using JupyterLab CSS variables
+ kaccounts-integration	 Online account management system and its Plasma integration components
+ karchive	 Qt addon providing access to numerous types of archives
+ kauth	 Abstraction to system policy and authentication features
+ kbd	 Keytable files and keyboard utilities
+ kbookmarks	 Support for bookmarks and the XBEL format
+ kcmutils	 Utilities for interacting with KCModules
+ kcodecs	 Provide a collection of methods to manipulate strings using various encodings
+ kcolorscheme	 Classes to read and interact with KColorScheme
+ kcompletion	 Text completion helpers and widgets
+ kconfig	 Configuration system
+ kconfigwidgets	 Widgets for KConfig
+ kcoreaddons	 Addons to QtCore
+ kcrash	 Support for application crash analysis and bug report from apps
+ kdbusaddons	 Addons to QtDBus
+ kdenlive	 A non-linear video editor for Linux using the MLT video framework
+ kdnssd	 Abstraction to system DNSSD features
+ kdsoap-qt6	 Qt-based client-side and server-side SOAP component
+ kdsoap-ws-discovery-client	 WS-Discovery client library based on KDSoap
+ keyutils	 Linux Key Management Utilities
+ kfilemetadata	 A library for extracting file metadata
+ kglobalaccel	 Add support for global workspace shortcuts
+ kguiaddons	 Addons to QtGui
+ ki18n	 Advanced internationalization framework
+ kiconthemes	 Support for icon themes
+ kidletime	 Monitoring user activity
+ kio	 Resource and network access abstraction
+ kio-extras	 Additional components to increase the functionality of KIO
+ kirigami	 A QtQuick based components set
+ kitemmodels	 Models for Qt Model/View system
+ kitemviews	 Widget addons for Qt Model/View
+ kitty	 A modern, hackable, featureful, OpenGL-based terminal emulator
+ kitty-shell-integration	 Shell integration scripts for kitty, an OpenGL-based terminal emulator
+ kitty-terminfo	 Terminfo for kitty, an OpenGL-based terminal emulator
+ kjobwidgets	 Widgets for tracking KJob instances
+ kmod	 Linux kernel module management tools and library
+ knewstuff	 Support for downloading application assets from the network
+ knotifications	 Abstraction for system notifications
+ knotifyconfig	 Configuration system for KNotify
+ kpackage	 Framework that lets applications manage user installable packages of non-binary assets
+ kparts	 Document centric plugin system
+ krb5	 The Kerberos network authentication system
+ kservice	 Advanced plugin and service introspection
+ ktextwidgets	 Advanced text editing widgets
+ kuserfeedback	 Framework for collecting user feedback for applications via telemetry and surveys
+ kwallet	 Secure and unified container for user passwords
+ kwidgetsaddons	 Addons to QtWidgets
+ kwindowsystem	 Access to the windowing system
+ kxmlgui	 User configurable main windows
+ l-smash	 MP4 muxer and other tools
+ lame	 A high quality MPEG Audio Layer III (MP3) encoder
+ languagetool	 An open source language checker
+ lapack	 Linear Algebra PACKage
+ lcms2	 Small-footprint color management engine, version 2
+ ldb	 Schema-less, ldap like, API and database
+ ldoc	 LuaDoc-compatible documentation generation system
+ lensfun	 Database of photographic lenses and a library that allows advanced access to the database
+ leptonica	 Software that is broadly useful for image processing and image analysis applications
+ less	 A terminal based program for viewing text files
+ lf	 A terminal file manager inspired by ranger
+ lib2geom	 Easy to use 2D geometry library in C++
+ lib32-gcc-libs	 32-bit runtime libraries shipped by GCC
+ lib32-glibc	 GNU C Library (32-bit)
+ lib32-ncurses-git	 System V Release 4.0 curses emulation library (32-bit)
+ lib32-ncurses5-compat-libs	 System V Release 4.0 curses emulation library (32-bit), ABI 5
+ libabw	 a library that parses the file format of AbiWord documents
+ libaccounts-glib	 Glib-based client library for accessing the online accounts database
+ libaccounts-qt	 Qt-based client library for accessing the online accounts database
+ libadwaita	 Building blocks for modern adaptive GNOME applications
+ libao	 Cross-platform audio output library and plugins
+ libappindicator-gtk3	 Allow applications to extend a menu via Ayatana indicators in Unity, KDE or Systray (GTK+ 3 library)
+ libarchive	 Multi-format archive and compression library
+ libart-lgpl	 A library for high-performance 2D graphics
+ libass	 A portable library for SSA/ASS subtitles rendering
+ libassuan	 IPC library used by some GnuPG related software
+ libasyncns	 A C library for executing name service queries asynchronously
+ libatasmart	 ATA S.M.A.R.T. reader and parser library
+ libatomic_ops	 Provides semi-portable access to hardware provided atomic memory operations
+ libavc1394	 Library to control A/V devices using the 1394 TA AV/C commands
+ libavif	 Library for encoding and decoding .avif files
+ libb2	 C library providing BLAKE2b, BLAKE2s, BLAKE2bp, BLAKE2sp hash functions
+ libblockdev	 A library for manipulating block devices
+ libblockdev-crypto	 A library for manipulating block devices - crypto support
+ libblockdev-fs	 A library for manipulating block devices - filesystem support
+ libblockdev-loop	 A library for manipulating block devices - loop device support
+ libblockdev-mdraid	 A library for manipulating block devices - MDRAID support
+ libblockdev-nvme	 A library for manipulating block devices - NVME support
+ libblockdev-part	 A library for manipulating block devices - partitioning support
+ libblockdev-swap	 A library for manipulating block devices - swap device support
+ libbluray	 Library to access Blu-Ray disks for video playback
+ libbpf	 Library for loading eBPF programs and reading and manipulating eBPF objects from user-space
+ libbs2b	 Bauer stereophonic-to-binaural DSP effect library
+ libbsd	 Provides useful functions commonly found on BSD systems like strlcpy()
+ libbytesize	 A tiny library providing a C "class" for working with arbitrary big sizes in bytes
+ libcamera	 A complex camera support library for Linux, Android, and ChromeOS
+ libcamera-ipa	 A complex camera support library for Linux, Android, and ChromeOS - signed IPA
+ libcanberra	 A small and lightweight implementation of the XDG Sound Theme Specification
+ libcap	 POSIX 1003.1e capabilities
+ libcap-ng	 A library for Linux that makes using posix capabilities easy
+ libcdio	 GNU Compact Disc Input and Control Library
+ libcdio-paranoia	 Compact Disc Digital Audio (CDDA) extraction tool using libcdio for CDROM access
+ libcdr	 CorelDraw file format importer library for LibreOffice
+ libcloudproviders	 DBus API that allows cloud storage sync clients to expose their services
+ libcmis	 a C/C++ client library for the CMIS protocol
+ libcolord	 System daemon for managing color devices (client library)
+ libconfig	 C/C++ Configuration File Library
+ libcups	 OpenPrinting CUPS - client libraries and headers
+ libcupsfilters	 OpenPrinting CUPS Filters - contains all the code of the filters of the former cups-filters package as library functions
+ libcurl-gnutls	 command line tool and library for transferring data with URLs (no versioned symbols, linked against gnutls)
+ libdaemon	 Lightweight C library that eases the writing of UNIX daemons
+ libdatrie	 Double-array trie library
+ libdbusmenu-glib	 Library for passing menus over DBus
+ libdbusmenu-gtk3	 Library for passing menus over DBus (GTK+ 3 library)
+ libdca	 Library for decoding DTS Coherent Acoustics streams
+ libde265	 Open h.265 video codec implementation
+ libdeflate	 Heavily optimized library for DEFLATE/zlib/gzip compression and decompression
+ libdiscid	 A Library for creating MusicBrainz DiscIDs
+ libdispatch	 Comprehensive support for concurrent code execution on multicore hardware
+ libdovi	 Library to read and write Dolby Vision metadata
+ libdrm	 Userspace interface to kernel DRM services
+ libdvbpsi	 Library designed for decoding and generation of MPEG TS and DVB PSI tables
+ libdvdnav	 Library to navigate DVD video disks
+ libdvdread	 Library for reading DVD video disks
+ libe-book	 Library for import of reflowable e-book formats.
+ libebml	 Extensible Binary Meta Language library
+ libebur128	 A library that implements the EBU R 128 standard for loudness normalisation
+ libedit	 Command line editor library providing generic line editing, history, and tokenization functions
+ libei	 Library for Emulated Input
+ libelf	 Handle ELF object files and DWARF debugging information (libraries)
+ libepoxy	 Library handling OpenGL function pointer management
+ libepubgen	 an EPUB generator for librevenge
+ libertinus-font	 Fonts based on Linux Libertine/Biolinum, with extended math support
+ libetonyek	 Library and a set of tools for reading and converting Apple Keynote presentations
+ libev	 A full-featured and high-performance event loop
+ libevdev	 Wrapper library for evdev devices
+ libevent	 Event notification library
+ libexif	 Library to parse an EXIF file and read the data from those tags
+ libexttextcat	 N-Gram-Based Text Categorization library primarily intended for language guessing
+ libfdk-aac	 Fraunhofer FDK AAC codec library
+ libffi	 Portable foreign function interface library
+ libfm	 Library for file management
+ libfm-extra	 Extra library for file management
+ libfm-gtk2	 GTK+ 2 library for file management
+ libfontenc	 X11 font encoding library
+ libfreeaptx	 Open Source aptX codec library
+ libfreehand	 a library for import of Aldus/Macromedia/Adobe FreeHand documents
+ libgcrypt	 General purpose cryptographic library based on the code from GnuPG
+ libgexiv2	 GObject-based wrapper around the Exiv2 library
+ libgirepository	 Introspection system for GObject-based libraries - runtime library
+ libgit2	 A linkable library for Git
+ libglvnd	 The GL Vendor-Neutral Dispatch library
+ libgme	 Video game music file emulation/playback library
+ libgpg-error	 Support library for libgcrypt
+ libgtop	 Library for collecting system monitoring data
+ libgudev	 GObject bindings for libudev
+ libgusb	 GObject wrapper for libusb1
+ libgxps	 XPS Documents library
+ libhandy	 Library full of GTK+ widgets for mobile phones
+ libheif	 An HEIF and AVIF file format decoder and encoder
+ libice	 X11 Inter-Client Exchange library
+ libid3tag	 ID3 tag manipulation library
+ libidn	 Implementation of the Stringprep, Punycode and IDNA specifications
+ libidn2	 Free software implementation of IDNA2008, Punycode and TR46
+ libiec61883	 A higher level API for streaming DV, MPEG-2 and audio over Linux IEEE 1394
+ libimagequant	 Library for high-quality conversion of RGBA images to 8-bit indexed-color (palette) images
+ libimobiledevice	 Library to communicate with services on iOS devices using native protocols
+ libimobiledevice-glue	 A library with common code used by libraries and tools around the libimobiledevice project
+ libinih	 A simple .INI file parser written in C
+ libinput	 Input device management and event handling library
+ libinstpatch	 Instrument file software library
+ libisl	 Library for manipulating sets and relations of integer points bounded by linear constraints
+ libixion	 A general purpose formula parser & interpreter
+ libjpeg-turbo	 JPEG image codec with accelerated baseline compression and decompression
+ libjxl	 JPEG XL image format reference implementation
+ libkexiv2	 A library to manipulate pictures metadata
+ libksba	 Library for working with X.509 certificates, CMS data and related objects
+ liblangtag	 interface library to access/deal with tags for identifying languages
+ liblc3	 Low Complexity Communication Codec library and tools
+ libldac	 LDAC Bluetooth encoder library
+ libldap	 Lightweight Directory Access Protocol (LDAP) client libraries
+ liblqr	 A seam-carving C/C++ library called Liquid Rescale
+ libluv	 Bare libuv bindings for lua
+ libmad	 A high-quality MPEG audio decoder
+ libmatroska	 Matroska library
+ libmd	 Message Digest functions from BSD systems
+ libmediainfo	 Shared library for MediaInfo
+ libmfx	 Intel Media SDK dispatcher library
+ libmikmod	 Module player library supporting many formats, including MOD, S3M, IT and XM
+ libmm-glib	 ModemManager library
+ libmms	 MMS stream protocol library
+ libmng	 A collection of routines used to create and manipulate MNG format graphics files
+ libmnl	 Minimalistic user-space library oriented to Netlink developers.
+ libmodplug	 A MOD playing library
+ libmpc	 Library for the arithmetic of complex numbers with arbitrarily high precision
+ libmpcdec	 MusePack decoding library
+ libmpdclient	 C library to implement a MPD client
+ libmpeg2	 Library for decoding MPEG-1 and MPEG-2 video streams
+ libmspub	 Microsoft Publisher file format parser library (latest snapshot)
+ libmtp	 Library implementation of the Media Transfer Protocol
+ libmupdf	 Library for Lightweight PDF and XPS viewer
+ libmwaw	 Import library for some old mac text documents.
+ libmypaint	 Library for making brushstrokes which is used by MyPaint and other projects
+ libmysofa	 C library to read HRTFs if they are stored in the AES69-2015 SOFA format
+ libnautilus-extension	 Extension interface for Nautilus
+ libndp	 Library for Neighbor Discovery Protocol
+ libnet	 A library which provides API for commonly used low-level net functions
+ libnetfilter_conntrack	 Library providing an API to the in-kernel connection tracking state table
+ libnewt	 Not Erik's Windowing Toolkit - text mode windowing with slang
+ libnfnetlink	 Low-level library for netfilter related kernel/userspace communication
+ libnfs	 client library for accessing NFS shares
+ libnftnl	 Netfilter library providing interface to the nf_tables subsystem
+ libnghttp2	 Framing layer of HTTP/2 is implemented as a reusable C library
+ libnghttp3	 HTTP/3 library written in C
+ libngtcp2	 Implementation of IETF QUIC protocol
+ libnice	 An implementation of the IETF's draft ICE (for p2p UDP data streams)
+ libnl	 Library for applications dealing with netlink sockets
+ libnm	 NetworkManager client library
+ libnma	 NetworkManager GUI client library (GTK3)
+ libnma-common	 NetworkManager GUI client library (common files)
+ libnotify	 Library for sending desktop notifications
+ libnsl	 Public client interface library for NIS(YP)
+ libnumbertext	 Number to number name and money text conversion library
+ libnvme	 C Library for NVM Express on Linux
+ libodfgen	 Library for generating documents in Open Document Format
+ libogg	 Ogg bitstream and framing library
+ libomxil-bellagio	 An opensource implementation of the OpenMAX Integration Layer API
+ libopenmpt	 A library to render tracker music to a PCM audio stream
+ liborcus	 File import filter library for spreadsheet documents.
+ libp11-kit	 Loads and enumerates PKCS#11 modules (library)
+ libpagemaker	 a library that parses the file format of Aldus/Adobe PageMaker documents
+ libpaper	 Library for handling paper characteristics
+ libpcap	 A system-independent interface for user-level packet capture
+ libpciaccess	 X11 PCI access library
+ libpgm	 Library implementing the Pragmatic General Multicast (PGM, RFC3208) reliable transport protocol (OpenPGM)
+ libpipeline	 a C library for manipulating pipelines of subprocesses in a flexible and convenient way
+ libpipewire	 Low-latency audio/video router and processor - client library
+ libplacebo	 Reusable library for GPU-accelerated video/image rendering primitives
+ libplist	 Library to handle Apple Property List files
+ libpng	 A collection of routines used to create PNG format graphics files
+ libportal	 GIO-style async APIs for most Flatpak portals
+ libportal-gtk4	 GIO-style async APIs for most Flatpak portals - GTK 4 backend
+ libppd	 OpenPrinting - the legacy support library for PPD files
+ libproxy	 Automatic proxy configuration management library
+ libpsl	 Public Suffix List library
+ libpulse	 A featureful, general-purpose sound server (client library)
+ libqxp	 a library that parses the file format of QuarkXPress documents
+ libraqm	 A library that encapsulates the logic for complex text layout
+ libratbag	 A DBus daemon to configure gaming mice
+ libraw	 A library for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, and others)
+ libraw1394	 Provides an API to the Linux IEEE1394 (FireWire) driver
+ libreoffice-fresh	 LibreOffice branch which contains new features and program enhancements
+ librevenge	 library for REVerses ENGineered formats filters
+ librsvg	 SVG rendering library
+ librsync	 Library for calculating and applying network deltas
+ libsamplerate	 An audio sample rate conversion library
+ libsasl	 Cyrus Simple Authentication Service Layer (SASL) library
+ libsass	 C implementation of Sass CSS preprocessor (library)
+ libseccomp	 Enhanced seccomp library
+ libsecret	 Library for storing and retrieving passwords and other secrets
+ libshout	 Library for accessing a shoutcast/icecast server
+ libsidplayfp	 Library to play Commodore 64 music
+ libsigc++	 Callback Framework for C++
+ libsigc++-3.0	 Callback Framework for C++
+ libsigsegv	 Page fault detection library
+ libsixel	 Provides a codec for DEC SIXEL graphics and some converter programs
+ libsm	 X11 Session Management library
+ libsndfile	 A C library for reading and writing files containing sampled audio data
+ libsodium	 A modern, portable, easy to use crypto library
+ libsoup	 HTTP client/server library for GNOME
+ libsoup3	 HTTP client/server library for GNOME
+ libsoxr	 The SoX Resampler library that aims to give fast and high quality results for any constant resampling ratio
+ libspectre	 Small library for rendering Postscript documents
+ libspiro	 Library that simplifies the drawing of beautiful curves
+ libssh	 Library for accessing ssh client services through C libraries
+ libssh2	 A library implementing the SSH2 protocol as defined by Internet Drafts
+ libstaroffice	 filter for old StarOffice documents(.sdc, .sdw, ...) based on librevenge
+ libstemmer	 Stemming library supporting several languages
+ libsynctex	 Library for synchronization between TeX files and resulting file
+ libsysprof-capture	 Kernel based performance profiler - capture library
+ libtar	 C library for manipulating POSIX tar files
+ libtasn1	 The ASN.1 library used in GNUTLS
+ libteam	 Library for controlling team network device
+ libtermkey	 Library for easy processing of keyboard entry from terminal-based programs
+ libthai	 Thai language support library
+ libtheora	 Standard encoder and decoder library for the Theora video compression format
+ libtiff	 Library for manipulation of TIFF images
+ libtirpc	 Transport Independent RPC library (SunRPC replacement)
+ libtommath	 Highly optimized and portable routines for integer based number theoretic applications
+ libtool	 A generic library support script
+ libtorrent-rasterbar	 A C++ BitTorrent library that aims to be a good alternative to all the other implementations around
+ libunibreak	 An implementation of the line breaking algorithm as described in Unicode 5.2.0 Standard Annex 14, Revision 24
+ libunistring	 Library for manipulating Unicode strings and C strings
+ libunwind	 Determine and manipulate the call-chain of a program
+ libupnp	 Portable Open Source UPnP Development Kit
+ liburing	 Linux-native io_uring I/O access library
+ libusb	 Library that provides generic access to USB devices
+ libusbmuxd	 Client library to multiplex connections from and to iOS devices
+ libutempter	 Interface for terminal emulators such as screen and xterm to record user sessions to utmp and wtmp files
+ libutf8proc	 C library for processing UTF-8 encoded Unicode strings
+ libuv	 Multi-platform support library with a focus on asynchronous I/O
+ libva	 Video Acceleration (VA) API for Linux
+ libvdpau	 Nvidia VDPAU library
+ libverto	 Main event loop abstraction library
+ libvisio	 Library providing ability to interpret and import visio diagrams
+ libvorbis	 Reference implementation of the Ogg Vorbis audio format
+ libvpl	 Intel Video Processing Library
+ libvpx	 VP8 and VP9 codec
+ libvterm	 Abstract library implementation of a VT220/xterm/ECMA-48 terminal emulator
+ libwacom	 Library to identify Wacom tablets and their features
+ libwbclient	 winbind client library
+ libwebp	 WebP library and conversion tools
+ libwireplumber	 Session / policy manager implementation for PipeWire - client library
+ libwmf	 A library for reading vector images in Microsoft's native Windows Metafile Format (WMF)
+ libwnck3	 Library to manage X windows and workspaces (via pagers, tasklists, etc.)
+ libwpd	 Library for importing WordPerfect (tm) documents
+ libwpg	 Library for importing and converting Corel WordPerfect(tm) Graphics images.
+ libwps	 a Microsoft Works file word processor format import filter library
+ libx11	 X11 client-side library
+ libxau	 X11 authorisation library
+ libxaw	 X11 Athena Widget library
+ libxcb	 X11 client-side library
+ libxcomposite	 X11 Composite extension library
+ libxcrypt	 Modern library for one-way hashing of passwords
+ libxcursor	 X cursor management library
+ libxcvt	 library providing a standalone version of the X server implementation of the VESA CVT standard timing modelines generator
+ libxdamage	 X11 damaged region extension library
+ libxdg-basedir	 An implementation of the XDG Base Directory specification
+ libxdmcp	 X11 Display Manager Control Protocol library
+ libxext	 X11 miscellaneous extensions library
+ libxfce4ui	 Widgets library for the Xfce desktop environment
+ libxfce4util	 Basic utility non-GUI functions for Xfce
+ libxfixes	 X11 miscellaneous 'fixes' extension library
+ libxfont2	 X11 font rasterisation library
+ libxft	 FreeType-based font drawing library for X
+ libxi	 X11 Input extension library
+ libxinerama	 X11 Xinerama extension library
+ libxkbcommon	 Keymap handling library for toolkits and window systems
+ libxkbcommon-x11	 Keyboard handling library using XKB data for X11 XCB clients
+ libxkbfile	 X11 keyboard file manipulation library
+ libxklavier	 High-level API for X Keyboard Extension (deprecated)
+ libxml2	 XML C parser and toolkit
+ libxmlb	 Library to help create and query binary XML blobs
+ libxmu	 X11 miscellaneous micro-utility library
+ libxpm	 X11 pixmap library
+ libxpresent	 X Present Extension library
+ libxrandr	 X11 RandR extension library
+ libxrender	 X Rendering Extension client library
+ libxres	 X11 Resource extension library
+ libxshmfence	 a library that exposes a event API on top of Linux futexes
+ libxslt	 XML stylesheet transformation library
+ libxss	 X11 Screen Saver extension library
+ libxt	 X11 toolkit intrinsics library
+ libxtst	 library for XTEST & RECORD extensions
+ libxv	 X11 Video extension library
+ libxxf86vm	 X11 XFree86 video mode extension library
+ libyaml	 YAML 1.1 library
+ libyuv	 Library for YUV scaling
+ libzen	 A C++ utility library
+ libzip	 C library for reading, creating, and modifying zip archives
+ libzmf	 a library for import of Zoner drawing and bitmap files
+ licenses	 A set of common license files
+ lilv	 A C library interface to the LV2 plug-in standard
+ linux	 The Linux kernel and modules
+ linux-api-headers	 Kernel headers sanitized for use in userspace
+ linux-firmware	 Firmware files for Linux
+ linux-firmware-whence	 Firmware files for Linux - contains the WHENCE license file which documents the vendor license details
+ llvm-libs	 LLVM runtime libraries
+ lm_sensors	 Collection of user space tools for general SMBus access and hardware monitoring
+ lmdb	 Symas Lightning Memory-Mapped Database
+ lpsolve	 a Mixed Integer Linear Programming (MILP) solver
+ lsb-release	 LSB version query program
+ lsof	 Lists open files for running Unix processes
+ lua	 Powerful lightweight programming language designed for extending applications
+ lua-filesystem	 File System Library for the Lua Programming Language
+ lua-lgi	 Lua bindings for gnome/gobject using gobject-introspection library
+ lua-penlight	 Lua libraries focusing on input data handling for Lua 5.4
+ lua51	 Powerful lightweight programming language designed for extending applications
+ lua51-lpeg	 Pattern-matching library for Lua 5.1
+ lua53	 Powerful lightweight programming language designed for extending applications
+ lua53-lgi	 Lua bindings for gnome/gobject using gobject-introspection library
+ luajit	 Just-in-time compiler and drop-in replacement for Lua 5.1
+ lv2	 Plugin standard for audio systems
+ lxappearance	 Feature-rich GTK+ theme switcher of the LXDE Desktop
+ lxmenu-data	 Freedesktop.org desktop menus for LXDE
+ lynx-current	 A text browser for the World Wide Web (current development version)
+ lz4	 Extremely fast compression algorithm
+ lzo	 Portable lossless data compression library
+ m4	 The GNU macro processor
+ mailcap	 Helper application and MIME type associations for file types
+ maim	 Utility to take a screenshot using imlib2
+ make	 GNU make utility to maintain groups of programs
+ man-db	 A utility for reading man pages
+ mariadb-libs	 MariaDB libraries
+ maven	 Java project management and project comprehension tool
+ mbedtls2	 An open source, portable, easy to use, readable and flexible TLS library
+ mc	 A file manager that emulates Norton Commander
+ md4c	 C Markdown parser
+ mdadm	 A tool for managing/monitoring Linux md device arrays, also known as Software RAID
+ media-player-info	 Data files describing media player capabilities, mostly of mass-storage devices
+ mediainfo	 Supplies technical and tag information about media files (CLI interface)
+ menu-cache	 Caching mechanism for freedesktop.org compliant menus
+ mesa	 Open-source OpenGL drivers
+ meson	 High productivity build system
+ minizip	 Mini zip and unzip based on zlib
+ mkinitcpio	 Modular initramfs image creation utility
+ mkinitcpio-busybox	 Base initramfs tools
+ mlt	 An open source multimedia framework
+ mobile-broadband-provider-info	 APN configuration presets for mobile broadband connections
+ mpc	 Minimalist command line interface to MPD
+ mpd	 Flexible, powerful, server-side application for playing music
+ mpd-mpris-bin	 An implementation of the MPRIS protocol for MPD.
+ mpdecimal	 Package for correctly-rounded arbitrary precision decimal floating point arithmetic
+ mpfr	 Multiple-precision floating-point library
+ mpg123	 Console based real time MPEG Audio Player for Layer 1, 2 and 3
+ mpv	 a free, open source, and cross-platform media player
+ mpv-mpris	 MPRIS plugin for mpv
+ msgpack-c	 An efficient object serialization library
+ mtdev	 A stand-alone library which transforms all variants of kernel MT events to the slotted type B protocol
+ mtpfs	 A FUSE filesystem that supports reading and writing from any MTP device
+ mujs	 An embeddable Javascript interpreter in C
+ mypaint-brushes1	 Brushes used by MyPaint and other software using libmypaint (v1.x)
+ ncmpcpp	 Featureful ncurses based MPD client inspired by ncmpc
+ ncurses	 System V Release 4.0 curses emulation library
+ neon	 HTTP/1.1 and WebDAV client library
+ neovim	 Fork of Vim aiming to improve user experience, plugins, and GUIs
+ net-tools	 Configuration tools for Linux networking
+ netpbm	 A toolkit for manipulation of graphic images
+ nettle	 A low-level cryptographic library
+ network-manager-applet	 Applet for managing network connections
+ networkmanager	 Network connection manager and user applications
+ nfs-utils	 Support programs for Network File Systems
+ nfsidmap	 Library to help mapping IDs, mainly for NFSv4
+ ninja	 Small build system with a focus on speed
+ nitrogen	 Background browser and setter for X windows
+ nm-connection-editor	 NetworkManager GUI connection editor and widgets
+ node-gyp	 Node.js native addon build tool
+ nodejs	 Evented I/O for V8 javascript
+ nodejs-nopt	 Node/npm Option Parsing library
+ noto-fonts	 Google Noto TTF fonts
+ noto-fonts-cjk	 Google Noto CJK fonts
+ noto-fonts-emoji	 Google Noto emoji fonts
+ noto-fonts-extra	 Google Noto TTF fonts - additional variants
+ npm	 JavaScript package manager
+ npth	 The new GNU portable threads library
+ nspr	 Netscape Portable Runtime
+ nss	 Network Security Services
+ nsxiv	 Neo (or New or Not) Simple (or Small or Suckless) X Image Viewer
+ oath-toolkit	 OATH one-time password toolkit
+ ocl-icd	 OpenCL ICD Bindings
+ oniguruma	 a regular expressions library
+ openal	 Cross-platform 3D audio library, software implementation
+ opencore-amr	 Open source implementation of the Adaptive Multi Rate (AMR) speech codec
+ openexr	 A high dynamic-range image file format library
+ openh264	 H.264 encoder and decoder
+ openjpeg2	 An open source JPEG 2000 codec, version 2.5.2
+ openssh	 SSH protocol implementation for remote login, command execution and file transfer
+ openssl	 The Open Source toolkit for Secure Sockets Layer and Transport Layer Security
+ opus	 Totally open, royalty-free, highly versatile audio codec
+ orc	 Optimized Inner Loop Runtime Compiler
+ osl	 OpenScop Library
+ otf-font-awesome	 Iconic font designed for Bootstrap
+ p11-kit	 Loads and enumerates PKCS#11 modules
+ pacman	 A library-based package manager with dependency support
+ pacman-contrib	 Contributed scripts and tools for pacman systems
+ pacman-mirrorlist	 Arch Linux mirror list for use by pacman
+ pam	 PAM (Pluggable Authentication Modules) library
+ pambase	 Base PAM configuration for services
+ pamixer	 Pulseaudio command-line mixer like amixer
+ pango	 A library for layout and rendering of text
+ pangomm	 C++ bindings for Pango
+ pangomm-2.48	 C++ bindings for Pango
+ parted	 A program for creating, destroying, resizing, checking and copying partitions
+ paru	 Feature packed AUR helper
+ paru-debug	 Detached debugging symbols for paru
+ pass	 Stores, retrieves, generates, and synchronizes passwords securely
+ pass-otp	 A pass extension for managing one-time-password (OTP) tokens.
+ patch	 A utility to apply patch files to original sources
+ pavucontrol	 PulseAudio Volume Control
+ pciutils	 PCI bus configuration space access library and tools
+ pcmanfm	 Extremely fast and lightweight file manager
+ pcre	 A deprecated library that implements Perl 5-style regular expressions
+ pcre2	 A library that implements Perl 5-style regular expressions. 2nd version
+ pcsclite	 PC/SC Architecture smartcard middleware library
+ pdftk	 Command-line tool for working with PDFs
+ perl	 A highly capable, feature-rich programming language
+ perl-error	 Perl/CPAN Error module - Error/exception handling in an OO-ish way
+ perl-image-exiftool	 Reader and rewriter of EXIF information that supports raw files
+ perl-mailtools	 Various e-mail related modules
+ perl-timedate	 Date formating subroutines
+ phonon-qt6	 The multimedia framework by KDE
+ phonon-qt6-vlc	 Phonon VLC backend for Qt6
+ php	 A general-purpose scripting language that is especially suited to web development
+ picard	 Official MusicBrainz tagger
+ picom-arian8j2-git	 Arian8j2's picom fork with configurable transitions
+ pinentry	 Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol
+ piper	 GTK application to configure gaming mice
+ pipewire	 Low-latency audio/video router and processor
+ pipewire-audio	 Low-latency audio/video router and processor - Audio support
+ pipewire-pulse	 Low-latency audio/video router and processor - PulseAudio replacement
+ pixman	 The pixel-manipulation library for X and cairo
+ pkgconf	 Package compiler and linker metadata toolkit
+ pkgstats	 Submit a list of installed packages to the Arch Linux project
+ plasma-activities	 Core components for KDE Activities
+ plattenalbum	 Browse music with MPD
+ playerctl	 mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+ playerctld-systemd-unit	 A systemd user unit for playerctld
+ polkit	 Application development toolkit for controlling system-wide privileges
+ polkit-qt6	 A library that allows developers to access PolicyKit API with a nice Qt-style API
+ poppler	 PDF rendering library based on xpdf 3.0
+ poppler-data	 Encoding data for the poppler PDF rendering library
+ poppler-glib	 Poppler glib bindings
+ poppler-qt6	 Poppler Qt6 bindings
+ popt	 A commandline option parser
+ portaudio	 A free, cross-platform, open source, audio I/O library.
+ postgresql-libs	 Libraries for use with PostgreSQL
+ potrace	 Utility for tracing a bitmap (input PBM,PGM,PPM,BMP; output EPS,PS,PDF,SVG,DXF,PGM,Gimppath,XFig)
+ procps-ng	 Utilities for monitoring your system and its processes
+ protobuf	 Protocol Buffers - Google's data interchange format
+ psmisc	 Miscellaneous procfs tools
+ purpose	 Framework for providing abstractions to get the developers purposes fulfilled
+ pwgen	 Password generator for creating easily memorable passwords
+ python	 The Python programming language
+ python-anyio	 High level compatibility layer for multiple asynchronous event loop implementations
+ python-appdirs	 A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir".
+ python-argcomplete	 Easy, extensible command line tab completion of arguments for your Python script
+ python-argon2-cffi	 Secure password hashing algorithm for Python
+ python-argon2-cffi-bindings	 Low-level CFFI bindings for Argon2
+ python-astropy	 Common core package for Astronomy
+ python-astropy-iers-data	 IERS Earth Rotation and Leap Second tables for the astropy core package
+ python-asttokens	 Get the currently executing AST node of a frame, and other information
+ python-async-lru	 Simple LRU cache for asyncio
+ python-attrs	 Attributes without boilerplate.
+ python-autocommand	 A library to create a command-line program from a function
+ python-babel	 A collection of tools for internationalizing Python applications
+ python-beautifulsoup4	 A Python HTML/XML parser designed for quick turnaround projects like screen-scraping
+ python-bleach	 An easy whitelist-based HTML-sanitizing tool
+ python-breathe	 An extension to reStructuredText and Sphinx to be able to read and render Doxygen xml output
+ python-build	 A simple, correct Python build frontend
+ python-cachecontrol	 Port of the caching algorithms in httplib2 for use with requests session object
+ python-cairo	 Python bindings for the cairo graphics library
+ python-certifi	 Python package for providing Mozilla's CA Bundle (using system CA store)
+ python-cffi	 Foreign Function Interface for Python calling C code
+ python-chardet	 Python3 module for character encoding auto-detection
+ python-charset-normalizer	 Encoding and language detection alternative to chardet
+ python-click	 Simple wrapper around optparse for powerful command line utilities
+ python-colorama	 Python API for cross-platform colored terminal text.
+ python-comm	 Python Comm implementation for the Jupyter kernel protocol
+ python-contourpy	 Python library for calculating contours in 2D quadrilateral grids
+ python-coverage	 A tool for measuring code coverage of Python programs
+ python-cryptography	 A package designed to expose cryptographic recipes and primitives to Python developers
+ python-cssselect	 A Python3 library that parses CSS3 Selectors and translates them to XPath 1.0
+ python-cycler	 Composable style cycles
+ python-dateutil	 Provides powerful extensions to the standard datetime module
+ python-dbus	 Python bindings for D-Bus
+ python-decorator	 Python Decorator module
+ python-defusedxml	 XML bomb protection for Python stdlib modules
+ python-discid	 Python binding of MusicBrainz libdiscid
+ python-docopt	 Pythonic argument parser, that will make you smile
+ python-docutils	 Set of tools for processing plaintext docs into formats such as HTML, XML, or LaTeX
+ python-evdev	 Python bindings for the Linux input subsystem
+ python-executing	 Get the currently executing AST node of a frame, and other information
+ python-fasteners	 A python package that provides useful locks.
+ python-fastjsonschema	 Fast JSON schema validator for Python
+ python-filelock	 A platform independent file lock
+ python-fonttools	 A library to manipulate font files from Python
+ python-gobject	 Python bindings for GLib/GObject/GIO/GTK
+ python-h11	 A pure-Python, bring-your-own-I/O implementation of HTTP/1.1
+ python-httpcore	 A minimal HTTP client
+ python-httpx	 A next generation HTTP client for Python
+ python-idna	 Internationalized Domain Names in Applications (IDNA)
+ python-imagesize	 Analyzes JPEG/JPEG 2000/PNG/GIF/TIFF/SVG/Netpbm/WebP image headers and returns image size or DPI
+ python-importlib-metadata	 Read metadata from Python packages
+ python-inflect	 Correctly generate plurals, singular nouns, ordinals, indefinite articles
+ python-installer	 Low-level library for installing a Python package from a wheel distribution
+ python-ipykernel	 The ipython kernel for Jupyter
+ python-jaraco.context	 Context managers by jaraco
+ python-jaraco.functools	 Functools like those found in stdlib
+ python-jaraco.text	 Module for text manipulation
+ python-jedi	 Awesome autocompletion for python
+ python-jinja	 A simple pythonic template language written in Python
+ python-json-logger	 A python library adding a json log formatter
+ python-json5	 A Python implementation of the JSON5 data format
+ python-jsonschema	 An implementation of JSON Schema validation for Python
+ python-jsonschema-specifications	 The JSON Schema meta-schemas and vocabularies, exposed as a Registry
+ python-jupyter-client	 Jupyter protocol implementation and client libraries
+ python-jupyter-core	 Jupyter core package. A base package on which Jupyter projects rely
+ python-jupyter-events	 Configurable event system for Jupyter applications and extensions
+ python-jupyterlab-server	 Launch an application built using JupyterLab
+ python-kiwisolver	 A fast implementation of the Cassowary constraint solver
+ python-lockfile	 Platform-independent file locking module
+ python-lxml	 Python3 binding for the libxml2 and libxslt libraries
+ python-mako	 A template library written in Python
+ python-markdown	 Python implementation of John Gruber's Markdown
+ python-markdown-it-py	 Python port of markdown-it. Markdown parsing, done right!
+ python-markupsafe	 Implements a XML/HTML/XHTML Markup safe string for Python
+ python-matplotlib	 A python plotting library, making publication quality plots
+ python-matplotlib-inline	 Inline Matplotlib backend for Jupyter
+ python-mdurl	 URL utilities for markdown-it
+ python-mistune	 A fast yet powerful Python Markdown parser with renderers and plugins
+ python-more-itertools	 More routines for operating on iterables, beyond itertools
+ python-mpd2	 Python library which provides a client interface for the Music Player Daemon
+ python-msgpack	 MessagePack serializer implementation for Python
+ python-mutagen	 An audio metadata tag reader and writer (python library)
+ python-nest-asyncio	 Patch asyncio to allow nested event loops
+ python-numpy	 Scientific tools for Python
+ python-ordered-set	 A MutableSet that remembers its order, so that every entry has an index
+ python-overrides	 A decorator to automatically detect mismatch when overriding a method
+ python-packaging	 Core utilities for Python packages
+ python-pandocfilters	 A python module for writing pandoc filters
+ python-parso	 Python parser that supports error recovery and round-trip parsing for different Python versions
+ python-pexpect	 For controlling and automating applications
+ python-pillow	 Python Imaging Library (PIL) fork
+ python-pip	 The PyPA recommended tool for installing Python packages
+ python-platformdirs	 A library to determine platform-specific system directories
+ python-pooch	 Python library for fetching and caching data files
+ python-prometheus_client	 Prometheus instrumentation library for Python applications
+ python-prompt_toolkit	 Library for building powerful interactive command lines in Python
+ python-psutil	 A cross-platform process and system utilities module for Python
+ python-ptyprocess	 Run a subprocess in a pseudo terminal
+ python-pure-eval	 Safely evaluate AST nodes without side effects
+ python-pycparser	 C parser and AST generator written in Python
+ python-pycups	 Python bindings for libcups
+ python-pyerfa	 Bindings for ERFA routines
+ python-pygments	 Python syntax highlighter
+ python-pyjwt	 JSON Web Token implementation in Python
+ python-pyparsing	 General parsing module for Python
+ python-pyproject-hooks	 A low-level library for calling build-backends in pyproject.toml-based project
+ python-pyqt5	 A set of Python bindings for the Qt5 toolkit
+ python-pyqt5-sip	 The sip module support for PyQt5
+ python-pyserial	 Multiplatform Serial Port Module for Python
+ python-pytz	 Cross platform time zone library for Python
+ python-pyzmq	 Python bindings for ZeroMQ
+ python-referencing	 An implementation-agnostic implementation of JSON reference resolution
+ python-requests	 Python HTTP for Humans
+ python-rich	 Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal
+ python-rpds-py	 Python bindings to the Rust rpds crate for persistent data structures
+ python-ruamel-yaml	 YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
+ python-ruamel.yaml.clib	 C version of reader, parser and emitter for ruamel.yaml derived from libyaml
+ python-scipy	 Open-source software for mathematics, science, and engineering
+ python-send2trash	 Send file to trash natively
+ python-setuptools	 Easily download, build, install, upgrade, and uninstall Python packages
+ python-setuptools-scm	 Handles managing your python package versions in scm metadata
+ python-six	 Python 2 and 3 compatibility utilities
+ python-sniffio	 Sniff out which async library your code is running under
+ python-snowballstemmer	 Snowball stemming library collection for Python
+ python-soupsieve	 A CSS4 selector implementation for Beautiful Soup
+ python-sphinx	 Python documentation generator
+ python-sphinx-alabaster-theme	 Light, configurable Sphinx theme
+ python-sphinx_rtd_theme	 Read the Docs theme for Sphinx
+ python-sphinxcontrib-applehelp	 Sphinx extension which outputs Apple help books
+ python-sphinxcontrib-devhelp	 Sphinx extension which outputs Devhelp document
+ python-sphinxcontrib-htmlhelp	 Sphinx extension which renders HTML help files
+ python-sphinxcontrib-jquery	 Extension to include jQuery on newer Sphinx releases
+ python-sphinxcontrib-jsmath	 Sphinx extension which renders display math in HTML via JavaScript
+ python-sphinxcontrib-qthelp	 Sphinx extension which outputs QtHelp document
+ python-sphinxcontrib-serializinghtml	 Sphinx extension which outputs "serialized" HTML files (json and pickle)
+ python-stack-data	 Extract data from python stack frames and tracebacks for informative displays
+ python-tinycss2	 Low-level CSS parser for Python
+ python-tomli	 A lil' TOML parser
+ python-tornado	 open source version of the scalable, non-blocking web server and tools
+ python-tqdm	 Fast, Extensible Progress Meter
+ python-traitlets	 A configuration system for Python applications
+ python-trove-classifiers	 Canonical source for classifiers on PyPI (pypi.org)
+ python-typeguard	 Run-time type checker for Python
+ python-typing_extensions	 Backported and Experimental Type Hints for Python 3.8+
+ python-uc-micro-py	 Micro subset of unicode data files for linkify-it-py projects
+ python-urllib3	 HTTP library with thread-safe connection pooling and file post support
+ python-validate-pyproject	 Validation library and CLI tool for checking on 'pyproject.toml' files using JSON Schema
+ python-wcwidth	 Python library that measures the width of unicode strings rendered to a terminal
+ python-webencodings	 This is a Python implementation of the WHATWG Encoding standard.
+ python-websocket-client	 WebSocket client library for Python
+ python-wheel	 A built-package format for Python
+ python-yaml	 Python bindings for YAML, using fast libYAML library
+ python-zipp	 Pathlib-compatible object wrapper for zip files
+ python-zstandard	 Python bindings to the Zstandard (zstd) compression library
+ qbittorrent	 An advanced BitTorrent client programmed in C++, based on Qt toolkit and libtorrent-rasterbar
+ qca-qt6	 Qt Cryptographic Architecture
+ qhull	 A general dimension code for computing convex hulls and related structures
+ qpdf	 QPDF A Content-Preserving PDF Transformation System
+ qqc2-desktop-style	 A style for Qt Quick Controls 2 to make it follow your desktop theme
+ qrencode	 C library for encoding data in a QR Code symbol.
+ qt5-base	 A cross-platform application and UI framework
+ qt5-declarative	 Classes for QML and JavaScript languages
+ qt5-location	 Provides access to position, satellite and area monitoring classes
+ qt5-remoteobjects	 Inter-process communication (IPC) module developed for Qt
+ qt5-svg	 Classes for displaying the contents of SVG files
+ qt5-translations	 A cross-platform application and UI framework (Translations)
+ qt5-webchannel	 Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients
+ qt5-webengine	 Provides support for web applications using the Chromium browser project
+ qt5-x11extras	 Provides platform-specific APIs for X11
+ qt6-5compat	 Module that contains unsupported Qt 5 APIs
+ qt6-base	 A cross-platform application and UI framework
+ qt6-declarative	 Classes for QML and JavaScript languages
+ qt6-imageformats	 Plugins for additional image formats TIFF, MNG, TGA, WBMP
+ qt6-multimedia	 Classes for audio, video, radio and camera functionality
+ qt6-multimedia-ffmpeg	 FFMpeg backend for qt6-multimedia
+ qt6-networkauth	 Network authentication module
+ qt6-positioning	 Provides access to position, satellite and area monitoring classes
+ qt6-shadertools	 Provides functionality for the shader pipeline that allows Qt Quick to operate on Vulkan, Metal, and Direct3D, in addition to OpenGL
+ qt6-speech	 Qt Speech support
+ qt6-svg	 Classes for displaying the contents of SVG files
+ qt6-translations	 A cross-platform application and UI framework (Translations)
+ qt6-wayland	 Provides APIs for Wayland
+ qt6-webchannel	 Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients
+ qt6-webengine	 Provides support for web applications using the Chromium browser project
+ r	 Language and environment for statistical computing and graphics
+ ragel	 Compiles finite state machines from regular languages into executable C, C++, Objective-C, or D code.
+ raptor	 A C library that parses RDF/XML/N-Triples into RDF triples
+ rasqal	 A library handling RDF query syntaxes, construction and execution
+ rate-mirrors-bin	 Everyday-use client-side map-aware mirror ranking tool - pre-built with musl
+ rav1e	 An AV1 encoder focused on speed and safety
+ readline	 GNU readline library
+ redland	 Library that provides a high-level interface to RDF data
+ rhash	 Utility for verifying hash sums of files
+ ripgrep	 A search tool that combines the usability of ag with the raw speed of grep
+ rnnoise	 A noise suppression library based on a recurrent neural network
+ rofi	 A window switcher, application launcher and dmenu replacement
+ rofi-pass	 bash script to handle pass storages in a convenient way
+ rpcbind	 portmap replacement which supports RPC over various protocols
+ rsync	 A fast and versatile file copying tool for remote and local files
+ rtkit	 Realtime Policy and Watchdog Daemon
+ rubberband	 Time-stretching and pitch-shifting audio library and utility
+ ruby	 An object-oriented language for quick and easy programming
+ ruby-bundled-gems	 Bundled gems which are part of Ruby StdLib
+ ruby-bundler	 Manages an application's dependencies through its entire life, across many machines, systematically and repeatably
+ ruby-debug	 Debugging functionality for Ruby
+ ruby-default-gems	 Default gems which are part of Ruby StdLib
+ ruby-erb	 An easy to use but powerful templating system for Ruby
+ ruby-irb	 Interactive Ruby command-line tool for REPL (Read Eval Print Loop).
+ ruby-matrix	 An implementation of Matrix and Vector classes
+ ruby-minitest	 Complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking
+ ruby-net-ftp	 Support for the File Transfer Protocol
+ ruby-net-imap	 Ruby client api for Internet Message Access Protocol
+ ruby-net-pop	 Ruby client library for POP3
+ ruby-net-smtp	 Simple Mail Transfer Protocol client library for Ruby
+ ruby-power_assert	 Power Assert for Ruby
+ ruby-prime	 Prime numbers and factorization library
+ ruby-racc	 LALR parser generator written in Ruby itself and generates ruby programs
+ ruby-rake	 Make-like build tool implemented in Ruby
+ ruby-rbs	 RBS is the language for type signatures for Ruby and standard library definitions
+ ruby-rdoc	 Command-line documentation generator for Ruby projects
+ ruby-rexml	 An XML toolkit for Ruby
+ ruby-rss	 Family of libraries that support various formats of XML "feeds"
+ ruby-stdlib	 Full Ruby StdLib including default gems, bundled gems and tools
+ ruby-test-unit	 An xUnit family unit testing framework for Ruby
+ ruby-typeprof	 An experimental type-level Ruby interpreter for testing and understanding Ruby code
+ rubygems	 Package management framework for Ruby
+ runc	 CLI tool for managing OCI compliant containers
+ rust	 Systems programming language focused on safety, speed and concurrency
+ rustdesk-bin	 Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
+ sassc	 C implementation of Sass CSS preprocessor
+ sbc	 Bluetooth Subband Codec (SBC) library
+ scour	 An SVG scrubber
+ screenkey	 A screencast tool to display your keys inspired by Screenflick
+ scrot	 Simple command-line screenshot utility for X
+ sdl2	 A library for portable low-level access to a video framebuffer, audio output, mouse, and keyboard (Version 2)
+ sed	 GNU stream editor
+ selectdefaultapplication-git	 A very simple application that lets you define default applications on Linux in a sane way
+ semver	 The semantic version parser used by npm
+ serd	 Lightweight C library for RDF syntax supporting reading/ writing Turtle and NTriples
+ serf	 High-performance asynchronous HTTP client library
+ shaderc	 Collection of tools, libraries and tests for shader compilation
+ shadow	 Password and account management tool suite with support for shadow files and PAM
+ shared-mime-info	 Freedesktop.org Shared MIME Info
+ signon-kwallet-extension	 KWallet integration for signon framework
+ signon-plugin-oauth2	 OAuth 2 plugin for signon
+ signon-ui	 UI component responsible for handling the user interactions which can happen during the login process of an online account
+ signond	 A D-Bus service which performs user authentication on behalf of its clients
+ simple-mtpfs	 A FUSE filesystem that supports reading/writing from MTP devices
+ slang	 S-Lang is a powerful interpreted language
+ slop	 Utility to query the user for a selection and print the region to stdout
+ smbclient	 Tools to access a server's filespace and printers via SMB
+ snappy	 A fast compressor/decompressor library
+ solid	 Hardware integration and detection
+ sonnet	 Spelling framework for Qt
+ sord	 A lightweight C library for storing RDF data in memory
+ sound-theme-freedesktop	 Freedesktop sound theme
+ spdlog	 Very fast, header-only/compiled, C++ logging library
+ speex	 A free codec for free speech
+ speexdsp	 DSP library derived from Speex
+ sphinx	 Free open-source SQL full-text search engine.
+ spirv-tools	 API and commands for processing SPIR-V modules
+ sqlite	 A C library that implements an SQL database engine
+ sratom	 An LV2 Atom RDF serialisation library
+ srt	 Secure Reliable Transport library
+ sshfs	 FUSE client based on the SSH File Transfer Protocol
+ sshpass	 Fool ssh into accepting an interactive password non-interactively
+ startup-notification	 Libary to monitor and display application startup
+ subversion	 A Modern Concurrent Version Control System
+ sudo	 Give certain users the ability to run some commands as root
+ suitesparse	 A collection of sparse matrix libraries
+ svt-av1	 Scalable Video Technology AV1 encoder and decoder
+ sxiv	 Simple X Image Viewer
+ syndication	 RSS/Atom parser library
+ syntax-highlighting	 Syntax highlighting engine for structured text and code
+ system-config-printer	 A CUPS printer configuration tool and status applet
+ systemd	 system and service manager
+ systemd-libs	 systemd client libraries
+ systemd-sysvcompat	 sysvinit compat for systemd
+ taglib	 A Library for reading and editing the meta-data of several popular audio formats
+ talloc	 Hierarchical pool based memory allocator with destructors
+ tar	 Utility used to store, backup, and transport files
+ tcl	 Powerful, easy-to-learn dynamic programming language
+ tcsh	 Enhanced version of the Berkeley C shell
+ tdb	 Trivial Database similar to GDBM but allows simultaneous commits
+ telegram-desktop	 Official Telegram Desktop client
+ tesseract	 An OCR program
+ tesseract-data-afr	 Tesseract OCR data (afr)
+ tesseract-data-osd	 Tesseract OCR data (osd)
+ tevent	 Event system based on the talloc memory management library
+ texinfo	 GNU documentation system for on-line information and printed output
+ texlive-basic	 TeX Live - Essential programs and files
+ texlive-bibtexextra	 TeX Live - BibTeX additional styles
+ texlive-bin	 TeX Live binaries
+ texlive-binextra	 TeX Live - TeX auxiliary programs
+ texlive-context	 TeX Live - ConTeXt and packages
+ texlive-fontsextra	 TeX Live - Additional fonts
+ texlive-fontsrecommended	 TeX Live - Recommended fonts
+ texlive-fontutils	 TeX Live - Graphics and font utilities
+ texlive-formatsextra	 TeX Live - Additional formats
+ texlive-games	 TeX Live - Games typesetting
+ texlive-humanities	 TeX Live - Humanities packages
+ texlive-latex	 TeX Live - LaTeX fundamental packages
+ texlive-latexextra	 TeX Live - LaTeX additional packages
+ texlive-latexrecommended	 TeX Live - LaTeX recommended packages
+ texlive-luatex	 TeX Live - LuaTeX packages
+ texlive-mathscience	 TeX Live - Mathematics, natural sciences, computer science packages
+ texlive-metapost	 TeX Live - MetaPost and Metafont packages
+ texlive-music	 TeX Live - Music packages
+ texlive-pictures	 TeX Live - Graphics, pictures, diagrams
+ texlive-plaingeneric	 TeX Live - Plain (La)TeX packages
+ texlive-pstricks	 TeX Live - PSTricks
+ texlive-publishers	 TeX Live - Publisher styles, theses, etc.
+ texlive-xetex	 TeX Live - XeTeX and packages
+ tinyxml2	 Simple XML parser made for easy integration
+ tk	 A windowing toolkit for use with tcl
+ tmux	 Terminal multiplexer
+ topcat	 Tool for OPerations on Catalogues And Tables
+ tpm2-tss	 Implementation of the TCG Trusted Platform Module 2.0 Software Stack (TSS2)
+ tracker3	 SQLite-based RDF triplestore database with SPARQL interface
+ tree	 A directory listing program displaying a depth indented list of files
+ tree-sitter	 Incremental parsing library
+ tree-sitter-bash	 Bash grammar for tree-sitter
+ tree-sitter-c	 C grammar for tree-sitter
+ tree-sitter-lua	 Lua grammar for tree-sitter
+ tree-sitter-markdown	 Markdown grammar for tree-sitter
+ tree-sitter-python	 Python grammar for tree-sitter
+ tree-sitter-query	 TS query grammar for tree-sitter
+ tree-sitter-vim	 Vimscript grammar for tree-sitter
+ tree-sitter-vimdoc	 Vim help file grammar for tree-sitter
+ tslib	 Touchscreen Access Library
+ ttf-dejavu	 Font family based on the Bitstream Vera Fonts with a wider range of characters
+ ttf-font-awesome	 Iconic font designed for Bootstrap
+ ttf-hack	 A hand groomed and optically balanced typeface based on Bitstream Vera Mono.
+ ttf-liberation	 Font family which aims at metric compatibility with Arial, Times New Roman, and Courier New
+ twolame	 An optimized MPEG Audio Layer 2 (MP2) encoder
+ tzdata	 Sources for time zone and daylight saving time data
+ uchardet	 Encoding detector library ported from Mozilla
+ udisks2	 Daemon, tools and libraries to access and manipulate disks, storage devices and technologies
+ ueberzug	 Command line util which allows to display images in combination with X11
+ unclutter	 A small program for hiding the mouse cursor
+ unibilium	 A terminfo parsing library
+ unixodbc	 ODBC is an open specification for providing application developers with a predictable API with which to access Data Sources
+ unzip	 For extracting and viewing files in .zip archives
+ upower	 Abstraction for enumerating power devices, listening to device events and querying history and statistics
+ uthash	 C preprocessor implementations of a hash table and a linked list
+ util-linux	 Miscellaneous system utilities for Linux
+ util-linux-libs	 util-linux runtime libraries
+ v4l-utils	 Userspace tools and conversion library for Video 4 Linux
+ vapoursynth	 A video processing framework with the future in mind
+ ventoy-bin	 A new bootable USB solution
+ vid.stab	 Video stabilization library
+ vim	 Vi Improved, a highly configurable, improved version of the vi text editor
+ vim-runtime	 Vi Improved, a highly configurable, improved version of the vi text editor (shared runtime)
+ vlc	 Multi-platform MPEG, VCD/DVD, and DivX player
+ vmaf	 Perceptual video quality assessment algorithm based on multi-method fusion
+ volume_key	 A library for manipulating storage volume encryption keys and storing them separately from volumes to handle forgotten passphrases
+ vte-common	 Virtual Terminal Emulator widget (common files)
+ vte3	 Virtual Terminal Emulator widget (GTK3)
+ vulkan-headers	 Vulkan header files
+ vulkan-icd-loader	 Vulkan Installable Client Driver (ICD) Loader
+ wavpack	 Audio compression format with lossless, lossy and hybrid compression modes
+ wayland	 A computer display server protocol
+ wcslib	 A C library that implements the 'World Coordinate System' (WCS) standard in FITS
+ webrtc-audio-processing-1	 AudioProcessing library based on Google's implementation of WebRTC
+ wget	 Network utility to retrieve files from the Web
+ which	 A utility to show the full path of commands
+ whitesur-cursor-theme-git	 WhiteSur cursors theme for linux desktops
+ whitesur-gtk-theme	 A macOS BigSur-like theme for your GTK apps
+ whitesur-icon-theme	 MacOS Big Sur like icon theme for linux desktops
+ wildmidi	 Simple software MIDI player which has a core softsynth library
+ wireplumber	 Session / policy manager implementation for PipeWire
+ woff2	 Web Open Font Format 2 reference implementation
+ wpa_supplicant	 A utility providing key negotiation for WPA wireless networks
+ x264	 Open Source H264/AVC video encoder
+ x265	 Open Source H265/HEVC video encoder
+ xcb-proto	 XML-XCB protocol descriptions
+ xcb-util	 Utility libraries for XC Binding
+ xcb-util-cursor	 XCB cursor library
+ xcb-util-image	 Utility libraries for XC Binding - Port of Xlib's XImage and XShmImage functions
+ xcb-util-keysyms	 Utility libraries for XC Binding - Standard X key constants and conversion to/from keycodes
+ xcb-util-renderutil	 Utility libraries for XC Binding - Convenience functions for the Render extension
+ xcb-util-wm	 Utility libraries for XC Binding - client and window-manager helpers for ICCCM
+ xcb-util-xrm	 XCB utility functions for the X resource manager
+ xclip	 Command line interface to the X11 clipboard
+ xcompmgr	 Composite window effect manager for X.org
+ xdg-desktop-portal	 Desktop integration portals for sandboxed apps
+ xdg-utils	 Command line tools that assist applications with a variety of desktop integration tasks
+ xdotool	 Command-line X11 automation tool
+ xf86-input-libinput	 Generic input driver for the X.Org server based on libinput
+ xf86-video-vesa	 X.org vesa video driver
+ xfce4-notifyd	 Notification daemon for the Xfce desktop
+ xfce4-power-manager	 Power Manager for Xfce
+ xfce4-settings	 Xfce's Configuration System
+ xfce4-taskmanager	 Easy to use task manager
+ xfce4-terminal	 A modern terminal emulator primarily for the Xfce desktop environment
+ xfconf	 D-Bus-based configuration storage system
+ xkeyboard-config	 X keyboard configuration files
+ xmlsec	 XML Security Library is a C library based on LibXML2
+ xmlto	 Convert xml to many other formats
+ xorg-bdftopcf	 Convert X font from Bitmap Distribution Format to Portable Compiled Format
+ xorg-docs	 X.org documentations
+ xorg-font-util	 X.Org font utilities
+ xorg-fonts-100dpi	 X.org 100dpi fonts
+ xorg-fonts-75dpi	 X.org 75dpi fonts
+ xorg-fonts-alias-100dpi	 X.org font alias files - 100dpi font familiy
+ xorg-fonts-alias-75dpi	 X.org font alias files - 75dpi font familiy
+ xorg-fonts-encodings	 X.org font encoding files
+ xorg-iceauth	 ICE authority file utility
+ xorg-mkfontscale	 Create an index of scalable font files for X
+ xorg-server	 Xorg X server
+ xorg-server-common	 Xorg server common files
+ xorg-server-devel	 Development files for the X.Org X server
+ xorg-server-xephyr	 A nested X server that runs as an X application
+ xorg-server-xnest	 A nested X server that runs as an X application
+ xorg-server-xvfb	 Virtual framebuffer X server
+ xorg-sessreg	 Register X sessions in system utmp/utmpx databases
+ xorg-setxkbmap	 Set the keyboard using the X Keyboard Extension
+ xorg-smproxy	 Allows X applications that do not support X11R6 session management to participate in an X11R6 session
+ xorg-util-macros	 X.Org Autotools macros
+ xorg-x11perf	 Simple X server performance benchmarker
+ xorg-xauth	 X.Org authorization settings program
+ xorg-xbacklight	 RandR-based backlight control application
+ xorg-xcmsdb	 Device Color Characterization utility for X Color Management System
+ xorg-xcursorgen	 Create an X cursor file from PNG images
+ xorg-xdpyinfo	 Display information utility for X
+ xorg-xdriinfo	 Query configuration information of DRI drivers
+ xorg-xev	 Print contents of X events
+ xorg-xgamma	 Alter a monitor's gamma correction
+ xorg-xhost	 Server access control program for X
+ xorg-xinit	 X.Org initialisation program
+ xorg-xinput	 Small commandline tool to configure devices
+ xorg-xkbcomp	 X Keyboard description compiler
+ xorg-xkbevd	 XKB event daemon
+ xorg-xkbutils	 XKB utility demos
+ xorg-xkill	 Kill a client by its X resource
+ xorg-xlsatoms	 List interned atoms defined on server
+ xorg-xlsclients	 List client applications running on a display
+ xorg-xmessage	 Display a message or query in a window
+ xorg-xmodmap	 Utility for modifying keymaps and button mappings
+ xorg-xpr	 Print an X window dump from xwd
+ xorg-xprop	 Property displayer for X
+ xorg-xrandr	 Primitive command line interface to RandR extension
+ xorg-xrdb	 X server resource database utility
+ xorg-xrefresh	 Refresh all or part of an X screen
+ xorg-xset	 User preference utility for X
+ xorg-xsetroot	 Classic X utility to set your root window background to a given pattern or color
+ xorg-xvinfo	 Prints out the capabilities of any video adaptors associated with the display that are accessible through the X-Video extension
+ xorg-xwayland	 run X clients under wayland
+ xorg-xwd	 X Window System image dumping utility
+ xorg-xwininfo	 Command-line utility to print information about windows on an X server
+ xorg-xwud	 X Window System image undumping utility
+ xorgproto	 combined X.Org X11 Protocol headers
+ xss-lock	 Use external locker as X screen saver
+ xvidcore	 XviD is an open source MPEG-4 video codec
+ xxhash	 Extremely fast non-cryptographic hash algorithm
+ xz	 Library and command line tools for XZ and LZMA compressed files
+ yadm	 Yet Another Dotfiles Manager
+ yajl	 Yet Another JSON Library
+ yarn	 Fast, reliable, and secure dependency management
+ yt-dlp	 A youtube-dl fork with additional features and fixes
+ zathura	 Minimalistic document viewer
+ zathura-pdf-mupdf	 PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
+ zeromq	 Fast messaging system built on sockets. C and C++ bindings. aka 0MQ, ZMQ.
+ zimg	 Scaling, colorspace conversion, and dithering library
+ zip	 Compressor/archiver for creating and modifying zipfiles
+ zix	 A lightweight C99 portability and data structure library
+ zlib	 Compression library implementing the deflate compression method found in gzip and PKZIP
+ zoom	 Video Conferencing and Web Conferencing Service
+ zotero-bin	 Zotero Standalone. Is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources.
+ zsh	 A very advanced and programmable command interpreter (shell) for UNIX
+ zsh-autosuggestions	 Fish-like autosuggestions for zsh
+ zsh-fast-syntax-highlighting	 Optimized and extended zsh-syntax-highlighting
+ zsh-history-substring-search	 ZSH port of Fish history search (up arrow)
+ zsh-you-should-use	 ZSH plugin that reminds you to use existing aliases for commands you just typed
+ zstd	 Zstandard - Fast real-time compression algorithm
+ zxing-cpp	 A C++ library to decode QRCode
+ zziplib	 A lightweight library that offers the ability to easily extract data from files archived in a single zip file
