@@ -174,11 +174,6 @@
  gcc, The GNU Compiler Collection - C and C++ frontends
  gcc-fortran, Fortran front-end for GCC
  gcc-libs, Runtime libraries shipped by GCC
- gcc13, The GNU Compiler Collection - C and C++ frontends (13.x.x)
- gcc13-fortran, Fortran front-end for GCC (13.x.x)
- gcc13-libs, Runtime libraries shipped by GCC (13.x.x)
- gcc48, The GNU Compiler Collection - C and C++ frontends (4.8.x)
- gcc48-debug, Detached debugging symbols for gcc48
  gcr-4, A library for bits of crypto UI and parsing
  gd, Library for the dynamic creation of images by programmers
  gdbm, GNU database library
@@ -297,14 +292,6 @@
  json-c, A JSON implementation in C
  json-glib, JSON library built on GLib
  jsoncpp, C++ library for interacting with JSON
- jupyter-nbclient, A tool for running Jupyter Notebooks in different execution contexts
- jupyter-nbconvert, Jupyter Notebook Conversion
- jupyter-nbformat, The base implementation of the Jupyter Notebook format and Python APIs for working with notebooks
- jupyter-notebook, The language-agnostic HTML notebook application for Project Jupyter
- jupyter-notebook-shim, Provides a way for JupyterLab and other frontends to switch to Jupyter Server for their Python Web application backend
- jupyter-server, Provides the backend for Jupyter web applications like Jupyter notebook JupyterLab and Voila
- jupyterlab, JupyterLab computational environment
- jupyterlab-pygments, Pygments theme using JupyterLab CSS variables
  kaccounts-integration, Online account management system and its Plasma integration components
  karchive, Qt addon providing access to numerous types of archives
  kauth, Abstraction to system policy and authentication features
@@ -794,7 +781,6 @@
  perl-mailtools, Various e-mail related modules
  perl-timedate, Date formating subroutines
  phonon-qt6, The multimedia framework by KDE
- phonon-qt6-vlc, Phonon VLC backend for Qt6
  php, A general-purpose scripting language that is especially suited to web development
  picard, Official MusicBrainz tagger
  picom-arian8j2-git, Arian8j2's picom fork with configurable transitions
@@ -826,189 +812,12 @@
  purpose, Framework for providing abstractions to get the developers purposes fulfilled
  pwgen, Password generator for creating easily memorable passwords
  python, The Python programming language
- python-anyio, High level compatibility layer for multiple asynchronous event loop implementations
- python-appdirs, A small Python module for determining appropriate platform-specific dirs e.g. a user data dir.
- python-argcomplete, Easy extensible command line tab completion of arguments for your Python script
- python-argon2-cffi, Secure password hashing algorithm for Python
- python-argon2-cffi-bindings, Low-level CFFI bindings for Argon2
- python-astropy, Common core package for Astronomy
- python-astropy-iers-data, IERS Earth Rotation and Leap Second tables for the astropy core package
- python-asttokens, Get the currently executing AST node of a frame and other information
- python-async-lru, Simple LRU cache for asyncio
- python-attrs, Attributes without boilerplate.
- python-autocommand, A library to create a command-line program from a function
- python-babel, A collection of tools for internationalizing Python applications
- python-beautifulsoup4, A Python HTML/XML parser designed for quick turnaround projects like screen-scraping
- python-bleach, An easy whitelist-based HTML-sanitizing tool
- python-breathe, An extension to reStructuredText and Sphinx to be able to read and render Doxygen xml output
- python-build, A simple correct Python build frontend
- python-cachecontrol, Port of the caching algorithms in httplib2 for use with requests session object
- python-cairo, Python bindings for the cairo graphics library
- python-certifi, Python package for providing Mozilla's CA Bundle (using system CA store)
- python-cffi, Foreign Function Interface for Python calling C code
- python-chardet, Python3 module for character encoding auto-detection
- python-charset-normalizer, Encoding and language detection alternative to chardet
- python-click, Simple wrapper around optparse for powerful command line utilities
- python-colorama, Python API for cross-platform colored terminal text.
- python-comm, Python Comm implementation for the Jupyter kernel protocol
- python-contourpy, Python library for calculating contours in 2D quadrilateral grids
- python-coverage, A tool for measuring code coverage of Python programs
- python-cryptography, A package designed to expose cryptographic recipes and primitives to Python developers
- python-cssselect, A Python3 library that parses CSS3 Selectors and translates them to XPath 1.0
- python-cycler, Composable style cycles
- python-dateutil, Provides powerful extensions to the standard datetime module
- python-dbus, Python bindings for D-Bus
- python-decorator, Python Decorator module
- python-defusedxml, XML bomb protection for Python stdlib modules
- python-discid, Python binding of MusicBrainz libdiscid
- python-docopt, Pythonic argument parser that will make you smile
- python-docutils, Set of tools for processing plaintext docs into formats such as HTML XML or LaTeX
- python-evdev, Python bindings for the Linux input subsystem
- python-executing, Get the currently executing AST node of a frame and other information
- python-fasteners, A python package that provides useful locks.
- python-fastjsonschema, Fast JSON schema validator for Python
- python-filelock, A platform independent file lock
- python-fonttools, A library to manipulate font files from Python
- python-gobject, Python bindings for GLib/GObject/GIO/GTK
- python-h11, A pure-Python bring-your-own-I/O implementation of HTTP/1.1
- python-httpcore, A minimal HTTP client
- python-httpx, A next generation HTTP client for Python
- python-idna, Internationalized Domain Names in Applications (IDNA)
- python-imagesize, Analyzes JPEG/JPEG 2000/PNG/GIF/TIFF/SVG/Netpbm/WebP image headers and returns image size or DPI
- python-importlib-metadata, Read metadata from Python packages
- python-inflect, Correctly generate plurals singular nouns ordinals indefinite articles
- python-installer, Low-level library for installing a Python package from a wheel distribution
- python-ipykernel, The ipython kernel for Jupyter
- python-jaraco.context, Context managers by jaraco
- python-jaraco.functools, Functools like those found in stdlib
- python-jaraco.text, Module for text manipulation
- python-jedi, Awesome autocompletion for python
- python-jinja, A simple pythonic template language written in Python
- python-json-logger, A python library adding a json log formatter
- python-json5, A Python implementation of the JSON5 data format
- python-jsonschema, An implementation of JSON Schema validation for Python
- python-jsonschema-specifications, The JSON Schema meta-schemas and vocabularies exposed as a Registry
- python-jupyter-client, Jupyter protocol implementation and client libraries
- python-jupyter-core, Jupyter core package. A base package on which Jupyter projects rely
- python-jupyter-events, Configurable event system for Jupyter applications and extensions
- python-jupyterlab-server, Launch an application built using JupyterLab
- python-kiwisolver, A fast implementation of the Cassowary constraint solver
- python-lockfile, Platform-independent file locking module
- python-lxml, Python3 binding for the libxml2 and libxslt libraries
- python-mako, A template library written in Python
- python-markdown, Python implementation of John Gruber's Markdown
- python-markdown-it-py, Python port of markdown-it. Markdown parsing done right!
- python-markupsafe, Implements a XML/HTML/XHTML Markup safe string for Python
- python-matplotlib, A python plotting library making publication quality plots
- python-matplotlib-inline, Inline Matplotlib backend for Jupyter
- python-mdurl, URL utilities for markdown-it
- python-mistune, A fast yet powerful Python Markdown parser with renderers and plugins
- python-more-itertools, More routines for operating on iterables beyond itertools
- python-mpd2, Python library which provides a client interface for the Music Player Daemon
- python-msgpack, MessagePack serializer implementation for Python
- python-mutagen, An audio metadata tag reader and writer (python library)
- python-nest-asyncio, Patch asyncio to allow nested event loops
- python-numpy, Scientific tools for Python
- python-ordered-set, A MutableSet that remembers its order so that every entry has an index
- python-overrides, A decorator to automatically detect mismatch when overriding a method
- python-packaging, Core utilities for Python packages
- python-pandocfilters, A python module for writing pandoc filters
- python-parso, Python parser that supports error recovery and round-trip parsing for different Python versions
- python-pexpect, For controlling and automating applications
- python-pillow, Python Imaging Library (PIL) fork
- python-pip, The PyPA recommended tool for installing Python packages
- python-platformdirs, A library to determine platform-specific system directories
- python-pooch, Python library for fetching and caching data files
- python-prometheus_client, Prometheus instrumentation library for Python applications
- python-prompt_toolkit, Library for building powerful interactive command lines in Python
- python-psutil, A cross-platform process and system utilities module for Python
- python-ptyprocess, Run a subprocess in a pseudo terminal
- python-pure-eval, Safely evaluate AST nodes without side effects
- python-pycparser, C parser and AST generator written in Python
- python-pycups, Python bindings for libcups
- python-pyerfa, Bindings for ERFA routines
- python-pygments, Python syntax highlighter
- python-pyjwt, JSON Web Token implementation in Python
- python-pyparsing, General parsing module for Python
- python-pyproject-hooks, A low-level library for calling build-backends in pyproject.toml-based project
- python-pyqt5, A set of Python bindings for the Qt5 toolkit
- python-pyqt5-sip, The sip module support for PyQt5
- python-pyserial, Multiplatform Serial Port Module for Python
- python-pytz, Cross platform time zone library for Python
- python-pyzmq, Python bindings for ZeroMQ
- python-referencing, An implementation-agnostic implementation of JSON reference resolution
- python-requests, Python HTTP for Humans
- python-rich, Render rich text tables progress bars syntax highlighting markdown and more to the terminal
- python-rpds-py, Python bindings to the Rust rpds crate for persistent data structures
- python-ruamel-yaml, YAML parser/emitter that supports roundtrip preservation of comments seq/map flow style and map key order
- python-ruamel.yaml.clib, C version of reader parser and emitter for ruamel.yaml derived from libyaml
- python-scipy, Open-source software for mathematics science and engineering
- python-send2trash, Send file to trash natively
- python-setuptools, Easily download build install upgrade and uninstall Python packages
- python-setuptools-scm, Handles managing your python package versions in scm metadata
- python-six, Python 2 and 3 compatibility utilities
- python-sniffio, Sniff out which async library your code is running under
- python-snowballstemmer, Snowball stemming library collection for Python
- python-soupsieve, A CSS4 selector implementation for Beautiful Soup
- python-sphinx, Python documentation generator
- python-sphinx-alabaster-theme, Light configurable Sphinx theme
- python-sphinx_rtd_theme, Read the Docs theme for Sphinx
- python-sphinxcontrib-applehelp, Sphinx extension which outputs Apple help books
- python-sphinxcontrib-devhelp, Sphinx extension which outputs Devhelp document
- python-sphinxcontrib-htmlhelp, Sphinx extension which renders HTML help files
- python-sphinxcontrib-jquery, Extension to include jQuery on newer Sphinx releases
- python-sphinxcontrib-jsmath, Sphinx extension which renders display math in HTML via JavaScript
- python-sphinxcontrib-qthelp, Sphinx extension which outputs QtHelp document
- python-sphinxcontrib-serializinghtml, Sphinx extension which outputs serialized HTML files (json and pickle)
- python-stack-data, Extract data from python stack frames and tracebacks for informative displays
- python-tinycss2, Low-level CSS parser for Python
- python-tomli, A lil' TOML parser
- python-tornado, open source version of the scalable non-blocking web server and tools
- python-tqdm, Fast Extensible Progress Meter
- python-traitlets, A configuration system for Python applications
- python-trove-classifiers, Canonical source for classifiers on PyPI (pypi.org)
- python-typeguard, Run-time type checker for Python
- python-typing_extensions, Backported and Experimental Type Hints for Python 3.8+
- python-uc-micro-py, Micro subset of unicode data files for linkify-it-py projects
- python-urllib3, HTTP library with thread-safe connection pooling and file post support
- python-validate-pyproject, Validation library and CLI tool for checking on 'pyproject.toml' files using JSON Schema
- python-wcwidth, Python library that measures the width of unicode strings rendered to a terminal
- python-webencodings, This is a Python implementation of the WHATWG Encoding standard.
- python-websocket-client, WebSocket client library for Python
- python-wheel, A built-package format for Python
- python-yaml, Python bindings for YAML using fast libYAML library
- python-zipp, Pathlib-compatible object wrapper for zip files
- python-zstandard, Python bindings to the Zstandard (zstd) compression library
  qbittorrent, An advanced BitTorrent client programmed in C++ based on Qt toolkit and libtorrent-rasterbar
  qca-qt6, Qt Cryptographic Architecture
  qhull, A general dimension code for computing convex hulls and related structures
  qpdf, QPDF: A Content-Preserving PDF Transformation System
  qqc2-desktop-style, A style for Qt Quick Controls 2 to make it follow your desktop theme
  qrencode, C library for encoding data in a QR Code symbol.
- qt5-base, A cross-platform application and UI framework
- qt5-declarative, Classes for QML and JavaScript languages
- qt5-location, Provides access to position satellite and area monitoring classes
- qt5-remoteobjects, Inter-process communication (IPC) module developed for Qt
- qt5-svg, Classes for displaying the contents of SVG files
- qt5-translations, A cross-platform application and UI framework (Translations)
- qt5-webchannel, Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients
- qt5-webengine, Provides support for web applications using the Chromium browser project
- qt5-x11extras, Provides platform-specific APIs for X11
- qt6-5compat, Module that contains unsupported Qt 5 APIs
- qt6-base, A cross-platform application and UI framework
- qt6-declarative, Classes for QML and JavaScript languages
- qt6-imageformats, Plugins for additional image formats: TIFF MNG TGA WBMP
- qt6-multimedia, Classes for audio video radio and camera functionality
- qt6-multimedia-ffmpeg, FFMpeg backend for qt6-multimedia
- qt6-networkauth, Network authentication module
- qt6-positioning, Provides access to position satellite and area monitoring classes
- qt6-shadertools, Provides functionality for the shader pipeline that allows Qt Quick to operate on Vulkan Metal and Direct3D in addition to OpenGL
- qt6-speech, Qt Speech support
- qt6-svg, Classes for displaying the contents of SVG files
- qt6-translations, A cross-platform application and UI framework (Translations)
- qt6-wayland, Provides APIs for Wayland
- qt6-webchannel, Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients
- qt6-webengine, Provides support for web applications using the Chromium browser project
  r, Language and environment for statistical computing and graphics
  ragel, Compiles finite state machines from regular languages into executable C C++ Objective-C or D code.
  raptor, A C library that parses RDF/XML/N-Triples into RDF triples
@@ -1026,31 +835,6 @@
  rsync, A fast and versatile file copying tool for remote and local files
  rtkit, Realtime Policy and Watchdog Daemon
  rubberband, Time-stretching and pitch-shifting audio library and utility
- ruby, An object-oriented language for quick and easy programming
- ruby-bundled-gems, Bundled gems which are part of Ruby StdLib
- ruby-bundler, Manages an application's dependencies through its entire life across many machines systematically and repeatably
- ruby-debug, Debugging functionality for Ruby
- ruby-default-gems, Default gems which are part of Ruby StdLib
- ruby-erb, An easy to use but powerful templating system for Ruby
- ruby-irb, Interactive Ruby command-line tool for REPL (Read Eval Print Loop).
- ruby-matrix, An implementation of Matrix and Vector classes
- ruby-minitest, Complete suite of testing facilities supporting TDD BDD mocking and benchmarking
- ruby-net-ftp, Support for the File Transfer Protocol
- ruby-net-imap, Ruby client api for Internet Message Access Protocol
- ruby-net-pop, Ruby client library for POP3
- ruby-net-smtp, Simple Mail Transfer Protocol client library for Ruby
- ruby-power_assert, Power Assert for Ruby
- ruby-prime, Prime numbers and factorization library
- ruby-racc, LALR parser generator written in Ruby itself and generates ruby programs
- ruby-rake, Make-like build tool implemented in Ruby
- ruby-rbs, RBS is the language for type signatures for Ruby and standard library definitions
- ruby-rdoc, Command-line documentation generator for Ruby projects
- ruby-rexml, An XML toolkit for Ruby
- ruby-rss, Family of libraries that support various formats of XML feeds
- ruby-stdlib, Full Ruby StdLib including default gems bundled gems and tools
- ruby-test-unit, An xUnit family unit testing framework for Ruby
- ruby-typeprof, An experimental type-level Ruby interpreter for testing and understanding Ruby code
- rubygems, Package management framework for Ruby
  runc, CLI tool for managing OCI compliant containers
  rust, Systems programming language focused on safety speed and concurrency
  rustdesk-bin, Yet another remote desktop software written in Rust. Works out of the box no configuration required.
@@ -1114,30 +898,6 @@
  tesseract-data-afr, Tesseract OCR data (afr)
  tesseract-data-osd, Tesseract OCR data (osd)
  tevent, Event system based on the talloc memory management library
- texinfo, GNU documentation system for on-line information and printed output
- texlive-basic, TeX Live - Essential programs and files
- texlive-bibtexextra, TeX Live - BibTeX additional styles
- texlive-bin, TeX Live binaries
- texlive-binextra, TeX Live - TeX auxiliary programs
- texlive-context, TeX Live - ConTeXt and packages
- texlive-fontsextra, TeX Live - Additional fonts
- texlive-fontsrecommended, TeX Live - Recommended fonts
- texlive-fontutils, TeX Live - Graphics and font utilities
- texlive-formatsextra, TeX Live - Additional formats
- texlive-games, TeX Live - Games typesetting
- texlive-humanities, TeX Live - Humanities packages
- texlive-latex, TeX Live - LaTeX fundamental packages
- texlive-latexextra, TeX Live - LaTeX additional packages
- texlive-latexrecommended, TeX Live - LaTeX recommended packages
- texlive-luatex, TeX Live - LuaTeX packages
- texlive-mathscience, TeX Live - Mathematics natural sciences computer science packages
- texlive-metapost, TeX Live - MetaPost and Metafont packages
- texlive-music, TeX Live - Music packages
- texlive-pictures, TeX Live - Graphics pictures diagrams
- texlive-plaingeneric, TeX Live - Plain (La)TeX packages
- texlive-pstricks, TeX Live - PSTricks
- texlive-publishers, TeX Live - Publisher styles theses etc.
- texlive-xetex, TeX Live - XeTeX and packages
  tinyxml2, Simple XML parser made for easy integration
  tk, A windowing toolkit for use with tcl
  tmux, Terminal multiplexer
@@ -1145,15 +905,6 @@
  tpm2-tss, Implementation of the TCG Trusted Platform Module 2.0 Software Stack (TSS2)
  tracker3, SQLite-based RDF triplestore database with SPARQL interface
  tree, A directory listing program displaying a depth indented list of files
- tree-sitter, Incremental parsing library
- tree-sitter-bash, Bash grammar for tree-sitter
- tree-sitter-c, C grammar for tree-sitter
- tree-sitter-lua, Lua grammar for tree-sitter
- tree-sitter-markdown, Markdown grammar for tree-sitter
- tree-sitter-python, Python grammar for tree-sitter
- tree-sitter-query, TS query grammar for tree-sitter
- tree-sitter-vim, Vimscript grammar for tree-sitter
- tree-sitter-vimdoc, Vim help file grammar for tree-sitter
  tslib, Touchscreen Access Library
  ttf-dejavu, Font family based on the Bitstream Vera Fonts with a wider range of characters
  ttf-font-awesome, Iconic font designed for Bootstrap
