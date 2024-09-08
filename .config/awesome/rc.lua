@@ -21,7 +21,7 @@ local wibox = require('wibox')
 
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
-purple =  "#6D2557"
+purple =  "#6C0533"
 cyan = "#0DC8C6"
 dgreen = "#263A09"
 dblue = "#0D0221"
@@ -60,6 +60,8 @@ local dunstbar = require("statusbar.aw-dunst")
 local updatebar = require("statusbar.aw-update")
 local calendar_widget = require("statusbar.aw-calendar")
 local music_widget = musbar.create_music_widget()
+
+powerbar.bg = purple
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:

@@ -19,7 +19,6 @@ local power_widget = wibox.widget {
         margins = 5,
     },
     widget = wibox.container.background,  -- Wrap in background container
-    bg = "#900C3F",  -- Set red background color
 }
 
 -- Define the dropdown menu items with custom icons and labels
