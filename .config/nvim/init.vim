@@ -49,7 +49,7 @@ set noshowcmd
 colorscheme jellybeans
 set background=dark
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+hi CursorLine guibg=Grey40
 " Some basics:
 	nnoremap c "_c
 	filetype plugin on
