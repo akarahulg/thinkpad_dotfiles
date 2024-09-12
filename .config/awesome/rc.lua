@@ -30,7 +30,7 @@ sand = "#DCDBB9"
 lgreen = "#89B6AD"
 
 -- Customize theme settings
-beautiful.font = "Hack Bold 10"
+beautiful.font = "Hack Bold 09"
 
 beautiful.bg_normal = "#202828"
 beautiful.bg_focus = purple
@@ -40,12 +40,12 @@ beautiful.wibar_bg = dblue
 beautiful.wibar_fg = lgreen
 beautiful.bg_systray = beautiful.wibar_bg
 
-beautiful.fg_normal = "#ebdbb2"
-beautiful.fg_focus = "#fbf1c7"
+beautiful.fg_normal = lgreen
+beautiful.fg_focus = lgreen
 beautiful.fg_urgent = "#ffffff"
 beautiful.fg_minimize = "#ffffff"
 
-beautiful.useless_gap = 0
+beautiful.useless_gap = 1
 beautiful.border_width = 5
 beautiful.border_color_normal = "#000000"
 beautiful.border_color_active = purple
@@ -239,6 +239,12 @@ mytextclock:connect_signal("button::press",
 
 local systray = wibox.widget.systray()
 systray:set_base_size(20)
+local spacer = wibox.widget {
+    widget = wibox.container.place,
+    halign = "center",
+    systray
+}
+
 --------------------------------
 
 screen.connect_signal("request::desktop_decoration", function(s)
@@ -282,6 +288,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         }
     }
 
+
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
@@ -303,6 +310,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 s.mywibox = awful.wibar {
     position = "top",
     screen   = s,
+    height = 22,
     widget   = {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
@@ -328,7 +336,7 @@ s.mywibox = awful.wibar {
 	    separator,
 	    volbar,
 	    separator,
-            wibox.widget.systray(),
+	    spacer,
 	    -- systray(),
 	    separator,
             mytextclock,

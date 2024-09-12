@@ -20,8 +20,10 @@ local dunst_widget = wibox.widget {
 -- Function to update the widget text with the current Dunst status
 local function update_widget()
     awful.spawn.easy_async(status_command, function(stdout)
+        -- Trim the newline character from the output
+        local trimmed_stdout = stdout:gsub("\n", "")
         -- Update the widget text with the output of the status command
-        dunst_widget.text = stdout
+        dunst_widget.text = trimmed_stdout
     end)
 end
 
@@ -44,5 +46,13 @@ gears.timer {
 -- Initial update
 update_widget()
 
--- Return the widget
-return dunst_widget
+-- Create a centered widget using align layout
+local centered_dunst_widget = wibox.widget {
+    layout = wibox.layout.align.horizontal,
+    nil,    -- Left placeholder (empty)
+    dunst_widget, -- Centered widget
+    nil,    -- Right placeholder (empty)
+}
+
+-- Return the centered widget
+return centered_dunst_widget
