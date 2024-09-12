@@ -28,6 +28,7 @@ dblue = "#0D0221"
 ashwhite = "#D5DCD9"
 sand = "#DCDBB9"
 lgreen = "#89B6AD"
+yellow = '#f7dc6f'
 
 -- Customize theme settings
 beautiful.font = "Hack Bold 09"
@@ -46,9 +47,9 @@ beautiful.fg_urgent = "#ffffff"
 beautiful.fg_minimize = "#ffffff"
 
 beautiful.useless_gap = 1
-beautiful.border_width = 5
+beautiful.border_width = 3
 beautiful.border_color_normal = "#000000"
-beautiful.border_color_active = purple
+beautiful.border_color_active = yellow
 beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
@@ -191,29 +192,6 @@ local separator = wibox.widget {
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
--- Create a textclock widget
--- Required libraries
-
--- Create the textclock widget
--- local mytextclock = wibox.widget.textclock("%a %b(%m) [%d] %H:%M:%S ", 1)
--- mytextclock.font = "Hack 10"
---
--- -- Create the calendar popup
--- local month_calendar = awful.widget.calendar_popup.month()
--- month_calendar:attach(mytextclock, "tr")  -- Attach the calendar to the textclock (top-right position)
--- month_calendar.visible = false  -- Ensure the calendar is initially hidden
---
--- -- Toggle calendar visibility on left-click
--- mytextclock:buttons(awful.util.table.join(
---     awful.button({}, 1, function()
---         if month_calendar.visible then
---             month_calendar.visible = false
---         else
---             month_calendar.visible = true
---         end
---     end)
--- ))
-
 mytextclock = wibox.widget.textclock("%a %b %d, %H:%M:%S ", 1)
 
 -- default
@@ -232,10 +210,6 @@ mytextclock:connect_signal("button::press",
     function(_, _, _, button)
         if button == 1 then cw.toggle() end
     end)
-
-
-
--- Systray customization
 
 local systray = wibox.widget.systray()
 systray:set_base_size(20)
@@ -289,7 +263,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     }
 
 
-    -- Create a tasklist widget
+    -- -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
@@ -302,9 +276,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
             awful.button({ }, 5, function() awful.client.focus.byidx( 1) end),
         }
     }
-
-
-
 
     -- Create the wibox
 s.mywibox = awful.wibar {
@@ -356,6 +327,26 @@ awful.mouse.append_global_mousebindings({
     awful.button({ }, 5, awful.tag.viewnext),
 })
 -- }}}
+
+local scratchpads = {}  -- Table to hold scratchpad clients
+
+-- Function to toggle a window in and out of the scratchpad
+function toggle_scratchpad(c)
+    -- If the window is not already in the scratchpad, move it there
+    if not scratchpads[c.window] then
+        -- Add the client to the scratchpad and minimize it
+        scratchpads[c.window] = c
+        c.hidden = true  -- Hide the window
+    else
+        -- If the client is already in the scratchpad, unminimize it and move it to the current tag
+        c.hidden = false  -- Show the window
+        c:move_to_tag(c.screen.selected_tag)  -- Move it to the currently selected tag
+        client.focus = c  -- Focus the window
+        c:raise()  -- Bring it to the front
+        scratchpads[c.window] = nil  -- Remove it from scratchpad tracking
+    end
+end
+
 
 -- {{{ Key bindings
 
@@ -810,10 +801,6 @@ root.keys(globalkeys)
 
 
 -- Screenkey
--- Import libraries
-local awful = require("awful")
-local gears = require("gears")
-local naughty = require("naughty")
 
 -- Define your keybindings
 
