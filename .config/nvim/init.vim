@@ -46,10 +46,10 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
-colorscheme jellybeans
+colorscheme github_dark_default
 set background=dark
-set cursorline
-hi CursorLine guibg=Grey40
+" set cursorline
+" hi CursorLine guibg=Grey40
 " Some basics:
 	nnoremap c "_c
 	filetype plugin on

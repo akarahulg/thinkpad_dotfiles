@@ -28,13 +28,16 @@ dblue = "#0D0221"
 ashwhite = "#D5DCD9"
 sand = "#DCDBB9"
 lgreen = "#89B6AD"
-yellow = '#f7dc6f'
-
+yellow = '#C7D81E'
+kiligreen = '#28EB33'
+somegreen = '#016063'
+someblue = '#003787'
+red = "#DC2222"
 -- Customize theme settings
 beautiful.font = "Hack Bold 09"
 
 beautiful.bg_normal = "#202828"
-beautiful.bg_focus = purple
+beautiful.bg_focus = someblue
 beautiful.bg_urgent = "#901C0F"
 beautiful.bg_minimize = beautiful.bg_normal
 beautiful.wibar_bg = dblue
@@ -47,9 +50,9 @@ beautiful.fg_urgent = "#ffffff"
 beautiful.fg_minimize = "#ffffff"
 
 beautiful.useless_gap = 1
-beautiful.border_width = 3
+beautiful.border_width = 4
 beautiful.border_color_normal = "#000000"
-beautiful.border_color_active = yellow
+beautiful.border_color_active = red
 beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
@@ -82,7 +85,6 @@ end)
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-
 
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
@@ -288,6 +290,7 @@ s.mywibox = awful.wibar {
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
             s.mytaglist,
+	    separator,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
@@ -388,9 +391,10 @@ awful.keyboard.append_global_keybindings({
               {description = "dmenu youtube search", group = "launcher"}),
     awful.key({ modkey }, "g", function() awful.spawn("gsearch") end,
               {description = "dmenu google selection", group = "launcher"}),
+    awful.key({ modkey }, "p", function() awful.spawn("rofi-pass") end,
+              {description = "Rofi password manager", group = "launcher"}),
     awful.key({ modkey, "Shift" }, "d", function ()
-    		awful.spawn("rofi -show run -modi run,window,drun,ssh")
-		end,
+    		awful.spawn("rofi -show run -modi run,window,drun,ssh") end,
 	      {description = "run rofi with all modes", group = "launcher"})
 })
 
@@ -658,11 +662,11 @@ ruled.client.connect_signal("request::rules", function()
         properties = { floating = true, above = true,  maximized = false, sticky = true}
     }
 
-    ruled.client.append_rule {
-	id = "Brave",
-        rule       = { name = "Brave"},
-        properties = {tag = ""}
-    }
+    -- ruled.client.append_rule {
+	-- id = "Brave",
+    --     rule       = { name = "Brave"},
+    --     properties = {tag = ""}
+    -- }
 --         -- Specific rule for LibreOffice
 --     ruled.client.append_rule {
 --         id         = "libreoffice",
