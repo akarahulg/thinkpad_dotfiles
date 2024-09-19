@@ -13,10 +13,11 @@ for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 	alias $command="sudo $command"
 done; unset command
 
-se() {
-	choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf --layout=reverse -i)"
-	[ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice"
-	;}
+se () {
+	paths=(~/.local/bin /usr/local/bin $al1suit/../)  # Add your preferred paths here
+	choice="$(find "${paths[@]}" -mindepth 1 -type f | fzf --layout=reverse -i)"
+	[ -f "$choice" ] && $EDITOR "$choice"
+}
 
 wedit() {
 	filepath="$(which $1)"

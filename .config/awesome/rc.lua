@@ -311,11 +311,11 @@ s.mywibox = awful.wibar {
 	    volbar,
 	    separator,
 	    spacer,
+            s.mylayoutbox,
 	    -- systray(),
 	    separator,
             mytextclock,
 	    powerbar,
-            -- s.mylayoutbox,
         },
     }
 }
