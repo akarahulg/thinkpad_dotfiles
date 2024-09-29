@@ -54,7 +54,8 @@ alias \
 	ccat="highlight --out-format=ansi" \
 	ip="ip -color=auto" \
 	cheat='cheat -ca' \
-	pcheat='cheat -p personal'
+	pcheat='cheat -p personal'\
+	scheat='\cheat -c -s '
 # These common commands are just too long! Abbreviate them.
 alias \
 	ka="killall" \
