@@ -49,7 +49,7 @@ beautiful.fg_focus = lgreen
 beautiful.fg_urgent = "#ffffff"
 beautiful.fg_minimize = "#ffffff"
 
-beautiful.useless_gap = 1
+beautiful.useless_gap = 0
 beautiful.border_width = 4
 beautiful.border_color_normal = "#000000"
 beautiful.border_color_active = red
@@ -737,9 +737,9 @@ end)
 -- }}}
 
 -- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-    c:activate { context = "mouse_enter", raise = false }
-end)
+-- client.connect_signal("mouse::enter", function(c)
+--     c:activate { context = "mouse_enter", raise = false }
+-- end)
 
 -- Autostart
 awful.spawn.with_shell(
@@ -805,8 +805,6 @@ root.keys(globalkeys)
 
 
 -- Screenkey
-
--- Define your keybindings
 
 globalkeys = gears.table.join(
     globalkeys,
