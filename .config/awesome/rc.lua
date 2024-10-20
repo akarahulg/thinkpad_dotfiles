@@ -49,14 +49,14 @@ beautiful.fg_focus = lgreen
 beautiful.fg_urgent = "#ffffff"
 beautiful.fg_minimize = "#ffffff"
 
-beautiful.useless_gap = 0
+beautiful.useless_gap = 3
 beautiful.border_width = 4
 beautiful.border_color_normal = "#000000"
 beautiful.border_color_active = red
 beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
-local volbar = require("statusbar.aw-volume")
+-- local volbar = require("statusbar.aw-volume")
 local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music-compact")
 local powerbar = require("statusbar.aw-lock")
@@ -64,7 +64,8 @@ local dunstbar = require("statusbar.aw-dunst")
 local updatebar = require("statusbar.aw-update")
 local calendar_widget = require("statusbar.aw-calendar")
 local music_widget = musbar.create_music_widget()
-
+local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
+local volbar = volume_widget{ widget_type = 'arc' }
 powerbar.bg = purple
 
 -- Enable hotkeys help widget for VIM and other apps
@@ -170,7 +171,7 @@ if beautiful.wallpaper then
         if s < 2 then
           gears.wallpaper.maximized(home .. "/.config/defaultwallpaper.png", s, true)
         else
-          gears.wallpaper.maximized(home .. "/.config/protraitwall.jpg", s, true)
+          gears.wallpaper.maximized(home .. "/.config/screen2.jpg", s, true)
         end
     end
 end
@@ -373,9 +374,9 @@ awful.keyboard.append_global_keybindings({
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
-    awful.key({ modkey, "Shift" }, "Return", function () awful.spawn("xfce4-terminal") end,
+    awful.key({ modkey, }, "Return", function () awful.spawn("xfce4-terminal") end,
               {description = "open a xfce4-terminal", group = "launcher"}),
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey, "Shift" }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
@@ -623,6 +624,7 @@ ruled.client.connect_signal("request::rules", function()
             screen    = awful.screen.preferred,
             placement = awful.placement.no_overlap+awful.placement.no_offscreen,
 	    maximized = false,
+	    size_hints_honor = false,
         }
     }
 
@@ -824,3 +826,4 @@ root.keys(globalkeys)
 
 awful.spawn.with_shell(home .."/.config/awesome/autorun.sh")
 awful.spawn.with_shell(home .."/.config/awesome/customlock.sh")
+awful.spawn.with_shell(home .."/.config/screenlayout.sh")
