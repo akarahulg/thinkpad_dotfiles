@@ -51,7 +51,7 @@ beautiful.fg_minimize = "#ffffff"
 
 beautiful.useless_gap = 3
 beautiful.border_width = 4
-beautiful.border_color_normal = "#000000"
+beautiful.border_color_normal = someblue
 beautiful.border_color_active = red
 beautiful.border_color_marked = "#91231C"
 
@@ -171,7 +171,7 @@ if beautiful.wallpaper then
         if s < 2 then
           gears.wallpaper.maximized(home .. "/.config/defaultwallpaper.png", s, true)
         else
-          gears.wallpaper.maximized(home .. "/.config/screen2.jpg", s, true)
+          gears.wallpaper.maximized(home .. "/.config/distopia_wallpaper.jpg", s, true)
         end
     end
 end
@@ -289,7 +289,7 @@ s.mywibox = awful.wibar {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            -- mylauncher,
             s.mytaglist,
 	    separator,
             s.mypromptbox,

@@ -44,7 +44,8 @@ alias \
 	ytt="yt --skip-download --write-thumbnail" \
 	ffmpeg="ffmpeg -hide_banner"\
 	fzf='fzf --layout=reverse'\
-	ytmp3='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -P $HOME/Music/downloaded'
+	ytmp3='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -P $HOME/Music/downloaded'\
+	cdd='cd $(find ~/ -type d \( -name ".?*" -prune -o -print \) | fzf +m --height 60% --preview "tree -C -L 1 dirname {}")'
 
 # Colorize commands when possible.
 alias \
