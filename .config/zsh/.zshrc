@@ -99,64 +99,9 @@ bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/rahul/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/rahul/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/rahul/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/rahul/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-#CUSTOM exports
-export PATH=$PATH:/home/rahul/fv5.5.2
-
-export PATH=$PATH:/home/rahul/TESTING/suitPipeline
-export al1suit=/home/rahul/TESTING/suitPipeline/bash_scripts
-export suitproduct=/home/rahul/data2/suitproducts
-export qldinfolder=/home/rahul/data2/suitproducts/archive
-export suitdata=/home/rahul/data2/suit_data
-
-#export suitspice=/home/rahul/Downloads/SPICE/kernels
-export suitspice="/home/rahul/TESTING/SPICE/kernels"
-
-export limboutfolder=$suitproduct/limbfit
-export limblatestimgfolder=$suitproduct/limbfitimg
-export PATH=$PATH:/home/rahul/.local/bin
-export PATH=$PATH:/home/rahul/git/usefulscripts
-
-export logo1=$al1suit/../suit_white.png
-export logo2=$al1suit/../sun_iucaa.png
-export logo3=$al1suit/../iucaaisro.png
-
 export shareddir=/srv/http/shareddir
-alias keyadd='eval $(ssh-agent -s);ssh-add  ~/.ssh/suit226'
-
-
-
 # Load plugins
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
-
-
-
-#heasoft
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
-export FC=/usr/bin/gfortran
-export PERL=/usr/bin/perl
-export PYTHON=/usr/bin/python3
-
-#export HEADAS=/home/rahul/packages/heasoft/heasoft-6.33.2/x86_64-pc-linux-gnu-libc2.40/
-#source $HEADAS/headas-init.sh
