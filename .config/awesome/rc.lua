@@ -57,6 +57,17 @@ beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
 -- local volbar = require("statusbar.aw-volume")
+-- local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+-- local batterybar = battery_widget{display_notification = true}
+
+
+
+local battery_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local batterybar = battery_widget{show_current_level = true, arc_thinkness = 1}
+
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+local brightbar = brightness_widget{ type = 'arc', program = 'brightnessctl', step = 10, percentage = true }
+
 local sysbar = require("statusbar.aw-system")
 local musbar = require("statusbar.aw-music-compact")
 local powerbar = require("statusbar.aw-lock")
@@ -100,21 +111,21 @@ modkey = "Mod4"
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
-}
+-- myawesomemenu = {
+--    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+--    { "manual", terminal .. " -e man awesome" },
+--    { "edit config", editor_cmd .. " " .. awesome.conffile },
+--    { "restart", awesome.restart },
+--    { "quit", function() awesome.quit() end },
+-- }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
+-- mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+--                                     { "open terminal", terminal }
+                                  -- }
+                        -- })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+-- mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+--                                      menu = mymainmenu })
 
 -- Menubar configuration
 -- menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -165,16 +176,16 @@ end)
 
 
 -- {{{ Wallpaper
-if beautiful.wallpaper then
-    for s = 1, screen.count() do
-        --gears.wallpaper.maximized(beautiful.wallpaper, s, true)
-        if s < 2 then
-          gears.wallpaper.maximized(home .. "/.config/defaultwallpaper.png", s, true)
-        else
-          gears.wallpaper.maximized(home .. "/.config/distopia_wallpaper.jpg", s, true)
-        end
-    end
-end
+--if beautiful.wallpaper then
+--    for s = 1, screen.count() do
+--        --gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+--        if s < 2 then
+--          gears.wallpaper.maximized(home .. "/.config/defaultwallpaper.png", s, true)
+--        else
+--          gears.wallpaper.maximized(home .. "/.config/distopia_wallpaper.jpg", s, true)
+--        end
+--    end
+--end
 -- }}}
 
 -- -- Create a vertical separator widget
@@ -197,9 +208,9 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 mytextclock = wibox.widget.textclock("%a %b %d, %H:%M:%S ", 1)
 
--- default
-local cw = calendar_widget()
--- or customized
+-- -- default
+-- local cw = calendar_widget()
+-- -- or customized
 local cw = calendar_widget({
     theme = 'outrun',
     placement = 'top_right',
@@ -226,7 +237,7 @@ local spacer = wibox.widget {
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[2])
+    awful.tag({ "", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[5])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -311,6 +322,10 @@ s.mywibox = awful.wibar {
 	    separator,
 	    volbar,
 	    separator,
+	    brightbar,
+	    separator,
+	    batterybar,
+	    separator,
 	    spacer,
             s.mylayoutbox,
 	    -- systray(),
@@ -326,7 +341,7 @@ end)
 
 -- {{{ Mouse bindings
 awful.mouse.append_global_mousebindings({
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
+    -- awful.button({ }, 3, n () mymainmenu:toggle() end),
     awful.button({ }, 4, awful.tag.viewprev),
     awful.button({ }, 5, awful.tag.viewnext),
 })

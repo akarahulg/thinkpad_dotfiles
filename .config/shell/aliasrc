@@ -14,7 +14,7 @@ for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 done; unset command
 
 se () {
-	paths=(~/.local/bin /usr/local/bin $al1suit/../)  # Add your preferred paths here
+	paths=(~/.local/bin )  # Add your preferred paths here
 	choice="$(find "${paths[@]}" -mindepth 1 -type f | fzf --layout=reverse -i)"
 	[ -f "$choice" ] && $EDITOR "$choice"
 }
