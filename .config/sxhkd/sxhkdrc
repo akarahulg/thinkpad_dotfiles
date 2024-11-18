@@ -1,0 +1,17 @@
+# multimedia keys
+XF86Favorites
+	mpc toggle
+shift + XF86Favorites
+	playerctl play-pause
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +1000
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -1000
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86MonBrightnessUp
+	brightnessctl s +10%
+XF86MonBrightnessDown
+	brightnessctl s 10%-
+alt + XF86Favorites
+	playerctl play-pause
