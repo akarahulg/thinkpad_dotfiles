@@ -52,7 +52,7 @@ beautiful.fg_minimize = "#ffffff"
 beautiful.useless_gap = 3
 beautiful.border_width = 4
 beautiful.border_color_normal = someblue
-beautiful.border_color_active = red
+beautiful.border_color_active = yellow
 beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
