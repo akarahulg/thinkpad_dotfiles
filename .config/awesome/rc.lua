@@ -49,8 +49,8 @@ beautiful.fg_focus = lgreen
 beautiful.fg_urgent = "#ffffff"
 beautiful.fg_minimize = "#ffffff"
 
-beautiful.useless_gap = 3
-beautiful.border_width = 4
+beautiful.useless_gap = 1
+beautiful.border_width = 3
 beautiful.border_color_normal = someblue
 beautiful.border_color_active = yellow
 beautiful.border_color_marked = "#91231C"
@@ -394,24 +394,7 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey, "Shift" }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, "d", function() awful.spawn("dmenu_run") end,
-              {description = "Run dmenu", group = "launcher"}),
-    awful.key({ modkey }, "b", function() awful.spawn("brave") end,
-              {description = "Brave browser", group = "launcher"}),
-    awful.key({ modkey }, "m", function() awful.spawn("mpc_control -t") end,
-              {description = "Music launcher", group = "launcher"}),
-    awful.key({ modkey,"Shift" }, "m", function() awful.spawn("dmenu-wrapper-music") end,
-              {description = "Music mode selection", group = "launcher"}),
-    awful.key({ modkey }, "y", function() awful.spawn("ytsearch") end,
-              {description = "dmenu youtube search", group = "launcher"}),
-    awful.key({ modkey }, "g", function() awful.spawn("gsearch") end,
-              {description = "dmenu google selection", group = "launcher"}),
-    awful.key({ modkey }, "p", function() awful.spawn("rofi-pass") end,
-              {description = "Rofi password manager", group = "launcher"}),
-    awful.key({ modkey, "Shift" }, "d", function ()
-    		awful.spawn("rofi -show run -modi run,window,drun,ssh") end,
-	      {description = "run rofi with all modes", group = "launcher"})
+              {description = "run prompt", group = "launcher"})
 })
 
 -- Tags related keybindings
@@ -481,10 +464,19 @@ awful.keyboard.append_global_keybindings({
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey,  "Shift"         }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-              {description = "select previous", group = "layout"}),
+    -- awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+              -- {description = "select previous", group = "layout"}),
+
+    awful.key({ modkey }, "space",
+        function ()
+            if client.focus then
+                client.focus:swap(awful.client.getmaster())
+            end
+        end,
+        {description = "move focused window to master", group = "client"}),
+
 
     -- Add keybindings for increasing and decreasing height factor
     awful.key({ modkey, "Control" }, "k",     function () awful.client.incwfact( 0.05)        end,
@@ -623,6 +615,9 @@ client.connect_signal("request::default_keybindings", function()
             {description = "(un)maximize horizontally", group = "client"}),
     })
 end)
+
+
+
 
 -- }}}
 
