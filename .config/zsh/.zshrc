@@ -16,7 +16,7 @@ zstyle ':vcs_info:*' enable git
 setopt PROMPT_SUBST
 
 # Set the prompt to include vcs_info
-PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[cyan]%} ${vcs_info_msg_0_}%{$fg[red]%}]
+PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[cyan]%}%M %{$fg[magenta]%}%~%{$fg[cyan]%} ${vcs_info_msg_0_}%{$fg[red]%}]
 %{$reset_color%} >%b '
 
 
@@ -98,6 +98,10 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
+#conda install
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+export TERMINFO=/usr/share/terminfo
 
 export shareddir=/srv/http/shareddir
 # Load plugins
