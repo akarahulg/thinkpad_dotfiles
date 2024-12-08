@@ -17,7 +17,7 @@ local function update_widget()
     awful.spawn.easy_async_with_shell("checkupdates | wc -l", function(stdout)
         -- Trim the newline character from the output
         local update_count = stdout:gsub("%s+", "")
-        pacman_widget.text = "" .. update_count
+        pacman_widget.text = " " .. update_count
     end)
 end
 

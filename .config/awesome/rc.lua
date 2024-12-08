@@ -237,7 +237,8 @@ local spacer = wibox.widget {
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[5])
+    -- awful.tag({ "", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[2])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" ,"0"}, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -311,7 +312,6 @@ s.mywibox = awful.wibar {
 	    separator,
 	    -- mykeyboardlayout,
 	    dunstbar,
-	    separator,
 	    updatebar,
 	    separator,
 	    sysbar.ram_widget,

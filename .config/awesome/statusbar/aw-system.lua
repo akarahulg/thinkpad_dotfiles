@@ -71,7 +71,7 @@ local home_widget = wibox.widget {
 
 -- Function to update RAM usage (as percentage)
 local function update_ram()
-    awful.spawn.easy_async_with_shell("free | awk '/^Mem/ {printf(\"%.2f%%\", $3/$2 * 100)}'", function(stdout)
+    awful.spawn.easy_async_with_shell("free | awk '/^Mem/ {printf(\"%.f%%\", $3/$2 * 100)}'", function(stdout)
         ram_widget:set_ram_usage(stdout:gsub("\n", ""))
     end)
 end
