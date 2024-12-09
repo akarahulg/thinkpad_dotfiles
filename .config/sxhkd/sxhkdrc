@@ -10,9 +10,9 @@ XF86AudioLowerVolume
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 XF86MonBrightnessUp
-	brightnessctl s +10%
+	brightnessctl s +5%
 XF86MonBrightnessDown
-	brightnessctl s 10%-
+	brightnessctl s 5%-
 alt + XF86Favorites
 	playerctl play-pause
 

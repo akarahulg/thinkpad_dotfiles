@@ -13,31 +13,41 @@ imap ,, <esc>:keepp /<++><CR>ca<
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
-Plug 'junegunn/goyo.vim'
-Plug 'jreybert/vimagit'
+" Plug 'junegunn/goyo.vim'
+" Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
-Plug 'lifepillar/pgsql.vim'
-Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'lifepillar/pgsql.vim'
+" Plug 'rafi/awesome-vim-colorschemes'
 Plug 'neoclide/coc.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tc50cal/vim-terminal'
 Plug 'preservim/tagbar'
 Plug 'terryma/vim-multiple-cursors'
-" Plug 'larvag/vitex'
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'preservim/nerdcommenter'
 Plug 'jamessan/vim-gnupg'
-Plug 'projekt0n/github-nvim-theme'
-
+Plug 'navarasu/onedark.nvim'
 call plug#end()
 
 
+ let g:onedark_config = {
+   \ 'style': 'deep',
+   \ 'toggle_style_key': '<leader>ts',
+   \ 'ending_tildes': v:true,
+   \ 'diagnostics': {
+     \ 'darker': v:true,
+     \ 'background': v:false,
+   \ },
+ \ }
+colorscheme onedark
+
 
 set title
-set bg=light
 set go=a
 set mouse=a
 set nohlsearch
@@ -46,8 +56,8 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
-colorscheme github_dark_default
-set background=dark
+" colorscheme github_dark_default
+" set background=dark
 " set cursorline
 " hi CursorLine guibg=Grey40
 " Some basics:
@@ -115,19 +125,6 @@ set background=dark
 	map <leader>b :vsp<space>$BIB<CR>
 	map <leader>r :vsp<space>$REFER<CR>
 
-" use <tab> to trigger completion and navigate to the next complete item
-	function! CheckBackspace() abort
-  	let col = col('.') - 1
-  	return !col || getline('.')[col - 1]  =~# '\s'
-	endfunction
-	inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "<CR>"
-	inoremap <silent><expr> <Tab>
-      	\ coc#pum#visible() ? coc#pum#next(1) :
-      	\ CheckBackspace() ? "\<Tab>" :
-      	\ coc#refresh()
-
-	inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
-	inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
 
@@ -140,37 +137,17 @@ set background=dark
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
 
-" Ensure files are read as what I want:
-	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-	map <leader>v :VimwikiIndex<CR>
-	let g:vimwiki_list = [{'path': '~/.local/share/nvim/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
-	autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
-	autocmd BufRead,BufNewFile *.tex set filetype=tex
-
-" Save file as sudo on files that require root permission
-	cabbrev w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
-" Enable Goyo by default for mutt writing
-	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo 80 | call feedkeys("jk")
-	autocmd BufRead,BufNewFile /tmp/neomutt* map ZZ :Goyo!\|x!<CR>
-	autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :Goyo!\|q!<CR>
 
 " Automatically deletes all trailing whitespace and newlines at end of file on save. & reset cursor position
  	autocmd BufWritePre * let currPos = getpos(".")
 	autocmd BufWritePre * %s/\s\+$//e
 	autocmd BufWritePre * %s/\n\+\%$//e
-  autocmd BufWritePre *.[ch] %s/\%$/\r/e " add trailing newline for ANSI C standard
-  autocmd BufWritePre *neomutt* %s/^--$/-- /e " dash-dash-space signature delimiter in emails
+	autocmd BufWritePre *.[ch] %s/\%$/\r/e " add trailing newline for ANSI C standard
+ 	autocmd BufWritePre *neomutt* %s/^--$/-- /e " dash-dash-space signature delimiter in emails
   	autocmd BufWritePre * cal cursor(currPos[1], currPos[2])
 
 " When shortcut files are updated, renew bash and ranger configs with new material:
 	autocmd BufWritePost bm-files,bm-dirs !shortcuts
-" Run xrdb whenever Xdefaults or Xresources are updated.
-	autocmd BufRead,BufNewFile Xresources,Xdefaults,xresources,xdefaults set filetype=xdefaults
-	autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
-" Recompile dwmblocks on config edit.
-	autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid -f dwmblocks }
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
@@ -211,3 +188,24 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+
+
+
+" Map <c-space> to trigger completion:
+	inoremap <silent><expr> <c-space> coc#refresh()
+	inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
+
+
+
+" " vimtex
+let g:vimtex_view_general_viewer = 'evince'
+let g:vimtex_quickfix_open_on_warning = 0
+let g:UltiSnipsSnippetDirectories=[$XDG_CONFIG_HOME.'/nvim/plugged/rg-snippets/']
+let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
+let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
+" set colorscheme for gvim
+if has("gui_running")
+	colorscheme sorbet
+endif
