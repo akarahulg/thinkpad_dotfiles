@@ -73,7 +73,10 @@ alias \
 	xq="xbps-query" \
 	z="zathura" \
 	resetcaps='setxkbmap -option' \
-	caps='setxkbmap -option caps:swapescape'
+	caps='setxkbmap -option caps:swapescape'\
+	vpn='netextender -u rahul.gopalakrishnan -p iucaa@123 -d localdomain moon.iucaa.in:4433'
+
+
 
 
 
