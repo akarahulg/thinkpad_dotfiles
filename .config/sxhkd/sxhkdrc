@@ -34,3 +34,11 @@ super + m
 
 super + b
 	brave
+
+super + i
+	bukumenu
+
+super + I
+	bukuadd
+super + z
+	zotero

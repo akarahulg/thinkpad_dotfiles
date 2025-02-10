@@ -313,7 +313,7 @@ s.mywibox = awful.wibar {
 	    -- mykeyboardlayout,
 	    dunstbar,
 	    updatebar,
-	    separator,
+	    sysbar.temp_widget,
 	    sysbar.ram_widget,
 	    sysbar.cpu_widget,
 	    sysbar.home_widget,

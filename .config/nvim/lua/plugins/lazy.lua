@@ -223,6 +223,10 @@ require('lazy').setup({
     config = function()
       require("noice").setup({
         -- add any options here
+        cmdline = {
+          enabled =true,
+          view = 'cmdline',
+        },
         routes = {
           {
             filter = {
@@ -363,7 +367,7 @@ require('lazy').setup({
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
   {
     "folke/twilight.nvim",
-    ft = "markdown",
+    ft = {"markdown", "python"},
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings

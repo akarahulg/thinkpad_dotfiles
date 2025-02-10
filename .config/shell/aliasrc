@@ -72,13 +72,12 @@ alias \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
 	z="zathura" \
+	x="exit"\
+	c="clear"\
+	b="buku --suggest"\
 	resetcaps='setxkbmap -option' \
 	caps='setxkbmap -option caps:swapescape'\
-	vpn='netextender -u rahul.gopalakrishnan -p iucaa@123 -d localdomain moon.iucaa.in:4433'
-
-
-
-
+	vpn='netExtender -u rahul.gopalakrishnan -p Iucaa@123 -d LocalDomain moon.iucaa.in:4433'
 
 
 
@@ -87,3 +86,7 @@ alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_CACHE_HOME:-$HOME/.cache}/weatherreport" \
+
+alias \
+	tnote="cd ~/git/personal/dailynotes/ && $EDITOR $(date -I).md" 
+	

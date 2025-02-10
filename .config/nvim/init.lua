@@ -17,5 +17,5 @@ require('plugins.zenmode')
 require('plugins.neogit')
 require('plugins.codesnap')
 require('plugins.harpoon')
-require('plugins.mini')
+-- require('plugins.mini')
 
