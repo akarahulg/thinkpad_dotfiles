@@ -29,6 +29,7 @@ ashwhite = "#D5DCD9"
 sand = "#DCDBB9"
 lgreen = "#89B6AD"
 yellow = '#C7D81E'
+violet = '#7E5CAD'
 kiligreen = '#28EB33'
 somegreen = '#016063'
 someblue = '#003787'
@@ -52,7 +53,7 @@ beautiful.fg_minimize = "#ffffff"
 beautiful.useless_gap = 1
 beautiful.border_width = 3
 beautiful.border_color_normal = someblue
-beautiful.border_color_active = yellow
+beautiful.border_color_active = cyan
 beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
