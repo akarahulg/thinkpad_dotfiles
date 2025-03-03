@@ -34,11 +34,12 @@ kiligreen = '#28EB33'
 somegreen = '#016063'
 someblue = '#003787'
 red = "#DC2222"
+manjarogreen = '#4F8A7C'
 -- Customize theme settings
 beautiful.font = "Hack Bold 09"
 
 beautiful.bg_normal = "#202828"
-beautiful.bg_focus = someblue
+beautiful.bg_focus = dgreen
 beautiful.bg_urgent = "#901C0F"
 beautiful.bg_minimize = beautiful.bg_normal
 beautiful.wibar_bg = dblue
@@ -52,8 +53,8 @@ beautiful.fg_minimize = "#ffffff"
 
 beautiful.useless_gap = 1
 beautiful.border_width = 3
-beautiful.border_color_normal = someblue
-beautiful.border_color_active = cyan
+beautiful.border_color_normal = "#000000"
+beautiful.border_color_active = manjarogreen
 beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
@@ -608,7 +609,7 @@ client.connect_signal("request::default_keybindings", function()
                 c:raise()
             end ,
             {description = "(un)maximize vertically", group = "client"}),
-        awful.key({ modkey, "Shift"   }, "m",
+        awful.key({ modkey, "Shift"   }, "'",
             function (c)
                 c.maximized_horizontal = not c.maximized_horizontal
                 c:raise()

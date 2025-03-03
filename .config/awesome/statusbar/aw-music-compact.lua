@@ -27,7 +27,7 @@ local function create_music_widget()
     local scrolling_text_with_bg = wibox.widget {
         scrolling_text,
         widget = wibox.container.background,
-        bg = "#192675",  -- Set your desired background color here
+        bg = "#222222",  -- Set your desired background color here
     }
 
     -- Tooltip to show instructions
