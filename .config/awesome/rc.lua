@@ -71,6 +71,7 @@ local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightne
 local brightbar = brightness_widget{ type = 'arc', program = 'brightnessctl', step = 10, percentage = true }
 
 local sysbar = require("statusbar.aw-system")
+local spotifydownbar = require("statusbar.aw-spotify-download")
 local musbar = require("statusbar.aw-music-compact")
 local powerbar = require("statusbar.aw-lock")
 local dunstbar = require("statusbar.aw-dunst")
@@ -321,6 +322,8 @@ s.mywibox = awful.wibar {
 	    sysbar.home_widget,
 	    separator,
 	    music_widget,
+	    separator,
+      spotifydownbar,
 	    separator,
 	    volbar,
 	    separator,
