@@ -394,10 +394,10 @@ awful.keyboard.append_global_keybindings({
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
-    awful.key({ modkey, }, "Return", function () awful.spawn("xfce4-terminal") end,
-              {description = "open a xfce4-terminal", group = "launcher"}),
-    awful.key({ modkey, "Shift" }, "Return", function () awful.spawn(terminal) end,
-              {description = "open a terminal", group = "launcher"}),
+    -- awful.key({ modkey, }, "Return", function () awful.spawn("kitty") end,
+    --           {description = "open a kitty terminal", group = "launcher"}),
+    -- awful.key({ modkey, "Shift" }, "Return", function () awful.spawn(terminal) end,
+    --           {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"})
 })
