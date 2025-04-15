@@ -29,32 +29,38 @@ ashwhite = "#D5DCD9"
 sand = "#DCDBB9"
 lgreen = "#89B6AD"
 yellow = '#C7D81E'
-violet = '#7E5CAD'
 kiligreen = '#28EB33'
 somegreen = '#016063'
 someblue = '#003787'
 red = "#DC2222"
 manjarogreen = '#4F8A7C'
+cyan1= "#028090"
+purple1 = "#820263"
+purple2 = "#6A0136"
+rich1 = "#BBDB9B"
+alabaster = "#E8EBE4"
+tangerine = "#F08700"
+gray = "#3D5A6C"
 -- Customize theme settings
 beautiful.font = "Hack Bold 09"
 
-beautiful.bg_normal = "#202828"
-beautiful.bg_focus = dgreen
+beautiful.bg_normal = "#000000"
+beautiful.bg_focus = purple2
 beautiful.bg_urgent = "#901C0F"
 beautiful.bg_minimize = beautiful.bg_normal
 beautiful.wibar_bg = dblue
-beautiful.wibar_fg = lgreen
+beautiful.wibar_fg = "#AAAAAA"
 beautiful.bg_systray = beautiful.wibar_bg
 
-beautiful.fg_normal = lgreen
-beautiful.fg_focus = lgreen
+beautiful.fg_normal = red
+beautiful.fg_focus = kiligreen
 beautiful.fg_urgent = "#ffffff"
 beautiful.fg_minimize = "#ffffff"
 
-beautiful.useless_gap = 1
+beautiful.useless_gap = 0
 beautiful.border_width = 3
-beautiful.border_color_normal = "#000000"
-beautiful.border_color_active = manjarogreen
+beautiful.border_color_normal = '#000000'
+beautiful.border_color_active = purple2
 beautiful.border_color_marked = "#91231C"
 
 -- widgets for wibar
