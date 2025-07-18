@@ -1,0 +1,187 @@
+
+snippet teal "Insert teal colored text"
+\textcolor{teal}{${1:}}
+endsnippet
+
+snippet orange "Insert orange colored text"
+\textcolor{orange}{${1:}}
+endsnippet
+
+snippet pac "usepackage - removes square braces if options removed" b
+\usepackage`!p snip.rv='[' if t[1] else ""`${1:options}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
+endsnippet
+
+
+snippet bib "Biblatex"
+\usepackage[backend=biber]{biblatex}
+\addbibresource{zotero.bib}
+% have title and author's full name appear in in-text citation
+\newrobustcmd*{\citefirstlastauthor}{\AtNextCite{\DeclareNameAlias{labelname}{given-family}}\citeauthor}
+\newcommand{\citetitlebyauthor}[2][]{
+    \citetitle{#2} by \citefirstlastauthor[#1]{#2}
+}
+endsnippet
+
+snippet handy "packages and configurations that are handy"
+% annotation support
+\usepackage[pdftex,dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+    colorlinks, % to avoid boxes around links and instead have links just colored
+    linkcolor={blue},
+    urlcolor={blue},
+    citecolor={blue}
+}
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommandx{\info}[2][1=]{\todo[linecolor=violet,backgroundcolor=violet!25,bordercolor=violet,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improve}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+endsnippet
+
+snippet fulltmplt "Full Template"
+\\documentclass{${1:article}}
+
+\\usepackage{import}
+\\usepackage{pdfpages}
+\\usepackage{transparent}
+\usepackage[pdftex,dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+    colorlinks, % to avoid boxes around links and instead have links just colored
+    linkcolor={blue},
+    urlcolor={blue},
+    citecolor={red}
+}
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommandx{\info}[2][1=]{\todo[linecolor=violet,backgroundcolor=violet!25,bordercolor=violet,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improve}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+$2
+
+\\newcommand{\incfig}[2][1]{%
+	    \def\svgwidth{#1\columnwidth}
+	    \import{./figures/}{#2.pdf_tex}
+}
+$3
+\\pdfsuppresswarningpagegroup=1
+
+\\begin{document}
+	    $0
+\\end{document}
+endsnippet
+
+snippet book "Book Template"
+\\documentclass[anyside, openany, 11pt]{book}
+\usepackage[margin=1.1in]{geometry}
+\\usepackage{import}
+\\usepackage{pdfpages}
+\\usepackage{transparent}
+\usepackage[pdftex,dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+    colorlinks, % to avoid boxes around links and instead have links just colored
+    linkcolor={blue},
+    urlcolor={blue},
+    citecolor={red}
+}
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommandx{\info}[2][1=]{\todo[linecolor=violet,backgroundcolor=violet!25,bordercolor=violet,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improve}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+$2
+
+\\newcommand{\incfig}[2][1]{%
+	    \def\svgwidth{#1\columnwidth}
+	    \import{./figures/}{#2.pdf_tex}
+}
+$3
+\\pdfsuppresswarningpagegroup=1
+
+\\begin{document}
+	    $0
+\\end{document}
+endsnippet
+
+
+snippet tmplt "Template"
+\\documentclass{${1:article}}
+
+\\usepackage{import}
+\\usepackage{pdfpages}
+\\usepackage{transparent}
+\\usepackage{xcolor}
+\usepackage[colorlinks]{hyperref}
+$2
+
+\\newcommand{\incfig}[2][1]{%
+	    \def\svgwidth{#1\columnwidth}
+	    \import{./figures/}{#2.pdf_tex}
+}
+\hypersetup{
+    colorlinks, % to avoid boxes around links and instead have links just colored
+    linkcolor={blue},
+    urlcolor={blue},
+    citecolor={red}
+}
+
+$3
+\\pdfsuppresswarningpagegroup=1
+
+\\begin{document}
+	    $0
+\\end{document}
+endsnippet
+
+snippet h1 "heading level 1"
+{\LARGE \textbf{$0} }\\\
+endsnippet
+
+snippet vs "vertical space"
+\vspace{$0 \baselineskip}
+endsnippet
+
+snippet fig "figure environment (includegraphics)"
+	\\begin{figure}
+	\\begin{center}
+		\\includegraphics[scale=${1}]{figures/${2}}
+	\\end{center}
+	\\caption{${3}}
+	\\label{fig:${4}}
+	\\end{figure}
+	${0}
+endsnippet
+
+snippet item "itemize environment"
+	\\begin{itemize}
+		\\item ${0}
+	\\end{itemize}
+endsnippet
+
+snippet dm "Math" wA
+\[
+${1:${VISUAL}}
+.\] $0
+endsnippet
+
+snippet begin "\begin{} ... \end{} block"
+	\\begin{${1:env}}
+		${0:${VISUAL}}
+	\\end{$1}
+endsnippet
+
+snippet enum "Enumerate list" b
+\begin{enumerate}
+  \item $1
+\end{enumerate}
+endsnippet
+

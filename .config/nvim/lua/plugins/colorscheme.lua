@@ -1,25 +1,25 @@
-return {
-  {
-    "rebelot/kanagawa.nvim",
-    lazy = false, -- Load immediately
-    priority = 1000, -- Ensure it loads before other plugins
-    config = function()
-      require("kanagawa").setup({
-        compile = false, -- Set to true if you want faster startup
-        transparent = false, -- Set to true for a transparent background
-        theme = "wave", -- Options: "wave", "dragon", "lotus"
-        colors = {
-          theme = {
-            all = {
-              ui = {
-                bg_gutter = "none", -- Remove side panel background
-              },
-            },
-          },
-        },
-      })
-      vim.cmd("colorscheme kanagawa") -- Apply the colorscheme
-    end,
-  },
-}
+-- File: ~/.config/nvim/lua/plugins/colorscheme.lua
+--
+-- return {
+--   "folke/tokyonight.nvim",
+--   lazy = false, -- make sure we load this during startup if it is your main colorscheme
+--   priority = 1000, -- make sure to load this before all the other start plugins
+--   config = function()
+--     -- Load the colorscheme here
+--     vim.cmd.colorscheme("tokyonight")
+--
+--     -- You can configure highlights by doing something like:
+--     -- vim.cmd.hi("Comment gui=italic")
+--   end,
+-- }
+--
 
+-- -- For Kanagawa
+return {
+  "rebelot/kanagawa.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("kanagawa")
+  end,
+}

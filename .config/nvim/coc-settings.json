@@ -1,0 +1,28 @@
+{
+	"suggest.noselect": false,
+	"suggest.enablePreselect": true,
+	"suggest.snippetIndicator": "↲",
+	// 🧩 Vim-style snippets directory
+	"snippets.ultisnips.directories": [
+		"~/.config/nvim/snippets"
+	],
+	// 🚀 Snippets show at the top
+	"python.pythonPath": "python3",
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	"python.formatting.provider": "black",
+	"python.formatting.blackPath": "black",
+	// 🧪 Diagnostics
+	"diagnostic.virtualText": true,
+	"diagnostic.displayByAle": false,
+	// 💾 Auto format on save
+	"coc.preferences.formatOnSave": true,
+	// 🛠 HTML / CSS / JSON
+	"html.format.enable": true,
+	"css.validate": true,
+	"json.format.enable": true,
+	// 🔁 Extension update settings
+	"extensions.updateCheck": "daily",
+	// Navigation via quickfix
+	"coc.preferences.useQuickfixForLocations": true
+}
