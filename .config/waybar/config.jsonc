@@ -6,7 +6,17 @@
 
     // Replaced 'mpris' with 'custom/media'
     "modules-left": ["niri/workspaces", "niri/window"],
-    "modules-right": ["custom/media", "custom/updates", "disk", "battery", "pulseaudio", "tray","clock",  "custom/power"],
+    "modules-right": [
+        "custom/media",
+        "custom/updates",
+        "disk",
+        "battery",
+        "backlight", // <-- Use the default Waybar backlight module
+        "pulseaudio",
+        "tray",
+        "clock",
+        "custom/power"
+    ],
 
     "niri/workspaces": {
         "format": "{icon}",
@@ -73,5 +83,19 @@
         "format-plugged": " {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "tooltip": true
+    },
+    "backlight": {
+        "device": "intel_backlight", // Change if your device is different
+        "format": " {icon}{percent}%",
+        "format-icons": [
+            "🌑", // 0-19%
+            "🌘", // 20-39%
+            "🌗", // 40-59%
+            "🌖", // 60-79%
+            "🌕"  // 80-100%
+        ],
+        "on-scroll-down": "brightnessctl set +5%",
+        "on-scroll-up": "brightnessctl set 5%-",
+        "tooltip": false
     }
 }
