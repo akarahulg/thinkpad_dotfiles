@@ -1,0 +1,16 @@
+#!/bin/bash
+
+PLAYERCTL_PATH="/usr/bin/playerctl" #<-- Ensure this path is correct
+
+PLAYER_STATUS=$($PLAYERCTL_PATH status 2> /dev/null)
+ARTIST=$($PLAYERCTL_PATH metadata artist 2> /dev/null)
+TITLE=$($PLAYERCTL_PATH metadata title 2> /dev/null)
+
+if [ "$PLAYER_STATUS" = "" ]; then
+    echo "No Music" # Output nothing if player is offline
+elif [ "$PLAYER_STATUS" = "Stopped" ]; then
+    echo "No Music" # Output nothing if player is stopped
+else
+    # Output the icon and the song info
+    echo "${ARTIST} - ${TITLE} - ${ARTIST} - ${TITLE} - ${ARTIST} - ${TITLE}"
+fi

@@ -1,0 +1,77 @@
+// ~/.config/waybar/config.jsonc
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+
+    // Replaced 'mpris' with 'custom/media'
+    "modules-left": ["niri/workspaces", "niri/window"],
+    "modules-right": ["custom/media", "custom/updates", "disk", "battery", "pulseaudio", "tray","clock",  "custom/power"],
+
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "focused": ""
+        }
+    },
+    "niri/window": {
+        "format": "{}",
+        "max-length": 50
+    },
+    "tray": {
+        "icon-theme": "Papirus",
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "clock": {
+        "format": " {:%a %d %b  %H:%M:%S}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/home"
+    },
+    "pulseaudio": {
+        "format": "{icon}{volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        },
+        "on-click": "pamixer --toggle-mute",
+        "on-click-right": "pavucontrol"
+    },
+    "custom/power": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/powermenu"
+    },
+    // This is the new custom module using your zscroll method
+	"custom/media": {
+      "escape": false, // <-- CHANGED to render Pango markup
+      "exec": "~/.config/waybar/scripts/music_panel",
+      "format": "{}", // <-- CHANGED as script now provides the icon
+      "max-length": 25,
+      "on-click": "~/.config/waybar/scripts/toggle_players",
+      "on-click-right": "playerctl -a stop",
+      "on-scroll-down": "playerctl previous",
+      "on-scroll-up": "playerctl next"
+    },
+	"custom/updates": {
+        "format": "  {}", // Icon + Number Placeholder
+        "exec": "~/.config/waybar/scripts/check-updates",
+        "return-type": "json",
+        "interval": 100, // Check every 30 minutes
+        "on-click": "kitty --hold sudo pacman -Syyu" // Change 'kitty' to your terminal
+    },
+    "battery": {
+        "interval": 30,
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true
+    }
+}

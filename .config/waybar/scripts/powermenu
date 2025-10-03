@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Define the options for the wofi menu with icons
+options="⏻ Shutdown\n Reboot\n Logout\n⏾ Hibernate\n Lock"
+
+# Show the wofi menu and capture the user's choice
+# We use --dmenu mode to pipe our options into wofi
+chosen=$(echo -e "$options" | wofi --dmenu --prompt "Power Menu" --width 250 --height 210 --cache-file /dev/null)
+
+# Execute a command based on the choice
+# CRITICAL: The case MUST match the options exactly, including the icon
+case "$chosen" in
+    "⏻ Shutdown")
+        systemctl poweroff
+        ;;
+    " Reboot")
+        systemctl reboot
+        ;;
+    " Logout")
+        niri-msg action quit
+        ;;
+    "⏾ Hibernate")
+        systemctl hibernate
+        ;;
+    " Lock")
+        # This requires a screen locker like swaylock to be installed
+        swaylock
+        ;;
+esac

@@ -1,0 +1,58 @@
+/* ~/.config/waybar/style.css */
+* {
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: #CDD6F4;
+}
+#window, #clock, #disk, #custom-media, #pulseaudio, #tray {
+    padding: 0 7px;
+    margin: 0px 0px;
+}
+#workspaces {
+    padding: 0 5px;
+}
+#workspaces button {
+    padding: 0 2px;
+    margin: 2px 1px;
+    min-height: 22px;
+    color: #4C566A;
+    font-size: 11px;
+    background: none;
+}
+#workspaces button.focused {
+    color: #89B4FA;
+    font-size: 14px;
+}
+#workspaces button:hover {
+    color: #CDD6F4;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+#custom-power {
+    padding: 0 8px;
+    margin: 0px 0px;
+    font-size: 14px;
+    color: #FF0000;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#custom-power:hover {
+    color: #89B4FA;
+    background-color: transparent;
+}
+#pulseaudio.muted {
+    color: #FAB387;
+}
+/* Style the new custom/media module */
+#custom-media, #tray {
+    color: #00FF00; /* Green color for the media module */
+	background-color: #313244;
+}

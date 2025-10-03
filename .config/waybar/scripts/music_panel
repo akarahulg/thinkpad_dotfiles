@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ZSCROLL_PATH="/usr/bin/zscroll" #<-- Ensure this path is correct
+PLAYERCTL_PATH="/usr/bin/playerctl"               #<-- Ensure this path is correct
+
+CURRENT_SONG="$HOME/.config/waybar/scripts/current_song"
+
+# Define colors
+COLOR_PLAYING="#A6E3A1" # Green
+COLOR_PAUSED="#CDD6F4"  # Ash White
+
+"$ZSCROLL_PATH" \
+    --delay 0.2 \
+    --scroll-padding " | " \
+    --length 30 \
+    --match-command "$PLAYERCTL_PATH status" \
+    --match-text "Playing" "--before-text '<span color=\"${COLOR_PLAYING}\">' --after-text '</span>' --scroll 1" \
+    --match-text "Paused" "--before-text '<span color=\"${COLOR_PAUSED}\">' --after-text '</span>' --scroll 0" \
+    --update-interval 1 \
+    --update-check true "$CURRENT_SONG"

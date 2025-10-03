@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PLAYERCTL_PATH="/usr/bin/playerctl" #<-- Ensure this path is correct
+
+# Check if ANY player is currently in the 'Playing' state across all players (-a)
+# The 'grep -q' means quiet, just check for existence, don't print
+if "$PLAYERCTL_PATH" -a status 2>/dev/null | grep -q "Playing"; then
+    # If at least one player is playing, then pause ALL players
+    "$PLAYERCTL_PATH" -a pause
+else
+    # If no player is playing (they are all paused or stopped),
+    # then toggle play/pause on the default/last active player.
+    # This will resume the most relevant player.
+    "$PLAYERCTL_PATH" play-pause
+fi

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Use 'checkupdates' from the 'pacman-contrib' package to safely check for updates.
+# The '2>/dev/null' suppresses errors if you're offline.
+UPDATES=$(checkupdates 2>/dev/null | wc -l)
+
+if [ "$UPDATES" -gt 0 ]; then
+    # If updates exist, output the number and a "warning" class for styling.
+    echo "{\"text\":\"$UPDATES\", \"tooltip\":\"$UPDATES Updates Available\", \"class\":\"warning\"}"
+else
+    # If no updates, output the number 0. This is the part that ensures "0" is shown.
+    echo "{\"text\":\"0\", \"tooltip\":\"System is Up to Date\"}"
+fi
